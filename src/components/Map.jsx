@@ -50,6 +50,11 @@ class MapContainer extends Component {
             <Map
                 google={this.props.google}
                 zoom={14}
+
+                fullscreenControl={false}
+                streetViewControl={false}
+                mapTypeControl={false}
+
                 onClick={this.onClose}
 
                 centerAroundCurrentLocation= {true}

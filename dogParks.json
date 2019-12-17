@@ -1,0 +1,838 @@
+{
+   "html_attributions" : [],
+   "next_page_token" : "CpQCBAEAAECluQl2Q1VFjjca6MyewysYvCGZo8ZCjTMWpkP2Lq3V3sleJPuVO-LmQQRYgm9qhOWfBtrACuSNm7N45Jn5xZCG_TDFNo74xa_dNkwQMHMQGOukHZEhfIQs1dMxxAbnNNSMATaSn4mz7vPu1lCmJU6QnDC2FRB91Td4hycHWvX4HRXdusk9XrCupKdckHgDbD9hY4NUhbPyf0krsvggpzoBhlOt5jexLHl5iiWCqltdYRhroxWJyahVeZaMsTcbni2RvoLK1gdto8_aCSGzXLIRDm9Z8nBL4NA-kD8BbegPMd-u_nbaWVsZdHI2bdBi-Q8OcXexUYUPFpolJ5ZitlX9FE8wFzXjMmVmumshOue3EhCKvEkf4vMfU_LWs7mrRFJdGhShrWhWQvBAeG52ZGtsZn30NEG8WQ",
+   "results" : [
+      {
+         "formatted_address" : "7, השרון 9, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0610651,
+               "lng" : 34.7782711
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06242837989272,
+                  "lng" : 34.77958447989271
+               },
+               "southwest" : {
+                  "lat" : 32.05972872010727,
+                  "lng" : 34.77688482010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "7a56a7a6a3551d3e4bf96f6a8c9c0a1370d4eea9",
+         "name" : "Dog Park Hagalil",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "place_id" : "ChIJz-C8QGNLHRURaUPbJohCJ8M",
+         "plus_code" : {
+            "compound_code" : "3Q6H+C8 תל אביב יפו",
+            "global_code" : "8G4P3Q6H+C8"
+         },
+         "rating" : 5,
+         "reference" : "ChIJz-C8QGNLHRURaUPbJohCJ8M",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 1
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0671307,
+               "lng" : 34.7650209
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06854912989272,
+                  "lng" : 34.76642042989271
+               },
+               "southwest" : {
+                  "lat" : 32.06584947010727,
+                  "lng" : 34.76372077010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "380646cea0e35593f9213572f3d0543be0cd9d5f",
+         "name" : "גינת כלבים הכובשים",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100155053776199038206\"\u003eAyelet Gershovits\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA8AbL5VCQhovNP0AI2mc6kjnjj_oe7Q5rL0Q-xh2wMHAxUlqN5MMBclBQgPkwuXHVbHb8vCq2GdyBjkL5xAbL52wjd5pc9UQrBFjh88aEdc7T12vUn_AKylGPLtBS95HvEhBSRZQ_5e5MQdOgKF1mLJDcGhRQbJu7wiD7AHe7Yc72QOGaV60_TQ",
+               "width" : 4640
+            }
+         ],
+         "place_id" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
+         "plus_code" : {
+            "compound_code" : "3Q88+V2 תל אביב יפו",
+            "global_code" : "8G4P3Q88+V2"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 193
+      },
+      {
+         "formatted_address" : "ישיבת וולוז'ין 2-10, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0610634,
+               "lng" : 34.7618278
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06231192989272,
+                  "lng" : 34.76318662989272
+               },
+               "southwest" : {
+                  "lat" : 32.05961227010728,
+                  "lng" : 34.76048697010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "0dc84b070107338139a0e025953a8f7426841ce4",
+         "name" : "Manshiya Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/116055170592507921749\"\u003eliron yovel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAATsdOxu0l__RrRYTaqN7u1pKoMZ-q45VDXyU_M5lfxy4eIBFU17K8htDVOn_vDdGSaoWhT8Rxa5eKyd82onRiQePsCYRfn4Z_5Ps4bchj7PDz1Vn9JdU_xDGtQhiEwTg6EhDhpvbVpOU4pcWigH4CJUf9GhTEFTuaHSwu39D-CmXOuFKuPZsBIg",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJbZi0QZdMHRURumANxef4Kkw",
+         "plus_code" : {
+            "compound_code" : "3Q66+CP תל אביב יפו",
+            "global_code" : "8G4P3Q66+CP"
+         },
+         "rating" : 4.4,
+         "reference" : "ChIJbZi0QZdMHRURumANxef4Kkw",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 84
+      },
+      {
+         "formatted_address" : "המלך ג'ורג' 35, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0723416,
+               "lng" : 34.7737931
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.07365672989272,
+                  "lng" : 34.77519367989272
+               },
+               "southwest" : {
+                  "lat" : 32.07095707010728,
+                  "lng" : 34.77249402010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "d89365a41dd4fb1d15ac0b706d7351f1267a2301",
+         "name" : "Meir Garden Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4032,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114095958552446113499\"\u003eRandy and Maria RicaFrente\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA1ebfwHZ9SnRsRHyN4dxe-NIlR8tZS2RX6xF5StcMqBVtqdIxsnEtB1nyWtJX5OHNS46t5YuG1hxTJfSBWuNHTpttCMbbKneT8PMMrwX9hlFsoYtAnnhidjHK9ooeMy33EhA3uvJWOvCGIIDv-zONE7FrGhRAPJzrBaemPtZZ37qaOCxFB5q1yw",
+               "width" : 2435
+            }
+         ],
+         "place_id" : "ChIJSx8nH4BMHRURghLBCIncRek",
+         "plus_code" : {
+            "compound_code" : "3QCF+WG תל אביב יפו",
+            "global_code" : "8G4P3QCF+WG"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJSx8nH4BMHRURghLBCIncRek",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 14
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0610048,
+               "lng" : 34.7782681
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06237237989272,
+                  "lng" : 34.77956972989272
+               },
+               "southwest" : {
+                  "lat" : 32.05967272010728,
+                  "lng" : 34.77687007010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "3a6680dd10632e6029c3286222658f5516356b0f",
+         "name" : "Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100475323868156145690\"\u003eDan Komsky\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAT7OWViKS29Z50vibaj6D1K2Xr0GVgwdVn0YcC9KT2x-jG7UqbtBkYPbcjQoZg4Z5EiJU80ttcK4IPNy9R9unTe4nSX38LRhocfaWnMnRAxMVzkN622rh63qlsgbHRyTVEhD6se0FegfAJB6Z9W6RKkSUGhT1nJLmcfrUz7Cil8CS_kED5wD78w",
+               "width" : 4640
+            }
+         ],
+         "place_id" : "ChIJhXCPQGNLHRURXkUC0KbdrU4",
+         "plus_code" : {
+            "compound_code" : "3Q6H+C8 תל אביב יפו",
+            "global_code" : "8G4P3Q6H+C8"
+         },
+         "rating" : 4,
+         "reference" : "ChIJhXCPQGNLHRURXkUC0KbdrU4",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 4
+      },
+      {
+         "formatted_address" : "נהרדעא, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0827181,
+               "lng" : 34.7859388
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.08413757989273,
+                  "lng" : 34.78731562989272
+               },
+               "southwest" : {
+                  "lat" : 32.08143792010728,
+                  "lng" : 34.78461597010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "6664b0b18d439ff6814d785881c830a37e82f03b",
+         "name" : "גינת כלבים",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3120,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111980427020172143351\"\u003eRoni Dromi\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAaHREo7rAB-_jEWdcLm66V_rpR3075xhs1MqfD0j-qMPMT1cf7L-7H5zFddDoSN7peEDj9xJJSlbQSxKGMv7aYWHmIsBifm-uDmiF_poCJtxcf3DPUYSU_Ai_xGb0UquCEhBKwFFco4D4DGvxOU7Lpt1TGhS5YpwYZzvt_snKFhyEyxBA8aISeg",
+               "width" : 4160
+            }
+         ],
+         "place_id" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
+         "plus_code" : {
+            "compound_code" : "3QMP+39 תל אביב יפו",
+            "global_code" : "8G4P3QMP+39"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 114
+      },
+      {
+         "formatted_address" : "אמיל בריג 6, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.1090013,
+               "lng" : 34.8229818
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.11045372989271,
+                  "lng" : 34.82413327989272
+               },
+               "southwest" : {
+                  "lat" : 32.10775407010727,
+                  "lng" : 34.82143362010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "3e1ada84b4b0a188638589e971821e2bd5194a44",
+         "name" : "Frankfurt Dog's Playground",
+         "photos" : [
+            {
+               "height" : 2976,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105003642614890525632\"\u003enuly petel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA2HZcu-uL4RmbAJQkYMXaUSzJM7UOWHmvkNPmpuv-SKPr4m_fx4DtdrZocpDCgFcmYZpPKkDRKlJtHixaEW8UvG4SdVCEu9843C94KDOI7cvlEQZTvxNPWhwh5AEUAu13EhB8CwOqPsLo6bysKiyjBey_GhTnbPwpdDO-EOYsqE8Rx96vjuBX1w",
+               "width" : 3968
+            }
+         ],
+         "place_id" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "plus_code" : {
+            "compound_code" : "4R5F+J5 תל אביב יפו",
+            "global_code" : "8G4P4R5F+J5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 68
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0759886,
+               "lng" : 34.77023690000001
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.07735897989272,
+                  "lng" : 34.77168262989272
+               },
+               "southwest" : {
+                  "lat" : 32.07465932010728,
+                  "lng" : 34.76898297010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "60f1cba5105be416da48ab43df0b4e4931c1c371",
+         "name" : "Tverya Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/114260329967570934137\"\u003eKatja Haviv\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAJ6R1fkKT-JC-q_kxcnoulE0oe40MXfFgkQqPB09NOdkMVC30oCdGqg-IV11LnWHzjdhlNMII5sy0rL8IdNXebuT4UUsOf-RtKBpvDJp37mLJUazCno2SpIR6OpgANG_FEhBk-lEtKWOe_19eO3YuMUCHGhTTtpeYIqnMK0twJ1giUO5F5yYZoQ",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJSWclQX5MHRUR6zLATXvRNsE",
+         "plus_code" : {
+            "compound_code" : "3QGC+93 תל אביב יפו",
+            "global_code" : "8G4P3QGC+93"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJSWclQX5MHRUR6zLATXvRNsE",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 12
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0644736,
+               "lng" : 34.7993643
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06575202989272,
+                  "lng" : 34.80071002989272
+               },
+               "southwest" : {
+                  "lat" : 32.06305237010728,
+                  "lng" : 34.79801037010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "46fc43350dd0150da268b49454eaadd1a794c612",
+         "name" : "Horodetzki Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/113361050603772599837\"\u003eAdam Yodfat\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAMa44-NuP1bGHK95OmabZXbznB1ylJrTlWJBchXkrIZdQox58WwokXItVZ0dnxH9WuP1wnXM3_49WGl_gXjBw4MslL9bWBY2W3Sw5xSTeHY-jfwfk57kGyIwTKf_5Obw4EhDvmZnlGaCIktU5d7_hdtSxGhTPLT6xqB-TDzsJ_dtDHnwdGgKheQ",
+               "width" : 4608
+            }
+         ],
+         "place_id" : "ChIJd1a9ZgpLHRURUfrRweyg9V4",
+         "plus_code" : {
+            "compound_code" : "3Q7X+QP תל אביב יפו",
+            "global_code" : "8G4P3Q7X+QP"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJd1a9ZgpLHRURUfrRweyg9V4",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 96
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0956498,
+               "lng" : 34.7816188
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.09699962989272,
+                  "lng" : 34.78296862989271
+               },
+               "southwest" : {
+                  "lat" : 32.09429997010728,
+                  "lng" : 34.78026897010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "32b95815ec9f5eb2a32aa93c708948057fbd4862",
+         "name" : "Park Ha Yarkon Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/106651474940650281256\"\u003eIdan Oshri\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAArmSKI3iLZ8yGECQtWcgTifwSK0QsuThMrA0hmCjjZieRxvrwf-PE-VQAnR5ajy6kc4gGu8Rw40oV58zZL1NjFrftVRbjXiYfp3WriwP50FIx0NJwoph-McXhyid4XOv6EhBFdUZUY8cxWQylEEAl_b1OGhS-qKj6ygVuQzx1MhPT6pXf04-knw",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJv7bx2fNLHRURQZ7tyk9TuoE",
+         "plus_code" : {
+            "compound_code" : "3QWJ+7J תל אביב יפו",
+            "global_code" : "8G4P3QWJ+7J"
+         },
+         "rating" : 4.6,
+         "reference" : "ChIJv7bx2fNLHRURQZ7tyk9TuoE",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 7
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0574586,
+               "lng" : 34.7783432
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.05879227989272,
+                  "lng" : 34.77968337989272
+               },
+               "southwest" : {
+                  "lat" : 32.05609262010728,
+                  "lng" : 34.77698372010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "4fe4847fcdbee46ce08db5efe9fdf41356bb9e7f",
+         "name" : "Dog Park",
+         "place_id" : "ChIJP08zsB5LHRURhbps8Y--_GA",
+         "plus_code" : {
+            "compound_code" : "3Q4H+X8 תל אביב יפו",
+            "global_code" : "8G4P3Q4H+X8"
+         },
+         "rating" : 0,
+         "reference" : "ChIJP08zsB5LHRURhbps8Y--_GA",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.037666,
+               "lng" : 34.759479
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.03901582989272,
+                  "lng" : 34.76082882989272
+               },
+               "southwest" : {
+                  "lat" : 32.03631617010728,
+                  "lng" : 34.75812917010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "b00276c6a59c2b6f6e28857d57ecb3b3705239d7",
+         "name" : "Dog Park - Davidoff",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3456,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100267098455263288121\"\u003eשחר עזר\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAT15HErItc8ZNDpaujuNUc9n5qAo1OAqqbxiNQHCaHq3cu2qk3n9rSNog-IUy5ueapZuMy0OC2SSkNqFNbA6cZ1gFkbGPG8AhiVzJgyBteYF2O8SIhEzpo1DojY_peSE9EhA49M0DeUZOkeOx3k38zy5BGhTGeMueUruCM08qltmy0288uZ13Lw",
+               "width" : 4608
+            }
+         ],
+         "place_id" : "ChIJQ69zzkyzAhUR3We8CLa5Zik",
+         "plus_code" : {
+            "compound_code" : "2QQ5+3Q תל אביב יפו",
+            "global_code" : "8G4P2QQ5+3Q"
+         },
+         "rating" : 3.9,
+         "reference" : "ChIJQ69zzkyzAhUR3We8CLa5Zik",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 141
+      },
+      {
+         "formatted_address" : "שדרות ההשכלה 13, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0671361,
+               "lng" : 34.7964752
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06848397989272,
+                  "lng" : 34.79787792989272
+               },
+               "southwest" : {
+                  "lat" : 32.06578432010728,
+                  "lng" : 34.79517827010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "56c3eb23584d9021cea41621bbc10a72ca0b1ac6",
+         "name" : "גינת כלבים",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4030,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103394495773588302140\"\u003eJonathan Yehie\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAQIK0DDNAmec6jfrUYOVAMs7hreMlUgleqAFMusnztrpsCGgzjR9LBxH0EmP4Uisq60TSlGQ5qil4yxrztQoQODiYNHGlVMRkQrQ8ULwe1xeHQV5wws-zTcariiu2QLi6EhAI3ZFPOJG2x82ykw1MrM31GhQ9I7o_fySbfAphmLsWwnJgq6JHfw",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
+         "plus_code" : {
+            "compound_code" : "3Q8W+VH תל אביב יפו",
+            "global_code" : "8G4P3Q8W+VH"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 271
+      },
+      {
+         "formatted_address" : "דרך השלום 119, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0595006,
+               "lng" : 34.8076292
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06089887989272,
+                  "lng" : 34.80901152989272
+               },
+               "southwest" : {
+                  "lat" : 32.05819922010727,
+                  "lng" : 34.80631187010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "4e97b820cd8c90c85849749b4d9b283016ea50a5",
+         "name" : "Wolfson Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "place_id" : "ChIJWTsUJAZLHRURaqfj1CS8K-o",
+         "plus_code" : {
+            "compound_code" : "3R55+R3 תל אביב יפו",
+            "global_code" : "8G4P3R55+R3"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJWTsUJAZLHRURaqfj1CS8K-o",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 15
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0994413,
+               "lng" : 34.7825014
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.10079112989272,
+                  "lng" : 34.78385122989273
+               },
+               "southwest" : {
+                  "lat" : 32.09809147010728,
+                  "lng" : 34.78115157010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "11efcbae947df29129890dd5970d2a26ce6fc7da",
+         "name" : "Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "place_id" : "ChIJ7aZlYPBLHRURRPzrv9eGKa0",
+         "plus_code" : {
+            "compound_code" : "3QXM+Q2 תל אביב יפו",
+            "global_code" : "8G4P3QXM+Q2"
+         },
+         "rating" : 0,
+         "reference" : "ChIJ7aZlYPBLHRURRPzrv9eGKa0",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 0
+      },
+      {
+         "formatted_address" : "תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.1019313,
+               "lng" : 34.7926766
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.10329512989271,
+                  "lng" : 34.79411112989272
+               },
+               "southwest" : {
+                  "lat" : 32.10059547010727,
+                  "lng" : 34.79141147010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "15e15620de8a7d0fdd68a5fdde4466f50de8edd7",
+         "name" : "Dog Park",
+         "photos" : [
+            {
+               "height" : 1920,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100083845037615016870\"\u003eDmitry Ryzhkovich\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA3ht6OgdBjrB2wiv9ZEmssPIDC8-x4FEO6cACP2FjCtJfXQEQhlSY-cu-5dA77AmaoihJ8wVHNMkyfD9n_j4bRVtxUn2MSpbhIDMqQYuyyhIiSHRYeBXI1-ahjunBY_XYEhCTHzHTiY5m0p-kA8hv-90RGhQwgI9cEK9a1Tac44GhBQlKny0_yw",
+               "width" : 1080
+            }
+         ],
+         "place_id" : "ChIJsXPf9sNLHRURBRKIqE3Pyw8",
+         "plus_code" : {
+            "compound_code" : "4Q2V+Q3 תל אביב יפו",
+            "global_code" : "8G4P4Q2V+Q3"
+         },
+         "rating" : 4,
+         "reference" : "ChIJsXPf9sNLHRURBRKIqE3Pyw8",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 2
+      },
+      {
+         "formatted_address" : "אליפלט 13, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.056357,
+               "lng" : 34.76471420000001
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.05771522989272,
+                  "lng" : 34.76612402989272
+               },
+               "southwest" : {
+                  "lat" : 32.05501557010727,
+                  "lng" : 34.76342437010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "40ee3d682df0d70895616f949ec232883dba59b3",
+         "name" : "גינת כלבים פלורנטין",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3000,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105489861767031605833\"\u003eKevin Sonnenschein\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAATmDhQxLn0nsS16SvTSKnQKSIqqZdakY7v31ZvB_AC1pqI_3p3Dbz_S0QDRgf_6eZMbIsPkMXvZb9hksEDuGID_TD-utym12Af9uE5uenCUMfaWB3gX03TGNxpWnCb1T4EhDuCB-etPDUdqSN58l-FBcLGhTkAikl2W9G35m8gFOwUVKLSVz0XA",
+               "width" : 4000
+            }
+         ],
+         "place_id" : "ChIJK3gzoKJMHRURaIXxKTaAEmg",
+         "plus_code" : {
+            "compound_code" : "3Q47+GV תל אביב יפו",
+            "global_code" : "8G4P3Q47+GV"
+         },
+         "rating" : 4,
+         "reference" : "ChIJK3gzoKJMHRURaIXxKTaAEmg",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 335
+      },
+      {
+         "formatted_address" : "רדינג 37, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.1084485,
+               "lng" : 34.7946431
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.10987752989271,
+                  "lng" : 34.79578797989273
+               },
+               "southwest" : {
+                  "lat" : 32.10717787010727,
+                  "lng" : 34.79308832010729
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "6023d11eadbde210abe33e2b69b4ac70cc08305e",
+         "name" : "גינת כלבים, חורשת רמת אביב",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3024,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103599139356768005098\"\u003eAna Kupershtein\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAYNJOL9MN0Onb4_GR7S-xhKFAwiCwQlKox55eQ3R3SIsadwAmKbxdTKtXLym6v-97JO2UvL6M10rSm24zU-YfPpDWbPETqytoN8MViVQ-qAvYXNE-KUTktpJfSdYJqZf6EhA_s00too7mG399kNr_4d1xGhS9hraGljKPRNpftscp7P7V5frggQ",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJcQHqzV9JHRURLcp7pX33vmc",
+         "plus_code" : {
+            "compound_code" : "4Q5V+9V תל אביב יפו",
+            "global_code" : "8G4P4Q5V+9V"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJcQHqzV9JHRURLcp7pX33vmc",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 183
+      },
+      {
+         "formatted_address" : "לכיש 16-22, גבעתיים, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0732195,
+               "lng" : 34.8034782
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.07458842989272,
+                  "lng" : 34.80478087989272
+               },
+               "southwest" : {
+                  "lat" : 32.07188877010728,
+                  "lng" : 34.80208122010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "00b8c5f912e68bb7bbfda6f86580e4de513d87ac",
+         "name" : "Habanim Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2988,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/104063054277843041637\"\u003eEli Tzur\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAQAz0KSyYmdaBN54QKsx0mLdJOxoLMxwWl0C1x994l3cOxkAWSdhdLUchEvh5SPAsnXjzBum_gUa4sRnGpjMEpAAozo8HPAhT20sxIBdyWl14RrDmfIJX8Ca4XkHcDaQYEhCq0dzbBFxBgfR_gfdSi4QqGhTbeJq14XpvIW7IPTg0gSccUOEOMw",
+               "width" : 5312
+            }
+         ],
+         "place_id" : "ChIJU8sOxKRLHRUR83TznQBACA0",
+         "plus_code" : {
+            "compound_code" : "3RF3+79 גבעתיים",
+            "global_code" : "8G4P3RF3+79"
+         },
+         "rating" : 4.1,
+         "reference" : "ChIJU8sOxKRLHRUR83TznQBACA0",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 153
+      },
+      {
+         "formatted_address" : "גלוסקא, תל אביב יפו, ישראל",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0706458,
+               "lng" : 34.8023815
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.07202257989272,
+                  "lng" : 34.80368367989272
+               },
+               "southwest" : {
+                  "lat" : 32.06932292010728,
+                  "lng" : 34.80098402010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "56865b0ef3a22cbfec457920575ba3f9b6dc4d46",
+         "name" : "Sereni Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 2268,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100896236867887542822\"\u003eYuval Kovler\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA-XWszLX_KOnRkBVpAYV49qVwdmCJp7EYLoFyWsV2CcNR4kURHdIe80CQyF-LdY4b-tAnu450yU7odoeB2dl3sMm13T7AXy8ch5FFeL_HTwWw6TTQzhaucmQA8obrp-x1EhDR0sso4uXL9vL1lguPE1EfGhRwOybLOcwLn2qvHzOx5mgw-Bi_FQ",
+               "width" : 4032
+            }
+         ],
+         "place_id" : "ChIJg8JhDaRLHRUR2RAU_ZOsnqw",
+         "plus_code" : {
+            "compound_code" : "3RC2+7X תל אביב יפו",
+            "global_code" : "8G4P3RC2+7X"
+         },
+         "rating" : 3.8,
+         "reference" : "ChIJg8JhDaRLHRUR2RAU_ZOsnqw",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 47
+      }
+   ],
+   "status" : "OK"
+}

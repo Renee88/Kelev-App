@@ -4,7 +4,7 @@ class StatusButton extends Component {
     render() {
         return (
             <div>
-                
+               <h1>example test</h1> 
             </div>
         );
     }

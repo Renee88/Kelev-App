@@ -30,14 +30,25 @@ class MapContainer extends Component {
         }
     };
 
+
+    componentDidMount = async () => {
+        
+        await this.props.MapStore.getLocation()
+        
+        
+    }
+
+    
+
     render() {
         return (
             <Map
                 google={this.props.google}
                 zoom={14}
+                centerAroundCurrentLocation= {true}
                 initialCenter={{
-                    lat: 40.854885,
-                    lng: -88.081807
+                    lat: this.props.MapStore.location.latitude,
+                    lng: this.props.MapStore.location.longitude
                 }}
             >
                 {this.props.MapStore.markers.map(m =>

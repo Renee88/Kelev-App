@@ -41,16 +41,31 @@ class MapContainer extends Component {
     
 
     render() {
+        const currentPosition = {
+            lat: this.props.MapStore.location.latitude,
+            lng: this.props.MapStore.location.longitude
+        }
         return (
             <Map
                 google={this.props.google}
                 zoom={14}
                 centerAroundCurrentLocation= {true}
+                
+                streetView = {false}
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
                 }}
             >
+                <Marker
+                        
+                        position={currentPosition}
+                        icon={{
+                            url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
+                            scaledSize: new window.google.maps.Size(60,60)
+                          }}
+                    />
+
                 {this.props.MapStore.markers.map(m =>
                     <Marker
                         onClick={this.onMarkerClick}

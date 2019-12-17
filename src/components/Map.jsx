@@ -1,6 +1,7 @@
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
+import PopUp from './PopUp';
 
 @inject("MapStore")
 @observer
@@ -16,6 +17,7 @@ class MapContainer extends Component {
 
     onMarkerClick = async (props, marker, e) => {
         await this.props.MapStore.getDistance(1)
+
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
@@ -23,14 +25,14 @@ class MapContainer extends Component {
         });
     }
 
-    onClose = props => {
+     onClose = props => {
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,
                 activeMarker: null
-            });
+            })
         }
-    };
+    }
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
@@ -45,9 +47,16 @@ class MapContainer extends Component {
             <Map
                 google={this.props.google}
                 zoom={14}
-                centerAroundCurrentLocation={true}
+                fullscreenControl={false}
+                streetViewControl={false}
+                mapTypeControl={false}
 
-                streetView={false}
+                onClick={this.onClose}
+
+                centerAroundCurrentLocation= {true}
+                
+                streetView = {false}
+
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
@@ -73,9 +82,9 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <div>
-                        <h4>{this.state.selectedPlace.name}</h4>
-                    </div>
+                    <div>6 mins away</div>
+                    <hr></hr>
+                    <div>4 dogs at the park</div>
                 </InfoWindow>
             </Map>
         );

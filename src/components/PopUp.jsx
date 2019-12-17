@@ -4,8 +4,9 @@ class PopUp extends Component {
     render() {
         return (
             <div>
-                <h1>LALALA</h1>
+                {this.props.park}
             </div>
+            
         );
     }
 }

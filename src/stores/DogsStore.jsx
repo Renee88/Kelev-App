@@ -1,11 +1,8 @@
-class Dogs {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        );
-    }
+import { observable } from "mobx";
+
+class DogsStore {
+    @observable dogs = []
+   
 }
 
-export default Dogs;
+export default DogsStore;

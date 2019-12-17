@@ -8,7 +8,10 @@ class ParkStore {
     @observable stats
     @observable numOnTheWay
     @observable numInThePark
+
     @observable example
+
+
 }
 
 export default ParkStore;

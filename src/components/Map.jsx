@@ -33,14 +33,10 @@ class MapContainer extends Component {
 
 
     componentDidMount = async () => {
-        
         await this.props.MapStore.getLocation()
-        
-        
     }
 
     
-
     render() {
         const currentPosition = {
             lat: this.props.MapStore.location.latitude,

@@ -15,14 +15,17 @@ class MapContainer extends Component {
         };
     }
 
-    onMarkerClick = (props, marker, e) => 
+    onMarkerClick = async (props, marker, e) => {
+        await this.props.MapStore.getDistance(1)
+
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
-        })
-        
-    onClose = props => {
+        });
+    }
+
+     onClose = props => {
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,
@@ -31,15 +34,9 @@ class MapContainer extends Component {
         }
     }
 
-
     componentDidMount = async () => {
-        
         await this.props.MapStore.getLocation()
-        
-        
     }
-
-    
 
     render() {
         const currentPosition = {
@@ -50,7 +47,6 @@ class MapContainer extends Component {
             <Map
                 google={this.props.google}
                 zoom={14}
-
                 fullscreenControl={false}
                 streetViewControl={false}
                 mapTypeControl={false}
@@ -67,18 +63,17 @@ class MapContainer extends Component {
                 }}
             >
                 <Marker
-                        
-                        position={currentPosition}
-                        icon={{
-                            url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
-                            scaledSize: new window.google.maps.Size(60,60)
-                          }}
-                    />
+                    position={currentPosition}
+                    icon={{
+                        url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
+                        scaledSize: new window.google.maps.Size(60, 60)
+                    }}
+                />
 
                 {this.props.MapStore.markers.map(m =>
                     <Marker
                         onClick={this.onMarkerClick}
-                        name={m.name}
+                        id={m.id}
                         position={m.position}
                     />)}
 

@@ -5,7 +5,7 @@ import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
-
+// import '../pictures'
 const { Header, Footer, Sider, Content } = Layout;
 
 
@@ -19,18 +19,19 @@ class ParkPictures extends Component {
 
         return (
             <div className="parkPictures">
-                <Carousel >
+                <Carousel autoplay>
                     <div>
-                        <h3>1</h3>
+                    <img id="img1" src={require('../pictures/1.jpg')} />
                     </div>
                     <div>
-                        <h3>2</h3>
+                    <img id="img1" src={require('../pictures/2.jpg')} />
+
                     </div>
                     <div>
-                        <h3>3</h3>
+                    <img id="img1" src={require('../pictures/3.jpg')} />
                     </div>
                     <div>
-                        <h3>4</h3>
+                    <img id="img1" src={require('../pictures/4.jpg')} />
                     </div>
                 </Carousel>
             </div>

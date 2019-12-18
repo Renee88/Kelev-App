@@ -4,6 +4,9 @@ import Map from './components/Map'
 import StatusButton from './components/StatusButton';
 import ReCenterButton from './components/reCenterButton';
 import HeaderButtons from './components/headerButtons';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Park from './components/Park';
+
 import { inject, observer } from 'mobx-react';
 
 @inject("parksStore","MapStore")
@@ -16,18 +19,25 @@ class App extends Component {
     this.props.MapStore.getParks(parks)
   }
 
-  render() {
-    return (
-      <div className="App">
-      <Map />
-      <StatusButton />
-      <HeaderButtons />
-      <ReCenterButton/>
+   render() {
+  return (
+<Router >
+
+    <div className="App">
+    <Route exact path="/"   >
+    
+    
+    <Map />
+    <StatusButton />
+    <HeaderButtons />
+    <ReCenterButton />
+    </Route>
+    <Route path="/park" exact render={() => <Park />} />
 
     </div>
-    );
-  }
+    </Router>
+  );
+ }
 }
-
 export default App;
 

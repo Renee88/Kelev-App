@@ -57,7 +57,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-
+                
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude

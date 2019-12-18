@@ -63,9 +63,5 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"onTheWay");
 -- INSERT INTO status VALUES (null,"inThePark");
 
--- DROP TABLE parks;
-
--- ALTER TABLE parks
--- ALTER COLUMN park_picture VARCHAR(500);
 
 

@@ -5,19 +5,13 @@ const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 const requestPromise = require('request-promise')
-const distance = require('google-distance-matrix')
-distance.key("AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY")
 
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
-    const mode = req.body.mode
 
-    distance.matrix(origin, destination, mode, function (err, distance) {
-        if (!err) {
-            res.send(distance.rows[0].elements[0])
-        }
-    })
+    requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
+    .then(response => res.send(response))
 })
 
 router.post('/directions', (req, res) => {

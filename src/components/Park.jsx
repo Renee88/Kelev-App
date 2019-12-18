@@ -8,12 +8,12 @@ import DogsInPark from './DogsInPark';
 import ParkPictures from './ParkPictures';
 
 import { Layout } from 'antd';
-import Ameneties from  './Amenities'
+import Amenities from  './Amenities'
+import ParkGeneralInfo from './ParkGeneralInfo';
 const { Header, Footer, Sider, Content } = Layout;
 
 
-// @inject("ownerStore")
-// @observer
+
 
 class Park extends Component {
 
@@ -24,6 +24,7 @@ class Park extends Component {
             <div className="parkComponent">
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
+                    <ParkGeneralInfo />
                 <Content id="inside">
                     <ParkPictures />
                 </Content>
@@ -33,7 +34,7 @@ class Park extends Component {
               
                 <Content id="dogs"><DogsInPark /></Content>
              
-                <Content id="amenities"><Ameneties/> </Content>
+                <Content id="amenities"><Amenities/> </Content>
             </Layout>
             </div>
         );

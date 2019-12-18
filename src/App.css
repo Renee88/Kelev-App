@@ -118,3 +118,13 @@ body {
   top: -2px;
   
 }
+
+#reCenterButton{
+  position: relative;
+  top: 510px;
+  left:160px;
+  width:40px;
+  height: 40px;
+  background-color:white;
+  font-size: 20px;
+}

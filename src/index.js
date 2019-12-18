@@ -5,9 +5,11 @@ import App from './App';
 import { Provider } from 'mobx-react';
 import * as serviceWorker from './serviceWorker';
 import { MapStore as mapStore } from './stores/MapStore';
+import OwnerStore  from './stores/OwnerStore';
 
+let ownerStore = new OwnerStore()
 let MapStore = new mapStore()
-let stores = { MapStore }
+let stores = { MapStore , ownerStore}
 
 ReactDOM.render(<Provider {...stores}><App /></Provider>, document.getElementById('root'));
 

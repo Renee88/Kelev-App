@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.css';
 
 .App {
-  text-align: center;
+  /* text-align: center; */
 
 }
 
@@ -31,15 +31,6 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -47,13 +38,14 @@ body {
 
 
 #reCenterButton{
-  position: relative;
-  top: 510px;
-  left:160px;
-  width:40px;
+  position: absolute;
+  bottom: 8rem;
+  right: 0.5rem;
+  width: 40px;
   height: 40px;
   background-color:white;
   font-size: 20px;
+  line-height: 50%;
 }
 
 

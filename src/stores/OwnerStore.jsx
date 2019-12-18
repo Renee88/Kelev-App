@@ -4,8 +4,7 @@ class OwnerStore {
     @observable name
     @observable picture
     @observable email
-    @observable dog
-
+    @observable dogs
     @observable status = 1
 
     @action changeStatus = () => {
@@ -13,13 +12,14 @@ class OwnerStore {
 
         if (this.status < 3) {
             this.status += 1
-            
+
         } else if (this.status === 3) {
             this.status = 1
 
         }
 
     }
+
 
 }
 

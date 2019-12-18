@@ -1,9 +1,9 @@
 {
    "html_attributions" : [],
-   "next_page_token" : "CpQCBAEAAECluQl2Q1VFjjca6MyewysYvCGZo8ZCjTMWpkP2Lq3V3sleJPuVO-LmQQRYgm9qhOWfBtrACuSNm7N45Jn5xZCG_TDFNo74xa_dNkwQMHMQGOukHZEhfIQs1dMxxAbnNNSMATaSn4mz7vPu1lCmJU6QnDC2FRB91Td4hycHWvX4HRXdusk9XrCupKdckHgDbD9hY4NUhbPyf0krsvggpzoBhlOt5jexLHl5iiWCqltdYRhroxWJyahVeZaMsTcbni2RvoLK1gdto8_aCSGzXLIRDm9Z8nBL4NA-kD8BbegPMd-u_nbaWVsZdHI2bdBi-Q8OcXexUYUPFpolJ5ZitlX9FE8wFzXjMmVmumshOue3EhCKvEkf4vMfU_LWs7mrRFJdGhShrWhWQvBAeG52ZGtsZn30NEG8WQ",
+   "next_page_token" : "CpQCAQEAAKU1bmNQjSnG24tu9wLYk8cOkl2kS-uGelrEdSBBkpl5hbxe7pmR0fQju5XhMpYKFwULNhD1_kUa-sO99TEfN4tp81pSqpmobCZZOiuDRZ7WA-UScibc4sqnb_jf8GL4_46LeYPIizLC3aJMZ_pw7DrwVn_MjMGiQeTxFGecKMoG240-1kIAhtSBcPW1aGr9G3IKg9Vjiepzx0x6SRuB0Rtvn-VF67sbLMDu4Sv4u2SdlPaH0s8YdrYSGMCkq0sYTUcRg62KaTzD14obB6Bo3zym0nqrhxCMAuCl1FLpoyfLJkFSIgTVnRiGd3bhH-U7nF9WLgrhgJEHJhymQoQNZCzEA9Yv-RTWXGreEpJAgV6QEhA6cS_w7V30dH-spVx1jjnMGhRtVIeOImodJo1c0IVwywpAm0P7Cw",
    "results" : [
       {
-         "formatted_address" : "7, השרון 9, תל אביב יפו, ישראל",
+         "formatted_address" : "7, HaSharon St 9, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0610651,
@@ -28,7 +28,7 @@
          },
          "place_id" : "ChIJz-C8QGNLHRURaUPbJohCJ8M",
          "plus_code" : {
-            "compound_code" : "3Q6H+C8 תל אביב יפו",
+            "compound_code" : "3Q6H+C8 Tel Aviv-Yafo",
             "global_code" : "8G4P3Q6H+C8"
          },
          "rating" : 5,
@@ -37,51 +37,7 @@
          "user_ratings_total" : 1
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
-         "geometry" : {
-            "location" : {
-               "lat" : 32.0671307,
-               "lng" : 34.7650209
-            },
-            "viewport" : {
-               "northeast" : {
-                  "lat" : 32.06854912989272,
-                  "lng" : 34.76642042989271
-               },
-               "southwest" : {
-                  "lat" : 32.06584947010727,
-                  "lng" : 34.76372077010727
-               }
-            }
-         },
-         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
-         "id" : "380646cea0e35593f9213572f3d0543be0cd9d5f",
-         "name" : "גינת כלבים הכובשים",
-         "opening_hours" : {
-            "open_now" : true
-         },
-         "photos" : [
-            {
-               "height" : 3480,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/100155053776199038206\"\u003eAyelet Gershovits\u003c/a\u003e"
-               ],
-               "photo_reference" : "CmRaAAAA8AbL5VCQhovNP0AI2mc6kjnjj_oe7Q5rL0Q-xh2wMHAxUlqN5MMBclBQgPkwuXHVbHb8vCq2GdyBjkL5xAbL52wjd5pc9UQrBFjh88aEdc7T12vUn_AKylGPLtBS95HvEhBSRZQ_5e5MQdOgKF1mLJDcGhRQbJu7wiD7AHe7Yc72QOGaV60_TQ",
-               "width" : 4640
-            }
-         ],
-         "place_id" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
-         "plus_code" : {
-            "compound_code" : "3Q88+V2 תל אביב יפו",
-            "global_code" : "8G4P3Q88+V2"
-         },
-         "rating" : 4.2,
-         "reference" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
-         "types" : [ "park", "point_of_interest", "establishment" ],
-         "user_ratings_total" : 193
-      },
-      {
-         "formatted_address" : "ישיבת וולוז'ין 2-10, תל אביב יפו, ישראל",
+         "formatted_address" : "Yeshivat Volozhin St 2-10, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0610634,
@@ -110,13 +66,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/116055170592507921749\"\u003eliron yovel\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAATsdOxu0l__RrRYTaqN7u1pKoMZ-q45VDXyU_M5lfxy4eIBFU17K8htDVOn_vDdGSaoWhT8Rxa5eKyd82onRiQePsCYRfn4Z_5Ps4bchj7PDz1Vn9JdU_xDGtQhiEwTg6EhDhpvbVpOU4pcWigH4CJUf9GhTEFTuaHSwu39D-CmXOuFKuPZsBIg",
+               "photo_reference" : "CmRaAAAAdKfnO8gDpeaqOj9559siatLZ48xjTC87teMrnd4aCWKDrW1xXrpkyE0Wtc1TWPztXDRJhjjUdl4s0PsdZ4w1l8IRL8xUsUMDARHk_pLdXwPLTCU3hVKVpW0JIroNeMrNEhBkzkaAJxGM_8N71ZsWLOKGGhReAC-Gw9mm7f9lc91CeOd_B1xufw",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJbZi0QZdMHRURumANxef4Kkw",
          "plus_code" : {
-            "compound_code" : "3Q66+CP תל אביב יפו",
+            "compound_code" : "3Q66+CP Tel Aviv-Yafo",
             "global_code" : "8G4P3Q66+CP"
          },
          "rating" : 4.4,
@@ -125,7 +81,51 @@
          "user_ratings_total" : 84
       },
       {
-         "formatted_address" : "המלך ג'ורג' 35, תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0671307,
+               "lng" : 34.7650209
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06854912989272,
+                  "lng" : 34.76642042989271
+               },
+               "southwest" : {
+                  "lat" : 32.06584947010727,
+                  "lng" : 34.76372077010727
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "380646cea0e35593f9213572f3d0543be0cd9d5f",
+         "name" : "HaKovshim Dog Park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3480,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/100155053776199038206\"\u003eAyelet Gershovits\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAA5QQ-ZHEnFvojn7Cf2YTPqVHkT_cAnJyVAnTfkjlD-BrWtrpWqnvX2gFgb4ShgVWW1GGVQmL1aK2XnNwizTzx7wayr627fO0hmJ84SiaXyhmWNKhOOcj3_mm_7UY2eHoIEhBFY9ZuGUO6gjEgvoA99FDOGhQH4qpZEc6IgrVI8kNpUZUTunbUAQ",
+               "width" : 4640
+            }
+         ],
+         "place_id" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
+         "plus_code" : {
+            "compound_code" : "3Q88+V2 Tel Aviv-Yafo",
+            "global_code" : "8G4P3Q88+V2"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJt3ArSIVMHRURRzTBWfowGXs",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 193
+      },
+      {
+         "formatted_address" : "King George St 35, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0723416,
@@ -154,13 +154,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/114095958552446113499\"\u003eRandy and Maria RicaFrente\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAA1ebfwHZ9SnRsRHyN4dxe-NIlR8tZS2RX6xF5StcMqBVtqdIxsnEtB1nyWtJX5OHNS46t5YuG1hxTJfSBWuNHTpttCMbbKneT8PMMrwX9hlFsoYtAnnhidjHK9ooeMy33EhA3uvJWOvCGIIDv-zONE7FrGhRAPJzrBaemPtZZ37qaOCxFB5q1yw",
+               "photo_reference" : "CmRaAAAAAA1J-J9WxekVENnQSAB5U7zg3ESikupVCMDXLikEHAj5gKHnYitx_ag_okg_zMgvOxRvHWPVr957oQuuU8anWvfB0Kcht1pmSGeKZVTbYc3Y__ipPhkabzohcu8PnPdyEhBwNKg-4s4qRNl3fNKfHddUGhRfKY898gghHaWv-zQtUAOTDS5HOw",
                "width" : 2435
             }
          ],
          "place_id" : "ChIJSx8nH4BMHRURghLBCIncRek",
          "plus_code" : {
-            "compound_code" : "3QCF+WG תל אביב יפו",
+            "compound_code" : "3QCF+WG Tel Aviv-Yafo",
             "global_code" : "8G4P3QCF+WG"
          },
          "rating" : 4.1,
@@ -169,7 +169,7 @@
          "user_ratings_total" : 14
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0610048,
@@ -198,13 +198,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/100475323868156145690\"\u003eDan Komsky\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAT7OWViKS29Z50vibaj6D1K2Xr0GVgwdVn0YcC9KT2x-jG7UqbtBkYPbcjQoZg4Z5EiJU80ttcK4IPNy9R9unTe4nSX38LRhocfaWnMnRAxMVzkN622rh63qlsgbHRyTVEhD6se0FegfAJB6Z9W6RKkSUGhT1nJLmcfrUz7Cil8CS_kED5wD78w",
+               "photo_reference" : "CmRaAAAAYf79kjXJkO-_PaLC5HUx1Rf7MY5-aN3-xCezJY3yp8hGkQPSwu27dhVP4t9s2LUAld_u8myWw1lAfhgjP26ph3LNnjt9tnEGHgvTP-NSKtlImFYNLHgH9P20tO7AYcZEEhDbYU5mJhAAG3ycFQT4eAXqGhQOzAvQreMTpcyrO3Lug0HrP7nkwQ",
                "width" : 4640
             }
          ],
          "place_id" : "ChIJhXCPQGNLHRURXkUC0KbdrU4",
          "plus_code" : {
-            "compound_code" : "3Q6H+C8 תל אביב יפו",
+            "compound_code" : "3Q6H+C8 Tel Aviv-Yafo",
             "global_code" : "8G4P3Q6H+C8"
          },
          "rating" : 4,
@@ -213,92 +213,7 @@
          "user_ratings_total" : 4
       },
       {
-         "formatted_address" : "נהרדעא, תל אביב יפו, ישראל",
-         "geometry" : {
-            "location" : {
-               "lat" : 32.0827181,
-               "lng" : 34.7859388
-            },
-            "viewport" : {
-               "northeast" : {
-                  "lat" : 32.08413757989273,
-                  "lng" : 34.78731562989272
-               },
-               "southwest" : {
-                  "lat" : 32.08143792010728,
-                  "lng" : 34.78461597010728
-               }
-            }
-         },
-         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
-         "id" : "6664b0b18d439ff6814d785881c830a37e82f03b",
-         "name" : "גינת כלבים",
-         "opening_hours" : {
-            "open_now" : true
-         },
-         "photos" : [
-            {
-               "height" : 3120,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/111980427020172143351\"\u003eRoni Dromi\u003c/a\u003e"
-               ],
-               "photo_reference" : "CmRaAAAAaHREo7rAB-_jEWdcLm66V_rpR3075xhs1MqfD0j-qMPMT1cf7L-7H5zFddDoSN7peEDj9xJJSlbQSxKGMv7aYWHmIsBifm-uDmiF_poCJtxcf3DPUYSU_Ai_xGb0UquCEhBKwFFco4D4DGvxOU7Lpt1TGhS5YpwYZzvt_snKFhyEyxBA8aISeg",
-               "width" : 4160
-            }
-         ],
-         "place_id" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
-         "plus_code" : {
-            "compound_code" : "3QMP+39 תל אביב יפו",
-            "global_code" : "8G4P3QMP+39"
-         },
-         "rating" : 3.7,
-         "reference" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
-         "types" : [ "park", "point_of_interest", "establishment" ],
-         "user_ratings_total" : 114
-      },
-      {
-         "formatted_address" : "אמיל בריג 6, תל אביב יפו, ישראל",
-         "geometry" : {
-            "location" : {
-               "lat" : 32.1090013,
-               "lng" : 34.8229818
-            },
-            "viewport" : {
-               "northeast" : {
-                  "lat" : 32.11045372989271,
-                  "lng" : 34.82413327989272
-               },
-               "southwest" : {
-                  "lat" : 32.10775407010727,
-                  "lng" : 34.82143362010728
-               }
-            }
-         },
-         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
-         "id" : "3e1ada84b4b0a188638589e971821e2bd5194a44",
-         "name" : "Frankfurt Dog's Playground",
-         "photos" : [
-            {
-               "height" : 2976,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105003642614890525632\"\u003enuly petel\u003c/a\u003e"
-               ],
-               "photo_reference" : "CmRaAAAA2HZcu-uL4RmbAJQkYMXaUSzJM7UOWHmvkNPmpuv-SKPr4m_fx4DtdrZocpDCgFcmYZpPKkDRKlJtHixaEW8UvG4SdVCEu9843C94KDOI7cvlEQZTvxNPWhwh5AEUAu13EhB8CwOqPsLo6bysKiyjBey_GhTnbPwpdDO-EOYsqE8Rx96vjuBX1w",
-               "width" : 3968
-            }
-         ],
-         "place_id" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
-         "plus_code" : {
-            "compound_code" : "4R5F+J5 תל אביב יפו",
-            "global_code" : "8G4P4R5F+J5"
-         },
-         "rating" : 4.2,
-         "reference" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
-         "types" : [ "park", "point_of_interest", "establishment" ],
-         "user_ratings_total" : 68
-      },
-      {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0759886,
@@ -327,13 +242,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/114260329967570934137\"\u003eKatja Haviv\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAJ6R1fkKT-JC-q_kxcnoulE0oe40MXfFgkQqPB09NOdkMVC30oCdGqg-IV11LnWHzjdhlNMII5sy0rL8IdNXebuT4UUsOf-RtKBpvDJp37mLJUazCno2SpIR6OpgANG_FEhBk-lEtKWOe_19eO3YuMUCHGhTTtpeYIqnMK0twJ1giUO5F5yYZoQ",
+               "photo_reference" : "CmRaAAAApedVqY2m09snmdQgAi9bN4kRbYSR5FiMnlE14biegArFyq63KNoLuuuAQXZ_QwuvENKzvUnQo2aZiHb_1Pc8I6QIavvBegCkj0Lv2xWOdCgqHpcHCCwLSp0M9-w4K1SgEhDL0DQUI02vemU6TqxIOg2ZGhS_7vEtXMmbipmBaIRx2PfGFbCdMQ",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJSWclQX5MHRUR6zLATXvRNsE",
          "plus_code" : {
-            "compound_code" : "3QGC+93 תל אביב יפו",
+            "compound_code" : "3QGC+93 Tel Aviv-Yafo",
             "global_code" : "8G4P3QGC+93"
          },
          "rating" : 3.7,
@@ -342,7 +257,7 @@
          "user_ratings_total" : 12
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0644736,
@@ -371,13 +286,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/113361050603772599837\"\u003eAdam Yodfat\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAMa44-NuP1bGHK95OmabZXbznB1ylJrTlWJBchXkrIZdQox58WwokXItVZ0dnxH9WuP1wnXM3_49WGl_gXjBw4MslL9bWBY2W3Sw5xSTeHY-jfwfk57kGyIwTKf_5Obw4EhDvmZnlGaCIktU5d7_hdtSxGhTPLT6xqB-TDzsJ_dtDHnwdGgKheQ",
+               "photo_reference" : "CmRaAAAAGZU3AKf3yVj20F9s3EkrkI020LuddX5D1BJdiEspIqyz-Hz7JA6iKZzndF6OtIV2bByr8yVocvY3ci3Jz5lxGB5rY7tF4kWobYC_kQOgn1logibSn2WhRMDCfIAwqBbmEhCV3fcLXpHme52TUHZgoUUWGhQFQhIgXDwc6P8Ne9LOrdRLYEBi-w",
                "width" : 4608
             }
          ],
          "place_id" : "ChIJd1a9ZgpLHRURUfrRweyg9V4",
          "plus_code" : {
-            "compound_code" : "3Q7X+QP תל אביב יפו",
+            "compound_code" : "3Q7X+QP Tel Aviv-Yafo",
             "global_code" : "8G4P3Q7X+QP"
          },
          "rating" : 3.9,
@@ -386,7 +301,93 @@
          "user_ratings_total" : 96
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Emil Brigg St 6, Tel Aviv-Yafo, Israel",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.1090013,
+               "lng" : 34.8229818
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.11045372989271,
+                  "lng" : 34.82413327989272
+               },
+               "southwest" : {
+                  "lat" : 32.10775407010727,
+                  "lng" : 34.82143362010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "3e1ada84b4b0a188638589e971821e2bd5194a44",
+         "name" : "Frankfurt Dog's Playground",
+         "opening_hours" : {},
+         "photos" : [
+            {
+               "height" : 2976,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105003642614890525632\"\u003enuly petel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAxJeDSsaNFq_LX7HsLFpJtVlhog5FkGIt24fvddpXuACkLNSp2qDJNkcVGwrKPvJoAsOR1PXsnwE8jjaQBOEhYX8wv4PkWbyvaoxdZ4vIjGbKrtUXoOlXKm6VZwBprXJ-EhAfUgNk2LF29XIV4UThxthXGhQbcXf30FuUCcuTdBiX1u_cTk5Kxg",
+               "width" : 3968
+            }
+         ],
+         "place_id" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "plus_code" : {
+            "compound_code" : "4R5F+J5 Tel Aviv-Yafo",
+            "global_code" : "8G4P4R5F+J5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 68
+      },
+      {
+         "formatted_address" : "Neharde'a St, Tel Aviv-Yafo, Israel",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0827181,
+               "lng" : 34.7859388
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.08413757989273,
+                  "lng" : 34.78731562989272
+               },
+               "southwest" : {
+                  "lat" : 32.08143792010728,
+                  "lng" : 34.78461597010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "6664b0b18d439ff6814d785881c830a37e82f03b",
+         "name" : "Dog park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 3120,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/111980427020172143351\"\u003eRoni Dromi\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAeBZfmFSw5m8mDjT-kRynNhlqnDhZJgNjii6VJ0pKIM22YmlpaYNEuMEUldrjWxBotkzCUC3QV-y8THvFFhzl-In4gF-5DjuANNd20W9E_hKkGyYAc7gRxlbcQ04Z03RKEhDBYK5AvmMJD1ceTvJVfZ9mGhSUTzpaUm5kZGFgOU-lO08fHuAwKQ",
+               "width" : 4160
+            }
+         ],
+         "place_id" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
+         "plus_code" : {
+            "compound_code" : "3QMP+39 Tel Aviv-Yafo",
+            "global_code" : "8G4P3QMP+39"
+         },
+         "rating" : 3.7,
+         "reference" : "ChIJqc-Iz5FLHRUR-LV_gpuM608",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 114
+      },
+      {
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0956498,
@@ -415,13 +416,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/106651474940650281256\"\u003eIdan Oshri\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAArmSKI3iLZ8yGECQtWcgTifwSK0QsuThMrA0hmCjjZieRxvrwf-PE-VQAnR5ajy6kc4gGu8Rw40oV58zZL1NjFrftVRbjXiYfp3WriwP50FIx0NJwoph-McXhyid4XOv6EhBFdUZUY8cxWQylEEAl_b1OGhS-qKj6ygVuQzx1MhPT6pXf04-knw",
+               "photo_reference" : "CmRaAAAAjCrK4htsWtrVCF_N-RCtOAqP_FXbA1NPlmtS6b_TaQIkwc4yOk7ksS_3myM8LqhcFwDKAFgk5_mLQTVYmtiZ-pK1FjbAcjPAYLEKUFg1-s9MW8xuUCx-PsGIZ_TGRQIVEhCzG51--5pgcLuAstj9fiItGhTpA6CdZycGVfD75XrlmD1AqVH1MA",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJv7bx2fNLHRURQZ7tyk9TuoE",
          "plus_code" : {
-            "compound_code" : "3QWJ+7J תל אביב יפו",
+            "compound_code" : "3QWJ+7J Tel Aviv-Yafo",
             "global_code" : "8G4P3QWJ+7J"
          },
          "rating" : 4.6,
@@ -430,7 +431,7 @@
          "user_ratings_total" : 7
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0574586,
@@ -452,7 +453,7 @@
          "name" : "Dog Park",
          "place_id" : "ChIJP08zsB5LHRURhbps8Y--_GA",
          "plus_code" : {
-            "compound_code" : "3Q4H+X8 תל אביב יפו",
+            "compound_code" : "3Q4H+X8 Tel Aviv-Yafo",
             "global_code" : "8G4P3Q4H+X8"
          },
          "rating" : 0,
@@ -461,7 +462,7 @@
          "user_ratings_total" : 0
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.037666,
@@ -490,13 +491,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/100267098455263288121\"\u003eשחר עזר\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAT15HErItc8ZNDpaujuNUc9n5qAo1OAqqbxiNQHCaHq3cu2qk3n9rSNog-IUy5ueapZuMy0OC2SSkNqFNbA6cZ1gFkbGPG8AhiVzJgyBteYF2O8SIhEzpo1DojY_peSE9EhA49M0DeUZOkeOx3k38zy5BGhTGeMueUruCM08qltmy0288uZ13Lw",
+               "photo_reference" : "CmRaAAAAW5PzxdiT_PFNHvbTOYSoPoQIfyLelosr0g_DDjPEUzUxm4qZDAH-gjncK0Mg-KvOPiS3kxXXnSUmXqFzbdgSto3y9-aJ_n18psBu-mAE4dmywucEZ2_zQ6NGuaK9SgiFEhBNVhAYLIheAO69lUYtpBeCGhSFHyL_D0uyblGm3SkLJJw9IMqgug",
                "width" : 4608
             }
          ],
          "place_id" : "ChIJQ69zzkyzAhUR3We8CLa5Zik",
          "plus_code" : {
-            "compound_code" : "2QQ5+3Q תל אביב יפו",
+            "compound_code" : "2QQ5+3Q Tel Aviv-Yafo",
             "global_code" : "8G4P2QQ5+3Q"
          },
          "rating" : 3.9,
@@ -505,51 +506,7 @@
          "user_ratings_total" : 141
       },
       {
-         "formatted_address" : "שדרות ההשכלה 13, תל אביב יפו, ישראל",
-         "geometry" : {
-            "location" : {
-               "lat" : 32.0671361,
-               "lng" : 34.7964752
-            },
-            "viewport" : {
-               "northeast" : {
-                  "lat" : 32.06848397989272,
-                  "lng" : 34.79787792989272
-               },
-               "southwest" : {
-                  "lat" : 32.06578432010728,
-                  "lng" : 34.79517827010728
-               }
-            }
-         },
-         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
-         "id" : "56c3eb23584d9021cea41621bbc10a72ca0b1ac6",
-         "name" : "גינת כלבים",
-         "opening_hours" : {
-            "open_now" : true
-         },
-         "photos" : [
-            {
-               "height" : 4030,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/103394495773588302140\"\u003eJonathan Yehie\u003c/a\u003e"
-               ],
-               "photo_reference" : "CmRaAAAAQIK0DDNAmec6jfrUYOVAMs7hreMlUgleqAFMusnztrpsCGgzjR9LBxH0EmP4Uisq60TSlGQ5qil4yxrztQoQODiYNHGlVMRkQrQ8ULwe1xeHQV5wws-zTcariiu2QLi6EhAI3ZFPOJG2x82ykw1MrM31GhQ9I7o_fySbfAphmLsWwnJgq6JHfw",
-               "width" : 3024
-            }
-         ],
-         "place_id" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
-         "plus_code" : {
-            "compound_code" : "3Q8W+VH תל אביב יפו",
-            "global_code" : "8G4P3Q8W+VH"
-         },
-         "rating" : 4.2,
-         "reference" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
-         "types" : [ "park", "point_of_interest", "establishment" ],
-         "user_ratings_total" : 271
-      },
-      {
-         "formatted_address" : "דרך השלום 119, תל אביב יפו, ישראל",
+         "formatted_address" : "HaShalom Rd 119, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0595006,
@@ -574,7 +531,7 @@
          },
          "place_id" : "ChIJWTsUJAZLHRURaqfj1CS8K-o",
          "plus_code" : {
-            "compound_code" : "3R55+R3 תל אביב יפו",
+            "compound_code" : "3R55+R3 Tel Aviv-Yafo",
             "global_code" : "8G4P3R55+R3"
          },
          "rating" : 4.1,
@@ -583,7 +540,51 @@
          "user_ratings_total" : 15
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Sderot HaHaskala 13, Tel Aviv-Yafo, Israel",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.0671361,
+               "lng" : 34.7964752
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.06848397989272,
+                  "lng" : 34.79787792989272
+               },
+               "southwest" : {
+                  "lat" : 32.06578432010728,
+                  "lng" : 34.79517827010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "56c3eb23584d9021cea41621bbc10a72ca0b1ac6",
+         "name" : "Dog park",
+         "opening_hours" : {
+            "open_now" : true
+         },
+         "photos" : [
+            {
+               "height" : 4030,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/103394495773588302140\"\u003eJonathan Yehie\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAHPPX-aol_kPW-fE8Fl0QDdjq1m_62EHjRRwKH5R1l8vbLUlgsaN-eo-Eewi_IFuRbSjXlKntgx84Aq5_DFsULQxlGiq6Aiilt_v00c4_AefhZhLAC2cEKCDoqeyFF4-0EhB556gF2jZD7sU4Bi6Kh2fUGhSZ1c4XiLiss2WGb5xttIx5gUkPzw",
+               "width" : 3024
+            }
+         ],
+         "place_id" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
+         "plus_code" : {
+            "compound_code" : "3Q8W+VH Tel Aviv-Yafo",
+            "global_code" : "8G4P3Q8W+VH"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJC0p9HKBLHRUR8G5dZdNm0l4",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 271
+      },
+      {
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0994413,
@@ -608,7 +609,7 @@
          },
          "place_id" : "ChIJ7aZlYPBLHRURRPzrv9eGKa0",
          "plus_code" : {
-            "compound_code" : "3QXM+Q2 תל אביב יפו",
+            "compound_code" : "3QXM+Q2 Tel Aviv-Yafo",
             "global_code" : "8G4P3QXM+Q2"
          },
          "rating" : 0,
@@ -617,7 +618,7 @@
          "user_ratings_total" : 0
       },
       {
-         "formatted_address" : "תל אביב יפו, ישראל",
+         "formatted_address" : "Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.1019313,
@@ -643,13 +644,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/100083845037615016870\"\u003eDmitry Ryzhkovich\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAA3ht6OgdBjrB2wiv9ZEmssPIDC8-x4FEO6cACP2FjCtJfXQEQhlSY-cu-5dA77AmaoihJ8wVHNMkyfD9n_j4bRVtxUn2MSpbhIDMqQYuyyhIiSHRYeBXI1-ahjunBY_XYEhCTHzHTiY5m0p-kA8hv-90RGhQwgI9cEK9a1Tac44GhBQlKny0_yw",
+               "photo_reference" : "CmRaAAAA4ZQt99Wy8JaFTlK3BrLQO2T7hcLIg3DBXjiYLIr84LM80F448SGCFcGOqBZC6YOmPQSQHdJOKwJJdSYM6bLnrUBJhmAyQ31w7ioYpXltIdUL4G-TDVqmuHWoGC10vb1kEhB-Z-22tP1N7XgT6v64j145GhRIrvYc7SKEkRV_BjYbMgv1OydTeA",
                "width" : 1080
             }
          ],
          "place_id" : "ChIJsXPf9sNLHRURBRKIqE3Pyw8",
          "plus_code" : {
-            "compound_code" : "4Q2V+Q3 תל אביב יפו",
+            "compound_code" : "4Q2V+Q3 Tel Aviv-Yafo",
             "global_code" : "8G4P4Q2V+Q3"
          },
          "rating" : 4,
@@ -658,7 +659,7 @@
          "user_ratings_total" : 2
       },
       {
-         "formatted_address" : "אליפלט 13, תל אביב יפו, ישראל",
+         "formatted_address" : "Elifelet St 13, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.056357,
@@ -677,7 +678,7 @@
          },
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "40ee3d682df0d70895616f949ec232883dba59b3",
-         "name" : "גינת כלבים פלורנטין",
+         "name" : "Dog park Florentin",
          "opening_hours" : {
             "open_now" : true
          },
@@ -687,13 +688,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/105489861767031605833\"\u003eKevin Sonnenschein\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAATmDhQxLn0nsS16SvTSKnQKSIqqZdakY7v31ZvB_AC1pqI_3p3Dbz_S0QDRgf_6eZMbIsPkMXvZb9hksEDuGID_TD-utym12Af9uE5uenCUMfaWB3gX03TGNxpWnCb1T4EhDuCB-etPDUdqSN58l-FBcLGhTkAikl2W9G35m8gFOwUVKLSVz0XA",
+               "photo_reference" : "CmRaAAAA710dN15hurPpsiZLRV0y-h7nE2QlEc8D1H0PT2YoP1S_y6h2bkvHpf5aJLkQp-_IFCDhHxtH3WB68syjt9LsOUF3hr1xZVTdBhgLAyw6hHFNHPRM6ltF3Lju490bIpX5EhAPPgK7gfCBl-J5K4fYmd-oGhR_4ClZ-SRSzXvijfpCHhHhe3wTew",
                "width" : 4000
             }
          ],
          "place_id" : "ChIJK3gzoKJMHRURaIXxKTaAEmg",
          "plus_code" : {
-            "compound_code" : "3Q47+GV תל אביב יפו",
+            "compound_code" : "3Q47+GV Tel Aviv-Yafo",
             "global_code" : "8G4P3Q47+GV"
          },
          "rating" : 4,
@@ -702,7 +703,7 @@
          "user_ratings_total" : 335
       },
       {
-         "formatted_address" : "רדינג 37, תל אביב יפו, ישראל",
+         "formatted_address" : "Reading St 37, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.1084485,
@@ -721,7 +722,7 @@
          },
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "6023d11eadbde210abe33e2b69b4ac70cc08305e",
-         "name" : "גינת כלבים, חורשת רמת אביב",
+         "name" : "Dog Park, Forest Ramat Aviv",
          "opening_hours" : {
             "open_now" : true
          },
@@ -731,13 +732,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/103599139356768005098\"\u003eAna Kupershtein\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAYNJOL9MN0Onb4_GR7S-xhKFAwiCwQlKox55eQ3R3SIsadwAmKbxdTKtXLym6v-97JO2UvL6M10rSm24zU-YfPpDWbPETqytoN8MViVQ-qAvYXNE-KUTktpJfSdYJqZf6EhA_s00too7mG399kNr_4d1xGhS9hraGljKPRNpftscp7P7V5frggQ",
+               "photo_reference" : "CmRaAAAA5eX5qQ03E_ezbrc9cImAMgIIWZPrPch_sMSnmEOGN4hvmfJnpPQuvl-lq3zFDfmBTI0I1a-1xkEAGR12kAOUdeUOv_7K16z9Rj7GrPjeQZLcbUgV4ZxQ5yFhtnRkcaSJEhDV13wknPIjB3oOgcpHtbH2GhTlN1AXdcPiAnvd2L9oKMI50_mbgg",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJcQHqzV9JHRURLcp7pX33vmc",
          "plus_code" : {
-            "compound_code" : "4Q5V+9V תל אביב יפו",
+            "compound_code" : "4Q5V+9V Tel Aviv-Yafo",
             "global_code" : "8G4P4Q5V+9V"
          },
          "rating" : 4.1,
@@ -746,7 +747,7 @@
          "user_ratings_total" : 183
       },
       {
-         "formatted_address" : "לכיש 16-22, גבעתיים, ישראל",
+         "formatted_address" : "Lakhish St 16-22, Giv'atayim, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0732195,
@@ -775,13 +776,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/104063054277843041637\"\u003eEli Tzur\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAAQAz0KSyYmdaBN54QKsx0mLdJOxoLMxwWl0C1x994l3cOxkAWSdhdLUchEvh5SPAsnXjzBum_gUa4sRnGpjMEpAAozo8HPAhT20sxIBdyWl14RrDmfIJX8Ca4XkHcDaQYEhCq0dzbBFxBgfR_gfdSi4QqGhTbeJq14XpvIW7IPTg0gSccUOEOMw",
+               "photo_reference" : "CmRaAAAAtYL_sPgceqrTLl1SBf37jOhFlGjrhhrDLHqyiCgl6Mo1kehpOaRQEs2HSkNY0hnpyM0KCvqZMUODH2i7xFOvwmpokWoixWKuPHlM3ksJdcv7qJ3qO4ua-jb8rxtvOYPTEhAGZhWr7g3zvyrqYJyU3GPGGhQx92s9mCiPdUww-3aiftufoB-haw",
                "width" : 5312
             }
          ],
          "place_id" : "ChIJU8sOxKRLHRUR83TznQBACA0",
          "plus_code" : {
-            "compound_code" : "3RF3+79 גבעתיים",
+            "compound_code" : "3RF3+79 Giv'atayim",
             "global_code" : "8G4P3RF3+79"
          },
          "rating" : 4.1,
@@ -790,7 +791,7 @@
          "user_ratings_total" : 153
       },
       {
-         "formatted_address" : "גלוסקא, תל אביב יפו, ישראל",
+         "formatted_address" : "Glosca St, Tel Aviv-Yafo, Israel",
          "geometry" : {
             "location" : {
                "lat" : 32.0706458,
@@ -819,13 +820,13 @@
                "html_attributions" : [
                   "\u003ca href=\"https://maps.google.com/maps/contrib/100896236867887542822\"\u003eYuval Kovler\u003c/a\u003e"
                ],
-               "photo_reference" : "CmRaAAAA-XWszLX_KOnRkBVpAYV49qVwdmCJp7EYLoFyWsV2CcNR4kURHdIe80CQyF-LdY4b-tAnu450yU7odoeB2dl3sMm13T7AXy8ch5FFeL_HTwWw6TTQzhaucmQA8obrp-x1EhDR0sso4uXL9vL1lguPE1EfGhRwOybLOcwLn2qvHzOx5mgw-Bi_FQ",
+               "photo_reference" : "CmRaAAAAQcheZTF-gpA2-N84KbqJI3Vqu5WYQpFD37TRJhAJ94tIVjo8UAyBb0_7VyF76gA3-Z4gPRQBriO3Y0JXTPUZtlAAv77_SRvOWA-LD77hSPhbBiC0qQH5vtU-3KK-2PWzEhBuGSGRLfuFyFHk-lO7lEuJGhR1WOyg23NedHWit-3j6iClKN7PtQ",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJg8JhDaRLHRUR2RAU_ZOsnqw",
          "plus_code" : {
-            "compound_code" : "3RC2+7X תל אביב יפו",
+            "compound_code" : "3RC2+7X Tel Aviv-Yafo",
             "global_code" : "8G4P3RC2+7X"
          },
          "rating" : 3.8,

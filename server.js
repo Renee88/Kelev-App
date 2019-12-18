@@ -20,5 +20,5 @@ app.use(function (req, res, next) {
 app.use('/', api)
 
 app.listen(port,function(){
-   console.log(`Running on port port`)
+   console.log(`Running on port ${port}`)
 })

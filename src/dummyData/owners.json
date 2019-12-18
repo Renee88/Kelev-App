@@ -1,6 +1,6 @@
 [
     {
-        "name":"Carlijne Van der Gulik",
+        "owner_name":"Carlijne Van der Gulik",
         "picture": "https://randomuser.me/api/portraits/thumb/women/20.jpg",
         "email":"carlijne.vandergulik@example.com",
         "dogs": [{
@@ -15,7 +15,7 @@
     },
 
     {
-        "name":"Kathy Bailey",
+        "owner_name":"Kathy Bailey",
         "picture": "https://randomuser.me/api/portraits/thumb/women/0.jpg",
         "email":"kathy.bailey@example.com",
         "dogs": [{
@@ -30,7 +30,7 @@
     },
 
     {
-        "name":"Emmanuel Girard",
+        "owner_name":"Emmanuel Girard",
         "picture": "https://randomuser.me/api/portraits/thumb/men/69.jpg",
         "email":"emmanuel.girard@example.com",
         "dogs": [{
@@ -45,7 +45,7 @@
     },
 
     {
-        "name":"Efe Özgörkey",
+        "owner_name":"Efe Özgörkey",
         "picture": "https://randomuser.me/api/portraits/thumb/men/5.jpg",
         "email":"efe.ozgorkey@example.com",
         "dogs": [{
@@ -60,7 +60,7 @@
     },
 
     {
-        "name":"Jorgen Hommel",
+        "owner_name":"Jorgen Hommel",
         "picture": "https://randomuser.me/api/portraits/thumb/men/12.jpg",
         "email":"jorgen.hommel@example.com",
         "dogs": [{
@@ -75,7 +75,7 @@
     },
 
     {
-        "name":"Lena Guillaume",
+        "owner_name":"Lena Guillaume",
         "picture": "https://randomuser.me/api/portraits/thumb/women/27.jpg",
         "email":"lena.guillaume@example.com",
         "dogs": [{
@@ -90,7 +90,7 @@
     },
 
     {
-        "name":"Ellen Perala",
+        "owner_name":"Ellen Perala",
         "picture": "https://randomuser.me/api/portraits/thumb/women/26.jpg",
         "email":"ellen.perala@example.com",
         "dogs": [{
@@ -105,7 +105,7 @@
     },
 
     {
-        "name":"Moon Kuppens",
+        "owner_name":"Moon Kuppens",
         "picture": "https://randomuser.me/api/portraits/thumb/women/83.jpg",
         "email":"moon.kuppens@example.com",
         "dogs": [{
@@ -120,7 +120,7 @@
     },
 
     {
-        "name":"Miro Perala",
+        "owner_name":"Miro Perala",
         "picture": "https://randomuser.me/api/portraits/thumb/men/79.jpg",
         "email":"miro.perala@example.com",
         "dogs": [{
@@ -135,7 +135,7 @@
     },
 
     {
-        "name":"Ekaterina Keller",
+        "owner_name":"Ekaterina Keller",
         "picture": "https://randomuser.me/api/portraits/thumb/women/42.jpg",
         "email":"ekaterina.keller@example.com",
         "dogs": [{
@@ -150,7 +150,7 @@
     },
 
     {
-        "name":"Hannes Hoogerdijk",
+        "owner_name":"Hannes Hoogerdijk",
         "picture": "https://randomuser.me/api/portraits/thumb/men/56.jpg",
         "email":"hannes.hoogerdijk@example.com",
         "dogs": [{
@@ -165,7 +165,7 @@
     },
 
     {
-        "name":"Aníbal da Luz",
+        "owner_name":"Aníbal da Luz",
         "picture": "https://randomuser.me/api/portraits/thumb/men/7.jpg",
         "email":"anibal.daluz@example.com",
         "dogs": [{
@@ -180,7 +180,7 @@
     },
 
     {
-        "name":"Rachel Robert",
+        "owner_name":"Rachel Robert",
         "picture": "https://randomuser.me/api/portraits/thumb/women/63.jpg",
         "email":"rachel.robert@example.com",
         "dogs": [{
@@ -195,7 +195,7 @@
     },
 
     {
-        "name":"Roy Fuller",
+        "owner_name":"Roy Fuller",
         "picture": "https://randomuser.me/api/portraits/thumb/men/56.jpg",
         "email":"roy.fuller@example.com",
         "dogs": [{
@@ -210,7 +210,7 @@
     },
 
     {
-        "name":"Feyyaz Van Agtmaal",
+        "owner_name":"Feyyaz Van Agtmaal",
         "picture": "https://randomuser.me/api/portraits/thumb/men/37.jpg",
         "email":"feyyaz.vanagtmaal@example.com",
         "dogs": [{
@@ -225,7 +225,7 @@
     },
 
     {
-        "name":"Ivan Ibañez",
+        "owner_name":"Ivan Ibañez",
         "picture": "https://randomuser.me/api/portraits/thumb/men/61.jpg",
         "email":"ivan.ibanez@example.com",
         "dogs": [{
@@ -240,7 +240,7 @@
     },
     
     {
-        "name":"Michaele Kirchhoff",
+        "owner_name":"Michaele Kirchhoff",
         "picture": "https://randomuser.me/api/portraits/thumb/men/46.jpg",
         "email":"michaele.kirchhoff@example.com",
         "dogs": [{
@@ -255,7 +255,7 @@
     },
 
     {
-        "name":"Craig Boyd",
+        "owner_name":"Craig Boyd",
         "picture": "https://randomuser.me/api/portraits/thumb/men/4.jpg",
         "email":"craig.boyd@example.com",
         "dogs": [{
@@ -270,7 +270,7 @@
     },
 
     {
-        "name":"Stella Daniels",
+        "owner_name":"Stella Daniels",
         "picture": "https://randomuser.me/api/portraits/thumb/women/14.jpg",
         "email":"stella.daniels@example.com",
         "dogs": [{
@@ -285,7 +285,7 @@
     },
 
     {
-        "name":"Ömür Adal",
+        "owner_name":"Ömür Adal",
         "picture": "https://randomuser.me/api/portraits/thumb/women/26.jpg",
         "email":"omur.adal@example.com",
         "dogs": [{
@@ -299,7 +299,7 @@
         }]
     },
     {
-        "name":"Nevaeh Jones",
+        "owner_name":"Nevaeh Jones",
         "picture": "https://randomuser.me/api/portraits/thumb/women/92.jpg",
         "email":"nevaeh.jones@example.com",
         "dogs": [{

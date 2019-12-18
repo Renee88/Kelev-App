@@ -1,7 +1,8 @@
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import PopUp from './PopUp';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 @inject("MapStore")
 @observer
@@ -52,9 +53,26 @@ class MapContainer extends Component {
                 />
 
                 {this.props.MapStore.markers.map(m =>
-                    )}
+                    <Marker
+                        onClick={this.onMarkerClick}
+                        id={m.id}
+                        position={m.position}
+                    />)}
 
-                
+                <InfoWindow
+                    marker={this.state.activeMarker}
+                    visible={this.state.showingInfoWindow}
+                    onClose={this.onClose}
+                >
+                    <Router>
+                        <Link to="/park" style={{ textDecoration: "none" }} >
+                            <div>{this.state.mins} away</div>
+                            <hr></hr>
+                            <div>4 dogs at the park</div>
+                        </Link>
+
+                    </Router>
+                </InfoWindow>
             </Map>
         );
     }

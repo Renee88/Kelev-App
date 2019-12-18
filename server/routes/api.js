@@ -3,7 +3,8 @@ const router = express.Router()
 const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
+// const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
+const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
 
 router.post('/distance', (req, res) => {
@@ -23,7 +24,6 @@ router.get('/map', function (req, res) {
     sequelize.query(`SELECT * FROM parks`)
         .then(function (results) {
             let parks = results[0]
-            console.log(parks)
             parks = parks.map(p => {
                 return {
                     id: p.id,
@@ -41,6 +41,51 @@ router.get('/map', function (req, res) {
 
             res.send(parks)
         })
+})
+
+router.get('/dogs', function (req, res) {
+    sequelize.query(`SELECT * FROM dogs`)
+        .then(function (results) {
+            const dogs = results[0]
+            res.send(dogs)
+        })
+})
+
+router.put('/dog-profile', function (req, res) {
+    const detailsForEdit = req.body
+    const fieldName = detailsForEdit.fieldName
+    const fieldValue = detailsForEdit[fieldName]
+    const dogId = detailsForEdit.id
+
+    sequelize.query(`UPDATE dogs 
+    SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)
+        .then(function (results) {
+            sequelize.query(`SELECT dogs.* FROM dogs WHERE dogs.id = ${dogId}`)
+                .then(function (results) {
+                    const updatedDog = results[0][0]
+                    res.send(updatedDog)
+                })
+        })
+})
+
+router.post('/dog-profile', async function (req, res) {
+    const newDog = req.body
+    newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
+    newDog.neutered ? newDog.neutered = 1 : newDog.neutered = 0
+
+    await sequelize.query(`INSERT INTO dogs VALUES(null,"${newDog.dog_name}","${newDog.dog_picture}","${newDog.gender}",${newDog.age},${newDog.weight},${newDog.vaccinated},${newDog.neutered},${newDog.dog_status})`)
+    
+    const results = await sequelize.query(`SELECT * FROM dogs`)
+    const dogs = results[0]
+    const lastIndex = dogs.length - 1
+    const newDogId = dogs[lastIndex].id
+    
+    sequelize.query(`INSERT INTO dog_owner VALUES (null,${newDog.owner_id},${newDogId})`)
+    .then(function(results){
+        res.send(dogs[lastIndex])
+    })
+
+
 })
 
 // `https://maps.googleapis.com/maps/api/place/photo?photoreference=${photoReference}key=${apiKey}`

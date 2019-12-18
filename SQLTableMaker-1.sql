@@ -8,7 +8,8 @@ USE sql_intro;
 --     age TINYINT,
 --     weight TINYINT,
 --     vaccinated BOOLEAN,
---     neutered BOOLEAN
+--     neutered BOOLEAN,
+--     dog_status TINYINT DEFAULT 1
 -- );
 
 
@@ -18,6 +19,7 @@ USE sql_intro;
 --     owner_name VARCHAR(50),
 --     owner_picture VARCHAR(80),
 --     email VARCHAR(80)
+--     owner_status TINYINT DEFAULT 1
 -- );
 
 -- CREATE TABLE dog_owner(
@@ -27,6 +29,7 @@ USE sql_intro;
 --     FOREIGN KEY (owner_id) REFERENCES owners(id),
 --     FOREIGN KEY (dog_id) REFERENCES dogs(id)
 -- );
+
 
 -- DROP TABLE parks;
 
@@ -63,4 +66,10 @@ INSERT INTO status VALUES (null,"standby");
 INSERT INTO status VALUES (null,"onTheWay");
 INSERT INTO status VALUES (null,"inThePark");
 
+<<<<<<< HEAD
 -- DROP TABLE parks;
+=======
+
+
+
+>>>>>>> a84203c9e816ad241bffea2a589b500865c72b2c

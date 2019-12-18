@@ -17,7 +17,7 @@ class MapContainer extends Component {
     }
 
     onMarkerClick = async (props, marker, e) => {
-        let distance = await this.props.MapStore.getDistance(marker.id)
+        let distance = await this.props.MapStore.getDistance(this.props.MapStore.markers[0].id)
 
         this.setState({
             selectedPlace: props,

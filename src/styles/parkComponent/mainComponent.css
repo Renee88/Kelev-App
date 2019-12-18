@@ -29,7 +29,6 @@ body {
       position: relative;
       width: 100vw;
       height: 10rem;
-      background-color: yellow;
   }
   
   #dogs{
@@ -156,4 +155,14 @@ body {
 
   #rating > span{
     margin-right: 10px;
+  }
+
+  #back-button{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 10px;
+    margin-top: 10px;
   }

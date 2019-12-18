@@ -1,10 +1,11 @@
 import { observable, action, computed } from 'mobx';
 
 class OwnerStore {
+    @observable id = null
     @observable name
     @observable picture
     @observable email
-    @observable dogs
+    @observable dogs = []
     @observable status = 1
 
     @action changeStatus = () => {
@@ -18,6 +19,10 @@ class OwnerStore {
 
         }
 
+    }
+
+    @action addDogToOwner(dog){
+        this.dogs.push(dog)
     }
 
 

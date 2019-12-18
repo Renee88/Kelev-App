@@ -35,11 +35,7 @@ body {
     max-height: 9rem;
     overflow: hidden;
   }
-  #amenities{
-    /* position: sticky; */
-    width: 100vw;
-    background-color: pink;
-  }
+  
   #inPark{
     display: inline-flex;
     text-align: center;
@@ -75,7 +71,6 @@ body {
     color:black;
     width: 100vw;
     height: 20vh;
-    padding: 20px;
     background-color: white;
   }
 

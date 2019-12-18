@@ -1,8 +1,8 @@
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import axios from 'axios';
 
 @inject("MapStore")
 @observer
@@ -13,8 +13,42 @@ class MapContainer extends Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
-            mins: 0
+            mins: '0 mins',
+            distance: 0
         };
+    }
+
+    onMarkerClick = async (props, marker, e) => {
+        await this.getDistance(marker.id)
+        this.setState({
+            selectedPlace: props,
+            activeMarker: marker,
+            showingInfoWindow: true
+        });
+    }
+
+    getDistance = (id) => {
+        let marker = this.props.MapStore.markers.find(m => m.id === id)
+        let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
+        let destination = `${marker.position.lat},${marker.position.lng}`
+        axios.post('http://localhost:4000/distance', { origin, destination })
+            .then(res => {
+                console.log(res.data.rows[0].elements[0])
+                this.setState({
+                    mins: res.data.rows[0].elements[0].duration.text,
+                    meters: res.data.rows[0].elements[0].distance.value
+                })
+            })
+            .catch(err => console.log(`unable to get distance, ${err}`))
+    }
+
+    onClose = props => {
+        if (this.state.showingInfoWindow) {
+            this.setState({
+                showingInfoWindow: false,
+                activeMarker: null
+            })
+        }
     }
 
     componentDidMount = async () => {
@@ -52,8 +86,9 @@ class MapContainer extends Component {
                     }}
                 />
 
-                {this.props.MapStore.markers.map(m =>
+                {this.props.MapStore.markers.map((m, i) =>
                     <Marker
+                        key={i}
                         onClick={this.onMarkerClick}
                         id={m.id}
                         position={m.position}
@@ -70,7 +105,6 @@ class MapContainer extends Component {
                             <hr></hr>
                             <div>4 dogs at the park</div>
                         </Link>
-
                     </Router>
                 </InfoWindow>
             </Map>

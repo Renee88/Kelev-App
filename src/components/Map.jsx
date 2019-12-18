@@ -2,13 +2,9 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import PopUp from './PopUp';
-<<<<<<< HEAD
-import DogsInPark from './DogsInPark';
-=======
 import Park from './Park';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
->>>>>>> master
 
 @inject("MapStore")
 @observer
@@ -104,13 +100,7 @@ class MapContainer extends Component {
                     </Router>
 
                 </InfoWindow>
-<<<<<<< HEAD
-                <DogsInPark />
-=======
 
-
-
->>>>>>> master
             </Map>
 
 

@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 const dogs = require("../dummyData/dogs.json")
 
 class DogsInPark extends Component {
-   
     
     render() {  
-       let dog = dogs.map(d => d.picture)
-       console.log(dog);
-       
         return (
             <div>
-               <img src={this.dog}></img>
+                <div id="spans">
+                <span id="atThePark">3 at the park</span><span id="onTheWay">2 on the way</span>
+                </div>
+                <div id="inPark">
+               {dogs.map(d => <div>
+                  <img id="pic" src={d.picture}></img> <span id="name">{d.dog_name} </span>
+               </div> )}
             </div>
-            
+            </div>
         );
     }
 }

@@ -38,10 +38,10 @@ export class MapStore {
             .catch(err => console.log(`unable to get distance, ${err}`))
     }
 
-    @action getDirections = () => {
-        axios.post('http://localhost:4000/directions')
-            .then(res => console.log(res))
-    }
+    // @action getDirections = () => {
+    //     axios.post('http://localhost:4000/directions')
+    //         .then(res => console.log(res))
+    // }
 
     @action getLocation = () => {
         if (navigator.geolocation) {

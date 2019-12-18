@@ -22,5 +22,5 @@ router.post('/directions', (req, res) => {
         .then(response => res.send(response.data))
 })
 
-"https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
+// "https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 module.exports = router

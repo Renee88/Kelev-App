@@ -20,7 +20,7 @@ const loadDogs = function (dogs) {
 
 const loadOwners = async function (owners) {
     for (let owner of owners) {
-        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.owner_name}','${owner.picture}','${owner.email},1')`)
+        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.name}','${owner.picture}','${owner.email},1')`)
     }
 }
 

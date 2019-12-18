@@ -18,7 +18,7 @@ USE sql_intro;
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     owner_name VARCHAR(50),
 --     owner_picture VARCHAR(80),
---     email VARCHAR(80)
+--     email VARCHAR(80),
 --     owner_status TINYINT DEFAULT 1
 -- );
 

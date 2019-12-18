@@ -4,6 +4,7 @@ import '../styles/parkComponent/mainComponent.css';
 import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
 // import { observer, inject } from 'mobx-react';
+import ParkPictures from './ParkPictures';
 
 import { Layout } from 'antd';
 
@@ -22,8 +23,10 @@ class Park extends Component {
             <div className="parkComponent">
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
-                <Content id="inside">renne park pictures</Content>
-                renne park details
+                <Content id="inside">
+                    <ParkPictures />
+                </Content>
+                
                   
               </Content>
               

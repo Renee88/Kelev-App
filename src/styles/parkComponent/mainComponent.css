@@ -2,49 +2,51 @@
 
 
 body {
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
   }
 
-
-/* #parkLayout{
-    background-color: black
-} */
 
 .ant-layout-content {
     display: block;
     background: rgba(16, 142, 233, 1);
     color: #fff;
-    /* min-height: 120px; */
-    /* line-height: 120px; */
   }
 
   #info{
       background-color: black;
       height: 12rem;
+      width: 100vw;
   }
 
 
   #inside {
-      position: relative;
-      width: 100vh;
+      /* position: sticky; */
+      width: 100vw;
       height: 10rem;
       background-color: yellow;
   }
 
   
   #dogs{
-    width: 100vh;
-    position: relative;
-    height: rem;
+    width: 100vw;
+    /* position: sticky; */
+    max-height: 9rem;
 
 
   }
 
   #amenities{
-    position: relative;
+    /* position: sticky; */
+    width: 100vw;
+    background-color: pink;
+  }
 
-    width: 100vh;
-
-      background-color: pink;
+  .parkPictures { 
+      position: absolute;
+      height: 20px;
   }

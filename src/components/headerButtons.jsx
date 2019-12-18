@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css';
 import { Button } from 'antd'
+import ChatButton from './ChatButton';
+import ProfileButton from './profileButton';
 // import { observer, inject } from 'mobx-react';
 
 
@@ -14,18 +16,8 @@ class HeaderButtons extends Component {
 
         return (
             <div className="headerButtons">
-
-                <div className="profileButton">
-                    <Button id="profileBtn" type="primary" shape="circle"  >
-
-                    </Button>
-                </div>
-
-                <div className="chatButton">
-                    <Button id="chatBtn" type="primary" shape="circle"  >
-
-                    </Button>
-                </div>
+                <ProfileButton />
+                <ChatButton />
             </div>
         );
     }

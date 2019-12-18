@@ -46,10 +46,10 @@ export class MapStore {
             return marker.distance
     }
 
-    // @action getDirections = () => {
-    //     axios.post('http://localhost:4000/directions')
-    //         .then(res => console.log(res))
-    // }
+    @action getDirections = () => {
+        axios.post('http://localhost:4000/directions')
+            .then(res => console.log(res))
+    }
 
     @action getLocation = () => {
         if (navigator.geolocation) {

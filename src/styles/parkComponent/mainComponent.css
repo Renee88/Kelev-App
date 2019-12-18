@@ -23,7 +23,7 @@ body {
       width: 100vw;
   }
   #inside {
-      /* position: sticky; */
+      position: relative;
       width: 100vw;
       height: 10rem;
       background-color: yellow;
@@ -31,7 +31,7 @@ body {
   
   #dogs{
     width: 100vw;
-    /* position: sticky; */
+    position: relative;
     max-height: 9rem;
     overflow: hidden;
   }
@@ -56,6 +56,7 @@ body {
     display: inline-block;
     color: black;
     position: relative;
+
     top: 4px
   }
   #atThePark{
@@ -69,3 +70,31 @@ body {
     bottom: 10px
   }
   
+#amenities{
+    position:relative;
+    color:black;
+    width: 100vw;
+    height: 20vh;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .Amenity{
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    height: 50px;
+    background-color: rgba(5, 101, 190, 0.726);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .amenities-container{
+    margin:10px;
+    text-align: center;
+  }
+

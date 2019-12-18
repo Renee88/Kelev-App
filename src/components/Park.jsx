@@ -7,7 +7,7 @@ import DogsInPark from './DogsInPark';
 // import { observer, inject } from 'mobx-react';
 
 import { Layout } from 'antd';
-
+import Ameneties from  './Ameneties'
 const { Header, Footer, Sider, Content } = Layout;
 
 
@@ -30,7 +30,7 @@ class Park extends Component {
               
                 <Content id="dogs"><DogsInPark /></Content>
              
-                <Content id="amenities">gili amenities </Content>
+                <Content id="amenities"><Ameneties/> </Content>
             </Layout>
             </div>
         );

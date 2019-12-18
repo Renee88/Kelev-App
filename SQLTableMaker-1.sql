@@ -1,36 +1,5 @@
 USE sql_intro;
 
-<<<<<<< HEAD
-CREATE TABLE dogs (
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    dog_name VARCHAR(20),
-    dog_picture VARCHAR(80),
-    gender VARCHAR(6),
-    age TINYINT,
-    weight TINYINT,
-    vaccinated BOOLEAN,
-    neutered BOOLEAN,
-    status TINYINT
-);
-
-
-
-CREATE TABLE owners(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    owner_name VARCHAR(50),
-    owner_picture VARCHAR(80),
-    email VARCHAR(80),
-    status TINYINT
-);
-
-CREATE TABLE dog_owner(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    owner_id INT,
-    dog_id INT,
-    FOREIGN KEY (owner_id) REFERENCES owners(id),
-    FOREIGN KEY (dog_id) REFERENCES dogs(id)
-);
-=======
 -- CREATE TABLE dogs (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     dog_name VARCHAR(20),
@@ -60,7 +29,7 @@ CREATE TABLE dog_owner(
 --     FOREIGN KEY (owner_id) REFERENCES owners(id),
 --     FOREIGN KEY (dog_id) REFERENCES dogs(id)
 -- );
->>>>>>> master
+
 
 -- DROP TABLE parks;
 
@@ -98,14 +67,5 @@ INSERT INTO status VALUES (null,"onTheWay");
 INSERT INTO status VALUES (null,"inThePark");
 
 
-<<<<<<< HEAD
-=======
-
--- ALTER TABLE owners
--- ADD owner_status TINYINT;
-
--- ALTER TABLE dogs
--- ADD dog_status TINYINT;
->>>>>>> master
 
 

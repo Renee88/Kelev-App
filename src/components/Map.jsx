@@ -62,7 +62,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-
+                
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
@@ -77,7 +77,7 @@ class MapContainer extends Component {
                 />
 
                 {this.props.MapStore.markers.map(m =>
-                    <Marker
+                    <Marker 
                         onClick={this.onMarkerClick}
                         id={m.id}
                         position={m.position}

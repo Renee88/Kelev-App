@@ -8,11 +8,11 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons'
 
 
 
-@inject("ownerStore")
+@inject("ownerStore","MapStore")
 @observer
 
 class StatusButton extends Component {
-
+    
     render() {
 
         let ownerStore = this.props.ownerStore

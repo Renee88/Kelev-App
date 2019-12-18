@@ -5,7 +5,7 @@ import Park from './Park';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
-@inject("MapStore")
+@inject("MapStore","ownerStore")
 @observer
 class MapContainer extends Component {
     constructor() {
@@ -34,11 +34,13 @@ class MapContainer extends Component {
         let destination = `${marker.position.lat},${marker.position.lng}`
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
+                
                 console.log(res.data.rows[0].elements[0])
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
-                })
+                },this.beAtThePark)
+               
             })
             .catch(err => console.log(`unable to get distance, ${err}`))
     }
@@ -52,8 +54,18 @@ class MapContainer extends Component {
         }
     }
 
+    beAtThePark = async () => {
+        if(this.state.meters < 100){
+            if(this.props.ownerStore.status === 2){
+                console.log(this.props.ownerStore.status)
+                await this.props.ownerStore.changeUserStatus()
+            }
+        }
+    }
+
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
+        
     }
 
     render() {
@@ -73,7 +85,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-
+                
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude

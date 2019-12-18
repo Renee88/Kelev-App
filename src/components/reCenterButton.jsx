@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Button } from 'antd'
-
+import { Button } from 'antd';
 import { observer, inject } from 'mobx-react';
-
 
 @inject("MapStore")
 @observer

@@ -17,18 +17,10 @@ router.post('/distance', (req, res) => {
     })
 })
 
-router.post('./directions', (req, res) => {
+router.post('/directions', (req, res) => {
     requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
-        .then(() => console.log(result))
-        .then(res.send(result))
+        .then(response => res.send(response.data))
 })
 
-
-<<<<<<< HEAD
 "https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 module.exports = router
-=======
-// const chosenCity = "telaviv"
-// `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=${apiKey}`
-// module.exports = router
->>>>>>> master

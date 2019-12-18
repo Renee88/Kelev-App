@@ -40,7 +40,7 @@ export class MapStore {
 
     @action getDirections = () => {
         axios.post('http://localhost:4000/directions')
-        .then(res => console.log(res))
+            .then(res => console.log(res))
     }
 
     @action getLocation = () => {
@@ -50,6 +50,7 @@ export class MapStore {
             alert("Geolocation is not supported by this browser.")
         }
     }
+
 
     @action getCoordinates = (position) => {
         this.location["latitude"] = position.coords.latitude

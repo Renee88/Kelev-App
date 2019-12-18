@@ -1,7 +1,11 @@
 import { observable, action, computed } from 'mobx';
 import axios from 'axios';
+import ParksStore from './ParksStore';
 
 export class MapStore {
+    
+    @observable location = {}
+    
     @observable markers = [
         {
             name: 'park',
@@ -14,7 +18,10 @@ export class MapStore {
         }
     ];
 
-    @observable location = {}
+
+    @action getParks(parks){
+        this.markers = [...this.markers,...parks]
+    }
 
     @computed get latitude() {
         return this.location.latitude
@@ -31,11 +38,11 @@ export class MapStore {
         let travelMode = 'WALKING'
          await axios.post('http://localhost:4000/distance', { origin, destination, travelMode })
             .then(res => {
-                marker.distance.meters = res.data.distance.value
-                marker.distance.minutes = res.data.duration.text
+                // marker.distance.meters = res.data.distance.value
+                marker.distance = res.data.duration.text
             })
             .catch(err => console.log(`unable to get distance, ${err}`))
-            return marker.distance.minutes
+            return marker.distance
     }
 
     // @action getDirections = () => {

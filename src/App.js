@@ -7,9 +7,19 @@ import HeaderButtons from './components/headerButtons';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
 
+import { inject, observer } from 'mobx-react';
 
+@inject("parksStore","MapStore")
+@observer
+class App extends Component {
+  
+  async componentDidMount(){
+    await this.props.parksStore.loadParks()
+    const parks = this.props.parksStore.parks
+    this.props.MapStore.getParks(parks)
+  }
 
-function App() {
+   render() {
   return (
 <Router >
 
@@ -27,6 +37,7 @@ function App() {
     </div>
     </Router>
   );
+ }
 }
-
 export default App;
+

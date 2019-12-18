@@ -39,7 +39,7 @@ class MapContainer extends Component {
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
-                })
+                },this.beAtThePark)
                
             })
             .catch(err => console.log(`unable to get distance, ${err}`))

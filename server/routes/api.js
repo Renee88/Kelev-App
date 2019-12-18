@@ -54,6 +54,7 @@ router.get('/park',async function(req,res){
     .then(function(results){
         const parks = results[0]
         const randomNumber = Math.floor(Math.random() * parks.length)
+        res.send(parks[randomNumber])
     })
 })
 

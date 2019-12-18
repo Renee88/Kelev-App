@@ -2,14 +2,10 @@ const dogs = require('./src/dummyData/dogs.json')
 const parks = require('./src/dummyData/dogParks.json')
 const owners = require('./src/dummyData/owners.json')
 const Sequelize = require('sequelize')
-<<<<<<< HEAD
 const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
-=======
-// const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
-const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
->>>>>>> b2acb1df2dc5a2957e751c25ed65824c346c9f6f
+
 const loadDogs = function (dogs) {
     for (let dog of dogs) {
         dog.vaccinated ? dog.vaccinated = 1 : dog.vaccinated = 0
@@ -62,8 +58,5 @@ const loadParks = async function(parks){
 // loadDogs(dogs)
 // loadOwners(owners)
 // loadParks(parks)
-<<<<<<< HEAD
 // loadOwnersAndDogs(owners)
-=======
-loadOwnersAndDogs(owners)
->>>>>>> b2acb1df2dc5a2957e751c25ed65824c346c9f6f
+

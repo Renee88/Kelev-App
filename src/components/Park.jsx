@@ -1,29 +1,26 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
-import ChatButton from './ChatButton';
-import ProfileButton from './profileButton';
 import DogsInPark from './DogsInPark';
 import ParkPictures from './ParkPictures';
 import { Layout } from 'antd';
 import Amenities from  './Amenities'
 import ParkGeneralInfo from './ParkGeneralInfo';
-import { inject, observer } from 'mobx-react';
-const { Header, Footer, Sider, Content } = Layout;
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 
+const { Header, Footer, Sider, Content } = Layout;
 
 class Park extends Component {
 
 
     render() {
-        console.log(this.props.parksStore)
 
         return (
             <div className="parkComponent">
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
                 <Content id="inside">
-
+                    <Link to = "/"><div id = "back-button"><i class="fas fa-chevron-left"></i></div></Link>
                     <ParkPictures />
                 </Content>
                 <Content>

@@ -1,0 +1,42 @@
+{
+         "formatted_address" : "Emil Brigg St 6, Tel Aviv-Yafo, Israel",
+         "geometry" : {
+            "location" : {
+               "lat" : 32.1090013,
+               "lng" : 34.8229818
+            },
+            "viewport" : {
+               "northeast" : {
+                  "lat" : 32.11045372989271,
+                  "lng" : 34.82413327989272
+               },
+               "southwest" : {
+                  "lat" : 32.10775407010727,
+                  "lng" : 34.82143362010728
+               }
+            }
+         },
+         "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
+         "id" : "3e1ada84b4b0a188638589e971821e2bd5194a44",
+         "name" : "Frankfurt Dog's Playground",
+         "opening_hours" : {},
+         "photos" : [
+            {
+               "height" : 2976,
+               "html_attributions" : [
+                  "\u003ca href=\"https://maps.google.com/maps/contrib/105003642614890525632\"\u003enuly petel\u003c/a\u003e"
+               ],
+               "photo_reference" : "CmRaAAAAxJeDSsaNFq_LX7HsLFpJtVlhog5FkGIt24fvddpXuACkLNSp2qDJNkcVGwrKPvJoAsOR1PXsnwE8jjaQBOEhYX8wv4PkWbyvaoxdZ4vIjGbKrtUXoOlXKm6VZwBprXJ-EhAfUgNk2LF29XIV4UThxthXGhQbcXf30FuUCcuTdBiX1u_cTk5Kxg",
+               "width" : 3968
+            }
+         ],
+         "place_id" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "plus_code" : {
+            "compound_code" : "4R5F+J5 Tel Aviv-Yafo",
+            "global_code" : "8G4P4R5F+J5"
+         },
+         "rating" : 4.2,
+         "reference" : "ChIJZf4dvZxJHRURcpDK97EP5iM",
+         "types" : [ "park", "point_of_interest", "establishment" ],
+         "user_ratings_total" : 68
+      },

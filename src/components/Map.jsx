@@ -17,7 +17,7 @@ class MapContainer extends Component {
     }
 
     onMarkerClick = async (props, marker, e) => {
-        await this.props.MapStore.getDistance(marker.id)
+        let distance = await this.props.MapStore.getDistance(marker.id)
 
         this.setState({
             selectedPlace: props,
@@ -83,7 +83,7 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <div>{this.state.mins}</div>
+                    <div>{this.state.mins} away</div>
                     <hr></hr>
                     <div>4 dogs at the park</div>
                 </InfoWindow>

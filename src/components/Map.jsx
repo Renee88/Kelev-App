@@ -1,4 +1,4 @@
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import PopUp from './PopUp';
@@ -14,26 +14,6 @@ class MapContainer extends Component {
             selectedPlace: {},
             mins: 0
         };
-    }
-
-    onMarkerClick = async (props, marker, e) => {
-        let distance = await this.props.MapStore.getDistance(this.props.MapStore.markers[0].id)
-
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            mins: distance,
-            showingInfoWindow: true
-        });
-    }
-
-    onClose = props => {
-        if (this.state.showingInfoWindow) {
-            this.setState({
-                showingInfoWindow: false,
-                activeMarker: null
-            })
-        }
     }
 
     componentDidMount = async () => {
@@ -72,21 +52,9 @@ class MapContainer extends Component {
                 />
 
                 {this.props.MapStore.markers.map(m =>
-                    <Marker
-                        onClick={this.onMarkerClick}
-                        id={m.id}
-                        position={m.position}
-                    />)}
+                    )}
 
-                <InfoWindow
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}
-                    onClose={this.onClose}
-                >
-                    <div>{this.state.mins} away</div>
-                    <hr></hr>
-                    <div>4 dogs at the park</div>
-                </InfoWindow>
+                
             </Map>
         );
     }

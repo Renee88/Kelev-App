@@ -5,7 +5,8 @@ import ParksStore from './ParksStore';
 export class MapStore {
     
     @observable location = {}
-    
+    @observable activeMarker = {}
+    @observable showingInfoWindow = false
     @observable markers = [
         {
             name: 'park',
@@ -37,8 +38,8 @@ export class MapStore {
             let destination = `${marker.position.lat},${marker.position.lng}`
             axios.post('http://localhost:4000/distance', { origin, destination })
                 .then(res => {
+                    console.log(res.data.rows[0].elements[0].duration.text)
                     marker.distance = res.data.rows[0].elements[0].duration.text
-                    return marker.distance
                 })
                 .catch(err => console.log(`unable to get distance, ${err}`))
         }

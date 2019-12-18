@@ -17,7 +17,7 @@ class MapContainer extends Component {
     }
 
     onMarkerClick = async (props, marker, e) => {
-        let distance = await this.props.MapStore.getDistance(1)
+        let distance = await this.props.MapStore.getDistance(this.props.MapStore.markers[0].id)
 
         this.setState({
             selectedPlace: props,
@@ -27,7 +27,7 @@ class MapContainer extends Component {
         });
     }
 
-     onClose = props => {
+    onClose = props => {
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,
@@ -55,9 +55,8 @@ class MapContainer extends Component {
                 center={currentPosition}
                 onClick={this.onClose}
                 setCenter={currentPosition}
-                centerAroundCurrentLocation= {true}
-                
-                streetView = {false}
+                centerAroundCurrentLocation={true}
+                streetView={false}
 
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
@@ -84,7 +83,7 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <div>{this.state.mins}</div>
+                    <div>{this.state.mins} away</div>
                     <hr></hr>
                     <div>4 dogs at the park</div>
                 </InfoWindow>

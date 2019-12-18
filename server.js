@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const bodyParser = require('body-parser')
-const api = require('./src/server/routes/api')
+const api = require('./server/routes/api')
 const port = process.env.PORT || 4000
 
 

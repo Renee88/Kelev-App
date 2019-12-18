@@ -25,7 +25,6 @@ class ParkPictures extends Component {
                     </div>
                     <div>
                     <img id="img1" src={require('../pictures/2.jpg')} />
-
                     </div>
                     <div>
                     <img id="img1" src={require('../pictures/3.jpg')} />
@@ -34,6 +33,7 @@ class ParkPictures extends Component {
                     <img id="img1" src={require('../pictures/4.jpg')} />
                     </div>
                 </Carousel>
+
             </div>
         );
     }

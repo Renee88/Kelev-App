@@ -96,14 +96,14 @@ body {
     text-align: center;
   }
 
-  .ant-carousel .slick-slide {
-    /* position: absolute; */
-    overflow: hidden;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    line-height: 160px;
-  }
+  /* .ant-carousel .slick-slider { */
+    /* overflow: hidden; */
+    /* text-align: center; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* line-height: 150px; */
+  /* } */
+
   .parkPictures{
     max-height: 100%;
     overflow: hidden;
@@ -117,6 +117,12 @@ body {
 
     .ant-carousel{
       position: relative;
-      height: 100%;
+      /* height: 100%; */
+    }
 
+
+   .slick-dots-bottom{
+      position: relative;
+      /* top: 50;ss/ */
+      color: white;
     }

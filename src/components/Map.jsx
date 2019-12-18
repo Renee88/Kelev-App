@@ -77,7 +77,7 @@ class MapContainer extends Component {
                 />
 
                 {this.props.MapStore.markers.map(m =>
-                    <Marker
+                    <Marker 
                         onClick={this.onMarkerClick}
                         id={m.id}
                         position={m.position}

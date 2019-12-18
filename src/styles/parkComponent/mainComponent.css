@@ -27,14 +27,14 @@ body {
 
   #inside {
       position: relative;
-      width: 100vh;
+      width: 100vw;
       height: 10rem;
       background-color: yellow;
   }
 
   
   #dogs{
-    width: 100vh;
+    width: 100vw;
     position: relative;
     height: rem;
 
@@ -43,8 +43,28 @@ body {
 
   #amenities{
     position: relative;
+    color:black;
+    width: 100vw;
+    height: 20vh;
+    padding: 20px;
+    background-color: white;
+  }
 
-    width: 100vh;
+  .Amenity{
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    height: 50px;
+    background-color: rgba(5, 101, 190, 0.726);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+  }
 
-      background-color: pink;
+  .amenities-container{
+    margin:10px;
+    text-align: center;
   }

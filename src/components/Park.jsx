@@ -6,7 +6,7 @@ import ProfileButton from './profileButton';
 // import { observer, inject } from 'mobx-react';
 
 import { Layout } from 'antd';
-
+import Ameneties from  './Ameneties'
 const { Header, Footer, Sider, Content } = Layout;
 
 
@@ -29,7 +29,7 @@ class Park extends Component {
               
                 <Content id="dogs">dogs profiles mariana</Content>
              
-                <Content id="amenities">gili amenities </Content>
+                <Content id="amenities"><Ameneties/> </Content>
             </Layout>
             </div>
         );

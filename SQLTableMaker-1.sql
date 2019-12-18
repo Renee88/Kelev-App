@@ -33,15 +33,13 @@ USE sql_intro;
 -- CREATE TABLE parks(
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     park_name VARCHAR(50),
---     lng DEC,
---     lat DEC,
+--     lng VARCHAR(20),
+--     lat VARCHAR(20),
 --     address VARCHAR(80),
 --     park_picture VARCHAR(500),
 --     rating TINYINT
 -- );
 
--- ALTER TABLE parks
--- ADD rating TINYINT;
 
 -- CREATE TABLE status(
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

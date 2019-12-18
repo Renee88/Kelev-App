@@ -24,13 +24,12 @@ export class MapStore {
         return this.location.longitude
     }
 
-    @action getDistance = (id) => {
+    @action getDistance = async (id) => {
         let marker = this.markers.find(m => m.id === id)
         let destination = [`${marker.position.lat}, ${marker.position.lng}`]
         let origin = [`${this.location.latitude} ,${this.location.longitude}`]
         let travelMode = 'WALKING'
-
-        axios.post('http://localhost:4000/distance', { origin, destination, travelMode })
+         await axios.post('http://localhost:4000/distance', { origin, destination, travelMode })
             .then(res => {
                 marker.distance.meters = res.data.distance.value
                 marker.distance.minutes = res.data.duration.text

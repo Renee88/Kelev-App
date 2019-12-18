@@ -12,7 +12,8 @@ import DogsStore from './stores/DogsStore';
 const ownerStore = new OwnerStore()
 const MapStore = new mapStore()
 const parksStore = new ParksStore()
-const dogsStore = new DogsStore
+const dogsStore = new DogsStore()
+
 console.log(dogsStore)
 const stores = { MapStore , ownerStore, parksStore,dogsStore}
 

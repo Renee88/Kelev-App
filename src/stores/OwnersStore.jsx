@@ -1,8 +1,9 @@
 import { observable } from "mobx";
 
-@observable
 class OwnersStore {
-   
+    @observable owners = []
+
+    
 }
 
 export default OwnersStore;

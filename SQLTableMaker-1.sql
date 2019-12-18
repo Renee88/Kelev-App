@@ -66,4 +66,8 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"inThePark");
 
 
+-- INSERT INTO dog_owner VALUES(null,3,22);
+-- INSERT INTO dog_owner VALUES(null,10,23);
+-- INSERT INTO dog_owner VALUES(null,13,24);
+
 

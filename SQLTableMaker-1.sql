@@ -66,6 +66,10 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"onTheWay");
 -- INSERT INTO status VALUES (null,"inThePark");
 
+<<<<<<< HEAD
+-- DROP TABLE parks;
+=======
 
 
 
+>>>>>>> a84203c9e816ad241bffea2a589b500865c72b2c

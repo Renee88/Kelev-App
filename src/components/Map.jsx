@@ -1,9 +1,9 @@
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-
+import axios from 'axios';
 
 @inject("MapStore")
 @observer
@@ -14,19 +14,33 @@ class MapContainer extends Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
-            mins: 0
+            mins: '0 mins',
+            distance: 0
         };
     }
 
     onMarkerClick = async (props, marker, e) => {
-        let distance = await this.props.MapStore.getDistance(this.props.MapStore.markers[0].id)
-
+        await this.getDistance(marker.id)
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
-            mins: distance,
             showingInfoWindow: true
         });
+    }
+
+    getDistance = (id) => {
+        let marker = this.props.MapStore.markers.find(m => m.id === id)
+        let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
+        let destination = `${marker.position.lat},${marker.position.lng}`
+        axios.post('http://localhost:4000/distance', { origin, destination })
+            .then(res => {
+                console.log(res.data.rows[0].elements[0])
+                this.setState({
+                    mins: res.data.rows[0].elements[0].duration.text,
+                    meters: res.data.rows[0].elements[0].distance.value
+                })
+            })
+            .catch(err => console.log(`unable to get distance, ${err}`))
     }
 
     onClose = props => {
@@ -48,8 +62,6 @@ class MapContainer extends Component {
             lng: this.props.MapStore.location.longitude
         }
         return (
-            // <Router>
-
             <Map
                 google={this.props.google}
                 zoom={14}
@@ -61,7 +73,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-                
+
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
@@ -75,8 +87,9 @@ class MapContainer extends Component {
                     }}
                 />
 
-                {this.props.MapStore.markers.map(m =>
-                    <Marker 
+                {this.props.MapStore.markers.map((m, i) =>
+                    <Marker
+                        key={i}
                         onClick={this.onMarkerClick}
                         id={m.id}
                         position={m.position}
@@ -89,20 +102,13 @@ class MapContainer extends Component {
                 >
                     <Router>
                         <Link to="/park" style={{ textDecoration: "none" }} >
-                    <div>{this.state.mins} away</div>
-                    <hr></hr>
-
+                            <div>{this.state.mins} away</div>
+                            <hr></hr>
                             <div>4 dogs at the park</div>
                         </Link>
-                       
-
                     </Router>
-
                 </InfoWindow>
-
             </Map>
-
-
         );
     }
 }

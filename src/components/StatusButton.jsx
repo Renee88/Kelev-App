@@ -13,9 +13,6 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons'
 
 class StatusButton extends Component {
 
-
-    
-
     render() {
 
         let ownerStore = this.props.ownerStore

@@ -8,7 +8,8 @@ USE sql_intro;
 --     age TINYINT,
 --     weight TINYINT,
 --     vaccinated BOOLEAN,
---     neutered BOOLEAN
+--     neutered BOOLEAN,
+--     dog_status TINYINT DEFAULT 1
 -- );
 
 
@@ -18,6 +19,7 @@ USE sql_intro;
 --     owner_name VARCHAR(50),
 --     owner_picture VARCHAR(80),
 --     email VARCHAR(80)
+--     owner_status TINYINT DEFAULT 1
 -- );
 
 -- CREATE TABLE dog_owner(

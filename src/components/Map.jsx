@@ -2,6 +2,9 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import PopUp from './PopUp';
+import Park from './Park';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 
 @inject("MapStore")
 @observer
@@ -46,6 +49,8 @@ class MapContainer extends Component {
             lng: this.props.MapStore.location.longitude
         }
         return (
+            // <Router>
+
             <Map
                 google={this.props.google}
                 zoom={14}
@@ -57,7 +62,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-
+                
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
@@ -72,7 +77,7 @@ class MapContainer extends Component {
                 />
 
                 {this.props.MapStore.markers.map(m =>
-                    <Marker
+                    <Marker 
                         onClick={this.onMarkerClick}
                         id={m.id}
                         position={m.position}
@@ -83,11 +88,24 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
+                    <Router>
+                        <Link to="/park" style={{ textDecoration: "none" }} >
                     <div>{this.state.mins} away</div>
                     <hr></hr>
-                    <div>4 dogs at the park</div>
+
+                            <div>4 dogs at the park</div>
+                        </Link>
+                       
+
+                    </Router>
+
                 </InfoWindow>
+
+
+
             </Map>
+
+
         );
     }
 }

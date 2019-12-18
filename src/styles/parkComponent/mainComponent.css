@@ -1,0 +1,70 @@
+@import '~antd/dist/antd.css';
+
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+
+/* #parkLayout{
+    background-color: black
+} */
+
+.ant-layout-content {
+    display: block;
+    background: rgba(16, 142, 233, 1);
+    color: #fff;
+    /* min-height: 120px; */
+    /* line-height: 120px; */
+  }
+
+  #info{
+      background-color: black;
+      height: 12rem;
+  }
+
+
+  #inside {
+      position: relative;
+      width: 100vw;
+      height: 10rem;
+      background-color: yellow;
+  }
+
+  
+  #dogs{
+    width: 100vw;
+    position: relative;
+    height: rem;
+
+
+  }
+
+  #amenities{
+    position: relative;
+    color:black;
+    width: 100vw;
+    height: 20vh;
+    padding: 20px;
+    background-color: white;
+  }
+
+  .Amenity{
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    height: 50px;
+    background-color: rgba(5, 101, 190, 0.726);
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+    color: white;
+    font-size: 18px;
+    box-shadow: 1px 4px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .amenities-container{
+    margin:10px;
+    text-align: center;
+  }

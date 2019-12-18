@@ -43,6 +43,15 @@ router.get('/map', function (req, res) {
         })
 })
 
+router.get('/park',async function(req,res){
+    sequelize.query(`SELECT * FROM parks`)
+    .then(function(results){
+        const parks = results[0]
+        const randomNumber = Math.floor(Math.random() * parks.length)
+        res.send(parks[randomNumber])
+    })
+})
+
 router.get('/dogs', function (req, res) {
     sequelize.query(`SELECT * FROM dogs`)
         .then(function (results) {
@@ -87,6 +96,7 @@ router.put('/dog-profile', function (req, res) {
         })
 })
 
+
 router.post('/dog-profile', async function (req, res) {
     const newDog = req.body
     newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
@@ -106,6 +116,11 @@ router.post('/dog-profile', async function (req, res) {
 
 
 })
+
+router.delete('/dog-profile',function(req,res){
+    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+})
+
 
 // `https://maps.googleapis.com/maps/api/place/photo?photoreference=${photoReference}key=${apiKey}`
 // `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&language=en&key=${apiKey}`

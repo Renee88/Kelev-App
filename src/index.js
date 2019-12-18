@@ -13,6 +13,8 @@ const ownerStore = new OwnerStore()
 const MapStore = new mapStore()
 const parksStore = new ParksStore()
 const dogsStore = new DogsStore
+const dogsStore = new DogsStore()
+
 const stores = { MapStore , ownerStore, parksStore,dogsStore}
 
 ReactDOM.render(<Provider {...stores}><App /></Provider>, document.getElementById('root'));

@@ -1,6 +1,7 @@
 import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
+import Park from './Park';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 

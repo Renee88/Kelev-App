@@ -18,12 +18,14 @@ class OwnerStore {
             this.status = 1
 
         }
-
+        return this.status
     }
 
     @action changeUserStatus = async () => {
         let owner =  await axios.get('http://localhost:4000/owner')
-        this.changeStatus(owner.owner_status)
+        console.log(owner.data[0].owner_status)
+        let newStatus = this.changeStatus(owner.data.owner_status)
+        await axios.put('http://localhost:4000/owner', {userStatus: newStatus })
     }
 
 

@@ -66,6 +66,16 @@ router.get('/owner', function (req, res) {
         
 })
 
+router.put('/owner', function (req, res) {
+    let userStatus = req.body.userStatus
+    sequelize.query(`UPDATE owners 
+    SET owner_status = '${userStatus}' WHERE owners.id = 1`)
+    
+        res.send("done")
+    
+        
+})
+
 router.put('/dog-profile', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName

@@ -3,6 +3,7 @@ import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
 import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
+import DogsInPark from './DogsInPark';
 // import { observer, inject } from 'mobx-react';
 
 import { Layout } from 'antd';
@@ -27,7 +28,7 @@ class Park extends Component {
                   
               </Content>
               
-                <Content id="dogs">dogs profiles mariana</Content>
+                <Content id="dogs"><DogsInPark /></Content>
              
                 <Content id="amenities"><Ameneties/> </Content>
             </Layout>

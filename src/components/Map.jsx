@@ -101,8 +101,6 @@ class MapContainer extends Component {
 
                 </InfoWindow>
 
-
-
             </Map>
 
 

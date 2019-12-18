@@ -67,10 +67,3 @@ USE sql_intro;
 
 
 
--- ALTER TABLE owners
--- ADD owner_status TINYINT;
-
--- ALTER TABLE dogs
--- ADD dog_status TINYINT;
-
-

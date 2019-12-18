@@ -10,6 +10,7 @@ class DogStore  {
     @observable vaccinated
     @observable neutered
     @observable owner
+    @observable status
 }
 
 export default DogStore;

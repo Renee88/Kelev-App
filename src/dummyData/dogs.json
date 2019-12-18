@@ -1,0 +1,212 @@
+[
+    {
+        "dog_name": "Leo",
+        "picture": "https://images.dog.ceo/breeds/chow/n02112137_7645.jpg",
+        "gender": "male",
+        "age": "1",
+        "weight": "20",
+        "vaccinated": true,
+        "neutered": true
+    },
+    {
+        "dog_name": "Angie",
+        "picture": "https://images.dog.ceo/breeds/labrador/n02099712_7497.jpg",
+        "gender": "female",
+        "age": "7",
+        "weight": "4",
+        "vaccinated": true,
+        "neutered": true
+    },
+    {
+        "dog_name": "Boo",
+        "picture": "https://images.dog.ceo/breeds/pomeranian/n02112018_1556.jpg",
+        "gender": "male",
+        "age": "5",
+        "weight": "5",
+        "vaccinated": true,
+        "neutered": false
+    },
+    
+    {
+        "dog_name": "Lucky",
+        "picture": "https://images.dog.ceo/breeds/beagle/n02088364_13028.jpg",
+        "gender": "female",
+        "age": "2",
+        "weight": "15",
+        "vaccinated": true,
+        "neutered": false
+    },
+    {
+        "dog_name": "Honey",
+        "picture": "https://images.dog.ceo/breeds/setter-irish/n02100877_2686.jpg",
+        "gender": "female",
+        "age": "2",
+        "weight": "15",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Toni",
+        "picture": "https://images.dog.ceo/breeds/rottweiler/n02106550_5133.jpg",
+        "gender": "male",
+        "age": "4",
+        "weight": "40",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Napoleon",
+        "picture": "https://images.dog.ceo/breeds/komondor/n02105505_2037.jpg",
+        "gender": "female",
+        "age": "7",
+        "weight": "10",
+        "vaccinated": true,
+        "neutered": false
+    },
+    
+    {
+        "dog_name": "Richie",
+        "picture": "https://images.dog.ceo/breeds/terrier-fox/n02095314_1116.jpg",
+        "gender": "male",
+        "age": "6",
+        "weight": "17",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Chance",
+        "picture": "https://images.dog.ceo/breeds/terrier-lakeland/n02095570_5820.jpg",
+        "gender": "male",
+        "age": "12",
+        "weight": "12",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Bobbi",
+        "picture": "https://images.dog.ceo/breeds/bouvier/n02106382_1311.jpg",
+        "gender": "male",
+        "age": "8",
+        "weight": "45",
+        "vaccinated": true,
+        "neutered": false
+    },
+
+    {
+        "dog_name": "Laura",
+        "picture": "https://images.dog.ceo/breeds/dane-great/n02109047_1371.jpg",
+        "gender": "female",
+        "age": "3",
+        "weight": "45",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Ella",
+        "picture": "https://images.dog.ceo/breeds/spaniel-japanese/n02085782_4438.jpg",
+        "gender": "female",
+        "age": "1",
+        "weight": "45",
+        "vaccinated": false,
+        "neutered": false
+    },
+
+    {
+        "dog_name": "Robbie",
+        "picture": "https://images.dog.ceo/breeds/mastiff-english/4.jpg",
+        "gender": "male",
+        "age": "5",
+        "weight": "45",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Chip",
+        "picture": "https://images.dog.ceo/breeds/terrier-australian/n02096294_8157.jpg",
+        "gender": "male",
+        "age": "3",
+        "weight": "3",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    
+    {
+        "dog_name": "Chili",
+        "picture": "https://images.dog.ceo/breeds/papillon/n02086910_2671.jpg",
+        "gender": "female",
+        "age": "1",
+        "weight": "2",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Kamil",
+        "picture": "https://images.dog.ceo/breeds/eskimo/n02109961_7100.jpg",
+        "gender": "female",
+        "age": "0.5",
+        "weight": "8",
+        "vaccinated": true,
+        "neutered": false
+    },
+
+    
+
+    {
+        "dog_name": "Charlie",
+        "picture": "https://images.dog.ceo/breeds/appenzeller/n02107908_5112.jpg",
+        "gender": "female",
+        "age": "0.8",
+        "weight": "15",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Mango",
+        "picture":  "https://images.dog.ceo/breeds/mountain-swiss/n02107574_2662.jpg",
+        "gender": "male",
+        "age": "2",
+        "weight": "15",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Berta",
+        "picture":  "https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg",
+        "gender": "female",
+        "age": "2",
+        "weight": "5",
+        "vaccinated": true,
+        "neutered": true
+    },
+
+    {
+        "dog_name": "Mongo",
+        "picture":  "https://images.dog.ceo/breeds/bulldog-english/jager-1.jpg",
+        "gender": "male",
+        "age": "5",
+        "weight": "50",
+        "vaccinated": false,
+        "neutered": false
+    },
+
+    {
+        "dog_name": "Jeff",
+        "picture":  "https://images.dog.ceo/breeds/spaniel-welsh/n02102177_3447.jpg",
+        "gender": "male",
+        "age": "5",
+        "weight": "50",
+        "vaccinated": false,
+        "neutered": true
+    }
+
+]

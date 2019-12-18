@@ -20,6 +20,6 @@ router.post('/distance', (req, res, next) => {
 "https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 module.exports = router
 
-const chosenCity = "telaviv"
-`https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=${apiKey}`
-module.exports = router
+// const chosenCity = "telaviv"
+// `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&key=${apiKey}`
+// module.exports = router

@@ -7,12 +7,14 @@ import * as serviceWorker from './serviceWorker';
 import { MapStore as mapStore } from './stores/MapStore';
 import OwnerStore  from './stores/OwnerStore';
 import ParksStore from './stores/ParksStore';
+import DogsStore from './stores/DogsStore';
 
 const ownerStore = new OwnerStore()
 const MapStore = new mapStore()
 const parksStore = new ParksStore()
-console.log(parksStore)
-const stores = { MapStore , ownerStore, parksStore}
+const dogsStore = new DogsStore
+console.log(dogsStore)
+const stores = { MapStore , ownerStore, parksStore,dogsStore}
 
 ReactDOM.render(<Provider {...stores}><App /></Provider>, document.getElementById('root'));
 

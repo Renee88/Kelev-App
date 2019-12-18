@@ -3,11 +3,12 @@ import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
 import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
+import DogsInPark from './DogsInPark';
 // import { observer, inject } from 'mobx-react';
 import ParkPictures from './ParkPictures';
 
 import { Layout } from 'antd';
-
+import Ameneties from  './Ameneties'
 const { Header, Footer, Sider, Content } = Layout;
 
 
@@ -30,9 +31,9 @@ class Park extends Component {
                   
               </Content>
               
-                <Content id="dogs">dogs profiles mariana</Content>
+                <Content id="dogs"><DogsInPark /></Content>
              
-                <Content id="amenities">gili amenities </Content>
+                <Content id="amenities"><Ameneties/> </Content>
             </Layout>
             </div>
         );

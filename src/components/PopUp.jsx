@@ -4,7 +4,6 @@ class PopUp extends Component {
     render() {
         return (
             <div>
-                {this.props.park}
             </div>
             
         );

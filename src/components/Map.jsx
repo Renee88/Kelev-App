@@ -17,7 +17,7 @@ class MapContainer extends Component {
     }
 
     onMarkerClick = async (props, marker, e) => {
-        let distance = await this.props.MapStore.getDistance(marker.id)
+        let distance = await this.props.MapStore.getDistance(this.props.MapStore.markers[0].id)
 
         this.setState({
             selectedPlace: props,
@@ -27,7 +27,7 @@ class MapContainer extends Component {
         });
     }
 
-     onClose = props => {
+    onClose = props => {
         if (this.state.showingInfoWindow) {
             this.setState({
                 showingInfoWindow: false,
@@ -57,7 +57,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-                
+
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude

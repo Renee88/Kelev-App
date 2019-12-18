@@ -19,6 +19,30 @@ router.post('/directions', (req, res) => {
         .then(response => res.send(response.data))
 })
 
+router.get('/map', function (req, res) {
+    sequelize.query(`SELECT * FROM parks`)
+        .then(function (results) {
+            let parks = results[0]
+            console.log(parks)
+            parks = parks.map(p => {
+                return {
+                    id: p.id,
+                    park_name: p.park_name,
+                    position: {
+                        lng: p.lng,
+                        lat: p.lat
+                    },
+                    address: p.address,
+                    park_picture: p.park_picture,
+                    rating: p.rating
+
+                }
+            })
+
+            res.send(parks)
+        })
+})
+
 // `https://maps.googleapis.com/maps/api/place/photo?photoreference=${photoReference}key=${apiKey}`
 // `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&language=en&key=${apiKey}`
 module.exports = router

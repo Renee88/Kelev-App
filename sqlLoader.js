@@ -16,7 +16,7 @@ const loadDogs = function (dogs) {
     }
 }
 
-// loadDogs(dogs)
+
 
 const loadOwners = async function (owners) {
     for (let owner of owners) {
@@ -24,7 +24,7 @@ const loadOwners = async function (owners) {
     }
 }
 
-// loadOwners(owners)
+
 
 const loadOwnersAndDogs = async function (owners) {
     for (let owner of owners) {
@@ -41,7 +41,6 @@ const loadOwnersAndDogs = async function (owners) {
     }
 }
 
-// loadOwnersAndDogs(owners)
 
 
 const loadParks = async function(parks){
@@ -53,4 +52,7 @@ const loadParks = async function(parks){
     }
 }
 
-loadParks(parks)
+// loadDogs(dogs)
+// loadOwners(owners)
+// loadParks(parks)
+// loadOwnersAndDogs(owners)

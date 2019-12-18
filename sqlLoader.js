@@ -12,7 +12,7 @@ const loadDogs = function (dogs) {
         sequelize.query(`INSERT INTO dogs 
         VALUES(null,'${dog.dog_name}', '${dog.picture}',
          '${dog.gender}',${dog.age},${dog.weight},
-        ${dog.vaccinated}, ${dog.neutered}) `)
+        ${dog.vaccinated}, ${dog.neutered},1) `)
     }
 }
 
@@ -20,7 +20,7 @@ const loadDogs = function (dogs) {
 
 const loadOwners = async function (owners) {
     for (let owner of owners) {
-        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.name}','${owner.picture}','${owner.email}')`)
+        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.name}','${owner.picture}','${owner.email},1')`)
     }
 }
 

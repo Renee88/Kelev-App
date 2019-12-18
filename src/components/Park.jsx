@@ -27,9 +27,7 @@ class Park extends Component {
                 <Content id="inside">
                     <ParkPictures />
                 </Content>
-                
-                  
-              </Content>
+                </Content>
               
                 <Content id="dogs"><DogsInPark /></Content>
              

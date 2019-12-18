@@ -2,8 +2,8 @@ const dogs = require('./src/dummyData/dogs.json')
 const parks = require('./src/dummyData/dogParks.json')
 const owners = require('./src/dummyData/owners.json')
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
-// const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
+// const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
+const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const loadDogs = function (dogs) {
     for (let dog of dogs) {
         dog.vaccinated ? dog.vaccinated = 1 : dog.vaccinated = 0
@@ -12,7 +12,7 @@ const loadDogs = function (dogs) {
         sequelize.query(`INSERT INTO dogs 
         VALUES(null,'${dog.dog_name}', '${dog.picture}',
          '${dog.gender}',${dog.age},${dog.weight},
-        ${dog.vaccinated}, ${dog.neutered}) `)
+        ${dog.vaccinated}, ${dog.neutered},1) `)
     }
 }
 
@@ -20,7 +20,7 @@ const loadDogs = function (dogs) {
 
 const loadOwners = async function (owners) {
     for (let owner of owners) {
-        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.name}','${owner.picture}','${owner.email}')`)
+        await sequelize.query(`INSERT INTO owners VALUES(null,'${owner.owner_name}','${owner.picture}','${owner.email}',1)`)
     }
 }
 
@@ -54,5 +54,5 @@ const loadParks = async function(parks){
 
 // loadDogs(dogs)
 // loadOwners(owners)
-loadParks(parks)
-// loadOwnersAndDogs(owners)
+// loadParks(parks)
+loadOwnersAndDogs(owners)

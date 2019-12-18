@@ -57,6 +57,15 @@ router.get('/dogs', function (req, res) {
         })
 })
 
+router.get('/owner', function (req, res) {
+    sequelize.query(`SELECT * FROM owners WHERE owners.id = 1`)
+    .then(function (results) {
+        const owner = results[0]
+        res.send(owner)
+    })
+        
+})
+
 router.put('/dog-profile', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName

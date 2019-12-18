@@ -18,7 +18,7 @@ USE sql_intro;
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     owner_name VARCHAR(50),
 --     owner_picture VARCHAR(80),
---     email VARCHAR(80)
+--     email VARCHAR(80),
 --     owner_status TINYINT DEFAULT 1
 -- );
 
@@ -33,21 +33,21 @@ USE sql_intro;
 
 -- DROP TABLE parks;
 
-CREATE TABLE parks(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    park_name VARCHAR(50),
-    lng VARCHAR(20),
-    lat VARCHAR(20),
-    address VARCHAR(80),
-    park_picture VARCHAR(500),
-    rating TINYINT
-);
+-- CREATE TABLE parks(
+--     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     park_name VARCHAR(50),
+--     lng VARCHAR(20),
+--     lat VARCHAR(20),
+--     address VARCHAR(80),
+--     park_picture VARCHAR(500),
+--     rating TINYINT
+-- );
 
 
-CREATE TABLE status(
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    status VARCHAR(20)
-);
+-- CREATE TABLE status(
+--     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+--     status VARCHAR(20)
+-- );
 
 
 
@@ -62,9 +62,9 @@ CREATE TABLE status(
 --     FOREIGN KEY (park_id) REFERENCES parks(id)
 -- );
 
-INSERT INTO status VALUES (null,"standby");
-INSERT INTO status VALUES (null,"onTheWay");
-INSERT INTO status VALUES (null,"inThePark");
+-- INSERT INTO status VALUES (null,"standby");
+-- INSERT INTO status VALUES (null,"onTheWay");
+-- INSERT INTO status VALUES (null,"inThePark");
 
 
 

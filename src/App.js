@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Map from './components/Map'
 import StatusButton from './components/StatusButton';
+import ReCenterButton from './components/reCenterButton';
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Map />
       <StatusButton />
+      <ReCenterButton/>
     </div>
   );
 }

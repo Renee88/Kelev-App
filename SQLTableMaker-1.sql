@@ -8,7 +8,8 @@ USE sql_intro;
 --     age TINYINT,
 --     weight TINYINT,
 --     vaccinated BOOLEAN,
---     neutered BOOLEAN
+--     neutered BOOLEAN,
+--     dog_status TINYINT DEFAULT 1
 -- );
 
 
@@ -18,6 +19,7 @@ USE sql_intro;
 --     owner_name VARCHAR(50),
 --     owner_picture VARCHAR(80),
 --     email VARCHAR(80)
+--     owner_status TINYINT DEFAULT 1
 -- );
 
 -- CREATE TABLE dog_owner(
@@ -63,9 +65,12 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"onTheWay");
 -- INSERT INTO status VALUES (null,"inThePark");
 
--- DROP TABLE parks;
 
--- ALTER TABLE parks
--- ALTER COLUMN park_picture VARCHAR(500);
+
+-- ALTER TABLE owners
+-- ADD owner_status TINYINT;
+
+-- ALTER TABLE dogs
+-- ADD dog_status TINYINT;
 
 

@@ -2,6 +2,7 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import PopUp from './PopUp';
+import DogsInPark from './DogsInPark';
 
 @inject("MapStore")
 @observer
@@ -87,6 +88,7 @@ class MapContainer extends Component {
                     <hr></hr>
                     <div>4 dogs at the park</div>
                 </InfoWindow>
+                <DogsInPark />
             </Map>
         );
     }

@@ -1,8 +1,6 @@
-
 import React, { Component } from 'react';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaw, faTrashAlt, faShoppingBag, faTint } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw, faTrashAlt, faShoppingBag, faTint } from '@fortawesome/free-solid-svg-icons';
 
 class Ameneties extends Component {
 
@@ -27,10 +25,8 @@ class Ameneties extends Component {
     }
 
     render() {
-        
         return (
             <div>
-
                 <div className="amenities-container">
                     {this.generateRandomAmenity().map((c, i) => <div className="Amenity" key={i}>{c}</div>)}
                 </div>

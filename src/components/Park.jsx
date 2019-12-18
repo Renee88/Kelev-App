@@ -7,7 +7,7 @@ import DogsInPark from './DogsInPark';
 // import { observer, inject } from 'mobx-react';
 
 import { Layout } from 'antd';
-import Ameneties from  './Ameneties'
+import Ameneties from  './Amenities'
 const { Header, Footer, Sider, Content } = Layout;
 
 

@@ -3,6 +3,7 @@ import './App.css';
 import Map from './components/Map'
 import StatusButton from './components/StatusButton';
 import ReCenterButton from './components/reCenterButton';
+import HeaderButtons from './components/headerButtons';
 
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <div className="App">
       <Map />
       <StatusButton />
+      <HeaderButtons />
       <ReCenterButton/>
+
     </div>
   );
 }

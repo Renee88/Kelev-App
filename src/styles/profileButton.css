@@ -1,0 +1,19 @@
+@import '~antd/dist/antd.css';
+
+.profileButton {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+  }
+  
+  #profileBtn{
+    width: 4rem;
+    height: 4rem;
+    font-size: 30px;
+    text-align: center;
+    line-height: 10px; 
+    border: white solid 1.5px;
+    box-shadow:  0px 3px 2px 1px rgba(0, 0, 0, 0.253);
+
+ }
+  

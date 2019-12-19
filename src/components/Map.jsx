@@ -121,7 +121,7 @@ class MapContainer extends Component {
                     <Router>
                         <Link to="/park" style={{ textDecoration: "none" }} >
                             <div className="popupText" id="eta" >
-                                <FontAwesomeIcon icon="far fa-clock" />
+                                
                                 <i className="far fa-clock"></i>
                                 {this.state.mins} away
                                 </div>

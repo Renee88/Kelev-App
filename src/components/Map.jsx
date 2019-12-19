@@ -9,10 +9,8 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
-
-@inject("MapStore","ownerStore")
+@inject("MapStore", "ownerStore","parksStore")
 @observer
-
 class MapContainer extends Component {
     constructor() {
         super()
@@ -27,14 +25,12 @@ class MapContainer extends Component {
 
     onMarkerClick = async (props, marker, e) => {
         await this.getDistance(marker.id)
-        await this.props.parksStore.insertId(marker.id)
-        let parkId = this.props.parksStore.parkId
-        await this.props.parksStore.getPark(parkId)
-
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
+        }, function(){
+            this.props.parksStore.getPark(marker.id)
         });
     }
 
@@ -54,8 +50,6 @@ class MapContainer extends Component {
             })
             .catch(err => console.log(`unable to get distance, ${err}`))
     }
-
-   
 
     onClose = props => {
         if (this.state.showingInfoWindow) {
@@ -77,7 +71,6 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
-
     }
 
     render() {
@@ -124,11 +117,10 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <Popup mins = {this.state.mins} />
                     <Router>
                         <Link to="/park" style={{ textDecoration: "none" }} >
                             <div className="popupText" id="eta" >
-                                <FontAwesomeIcon icon="far fa-clock" />
+                                
                                 <i className="far fa-clock"></i>
                                 {this.state.mins} away
                                 </div>

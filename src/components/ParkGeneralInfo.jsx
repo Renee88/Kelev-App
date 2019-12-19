@@ -16,8 +16,8 @@ class ParkGeneralInfo extends Component {
     }
 
     async componentDidMount (){
-        // let parkId = await this.props.parksStore.parkId
-        // console.log(parkId)
+        let chosenPark = this.props.parksStore.chosenPark
+        console.log(chosenPark)
         // await this.props.parksStore.getPark(parkId)
         // let chosenPark = this.props.parksStore.chosenPark
         // this.setState({chosenPark}, function(){

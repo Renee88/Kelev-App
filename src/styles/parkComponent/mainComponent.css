@@ -58,8 +58,10 @@ body {
   #spans{
     display: inline-block;
     color: black;
-    position: relative;
-    top: 4px
+    position: relative ;
+    /* left: -1px; */
+    top: 4px;
+  
   }
 
   #atThePark{
@@ -72,7 +74,14 @@ body {
 
   #name{
     position: relative;
-    bottom: 10px
+    bottom: 10px;
+    font-size: 13px;
+  }
+
+  #timeToArrive{
+    position: relative;
+    bottom: 10px;
+    font-size: 13px;
   }
   
   #amenities{
@@ -109,13 +118,11 @@ body {
 
   #img1{
     width: 100vw;
-    /* height: 100%; */
     object-fit: cover;
     }
 
     .ant-carousel{
       position: relative;
-      /* height: 100%; */
     }
 
     .stars-outer {
@@ -206,8 +213,10 @@ body {
   }
 
   .fa-circle{
-    color: rgb(90, 245, 90);
+    color: rgb(3, 202, 3);
     font-size: 8px;
     padding-right: 8px;
+    top: 5px;
+    text-shadow: 1px 1px 1px rgba(110, 110, 110, 0.452) ;
 
   }

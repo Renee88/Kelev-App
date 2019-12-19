@@ -11,7 +11,9 @@ class DogsInPark extends Component {
                 </div>
                 <div id="inPark">
                {dogs.map(d => <div>
-                  <img id="pic" src={d.picture}></img> <span id="name">{d.dog_name} </span>
+                  <img id="pic" src={d.picture}></img> 
+                  <span id="name"><i class="fas fa-circle"></i>{d.dog_name} </span>
+                  <span id="name">{d.dog_name} </span>
                </div> )}
             </div>
             </div>

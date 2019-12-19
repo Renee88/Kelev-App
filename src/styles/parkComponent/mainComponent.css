@@ -4,7 +4,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
     width: 100vw;
     height: 100vh;
@@ -35,7 +35,8 @@ body {
     width: 100vw;
     position: relative;
     max-height: 9rem;
-    overflow: hidden;
+    overflow-x: scroll;
+    
   }
   
   #inPark{
@@ -43,25 +44,32 @@ body {
     text-align: center;
     color: black;
     position: relative;
+    /* overflow-x: scroll; */
   }
+
   #pic{
     height: 65px;
     width: 65px;
     margin: 15px;
     border-radius: 50%;
+    object-fit: cover;
   }
+
   #spans{
     display: inline-block;
     color: black;
     position: relative;
     top: 4px
   }
+
   #atThePark{
     padding: 10px;
   }
+
   #onTheWay{
     padding: 10px;
   }
+
   #name{
     position: relative;
     bottom: 10px
@@ -74,7 +82,6 @@ body {
     height: 20vh;
     background-color: white;
   }
-
 
   .Amenity{
     display: inline-block;
@@ -94,14 +101,6 @@ body {
     margin:10px;
     text-align: center;
   }
-
-  /* .ant-carousel .slick-slider { */
-    /* overflow: hidden; */
-    /* text-align: center; */
-    /* height: 100%; */
-    /* width: 100%; */
-    /* line-height: 150px; */
-  /* } */
 
   .parkPictures{
     max-height: 100%;
@@ -164,4 +163,31 @@ body {
     text-shadow: 3px 3px 3px #000000;
     margin-left: 10px;
     margin-top: 10px;
+  }
+
+  .menu-item {
+    padding: 0 40px;
+    margin: 5px 10px;
+    user-select: none;
+    cursor: pointer;
+    border: none;
+  }
+
+  .menu-item-wrapper.active {
+    border: 1px blue solid;
+  }
+
+  .menu-item.active {
+    border: 1px green solid;
+  }
+   
+  .scroll-menu-arrow {
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .fa-circle{
+    color: rgb(90, 245, 90);
+    font-size: 8px;
+    padding-right: 8px;
   }

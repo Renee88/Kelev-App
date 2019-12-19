@@ -2,10 +2,15 @@ import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
-import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import '../styles/popup.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import Popup from './Popup'
-@inject("MapStore", "ownerStore", "parksStore")
+
+
+@inject("MapStore","ownerStore")
 @observer
 
 class MapContainer extends Component {
@@ -120,6 +125,22 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Popup mins = {this.state.mins} />
+                    <Router>
+                        <Link to="/park" style={{ textDecoration: "none" }} >
+                            <div className="popupText" id="eta" >
+                                <FontAwesomeIcon icon="far fa-clock" />
+                                <i className="far fa-clock"></i>
+                                {this.state.mins} away
+                                </div>
+
+                            <hr  style={{ textDecoration: "none" }}></hr>
+
+                            <div className="popupText" id="numDogs" >
+                            <i  className="far fa-map"></i>
+                                4 dogs at the park</div>
+
+                        </Link>
+                    </Router>
                 </InfoWindow>
             </Map>
         );

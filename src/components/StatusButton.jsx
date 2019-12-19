@@ -4,6 +4,7 @@ import '../styles/statusButtons.css'
 import { Button, Icon } from 'antd'
 import { observer, inject } from 'mobx-react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faPaw, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -18,7 +19,7 @@ class StatusButton extends Component {
         let ownerStore = this.props.ownerStore
         return (
             <div className="statusButtons">
-
+                
                 <div className="statusOne">
                     <Button style={{ display: (ownerStore.status === 1) ? true : "none" }} onClick={ownerStore.changeUserStatus} id="statusOne" type="primary" shape="circle"  >
                     <FontAwesomeIcon id="paw1" icon={faPaw} />

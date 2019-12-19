@@ -74,13 +74,9 @@ body {
   #name{
     position: relative;
     bottom: 10px;
-    font-size: 13px;
   }
 
-  #timeToArrive{
-    position: relative;
-    bottom: 10px;
-    font-size: 13px;
+
   }
   
   #amenities{
@@ -254,3 +250,15 @@ body {
     border: none;
     box-shadow: 1px 1px 3px 0px rgba(71, 71, 71, 0.932);
   }   
+
+  }
+  #minsAway{
+    font-size: 12px;
+    color: rgba(128, 128, 128, 0.863);
+    position: relative;
+    bottom: 14px;
+  }
+  #clock{
+    margin: 0;
+  } 
+  

@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
-import ChatButton from './ChatButton';
-import ProfileButton from './profileButton';
 import DogsInPark from './DogsInPark';
-// import { observer, inject } from 'mobx-react';
 import ParkPictures from './ParkPictures';
-
 import { Layout } from 'antd';
-import Ameneties from  './Ameneties'
+import Amenities from  './Amenities'
+import ParkGeneralInfo from './ParkGeneralInfo';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+
 const { Header, Footer, Sider, Content } = Layout;
-
-
-// @inject("ownerStore")
-// @observer
 
 class Park extends Component {
 
@@ -25,13 +20,19 @@ class Park extends Component {
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
                 <Content id="inside">
+                    <Link to = "/"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
                     <ParkPictures />
                 </Content>
+                <Content>
+                   
+                    <ParkGeneralInfo />
                 </Content>
+
+              </Content>
               
                 <Content id="dogs"><DogsInPark /></Content>
              
-                <Content id="amenities"><Ameneties/> </Content>
+                <Content id="amenities"><Amenities/> </Content>
             </Layout>
             </div>
         );

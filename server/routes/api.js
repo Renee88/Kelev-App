@@ -6,19 +6,13 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
-const distance = require('google-distance-matrix')
-distance.key("AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY")
 
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
-    const mode = req.body.mode
 
-    distance.matrix(origin, destination, mode, function (err, distance) {
-        if (!err) {
-            res.send(distance.rows[0].elements[0])
-        }
-    })
+    requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
+    .then(response => res.send(response))
 })
 
 router.post('/directions', (req, res) => {
@@ -47,6 +41,15 @@ router.get('/map', function (req, res) {
 
             res.send(parks)
         })
+})
+
+router.get('/park',async function(req,res){
+    sequelize.query(`SELECT * FROM parks`)
+    .then(function(results){
+        const parks = results[0]
+        const randomNumber = Math.floor(Math.random() * parks.length)
+        res.send(parks[randomNumber])
+    })
 })
 
 router.get('/dogs', function (req, res) {
@@ -93,6 +96,7 @@ router.put('/dog-profile', function (req, res) {
         })
 })
 
+
 router.post('/dog-profile', async function (req, res) {
     const newDog = req.body
     newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
@@ -112,6 +116,11 @@ router.post('/dog-profile', async function (req, res) {
 
 
 })
+
+router.delete('/dog-profile',function(req,res){
+    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+})
+
 
 // `https://maps.googleapis.com/maps/api/place/photo?photoreference=${photoReference}key=${apiKey}`
 // `https://maps.googleapis.com/maps/api/place/textsearch/json?query=dogpark+telaviv+israel&language=en&key=${apiKey}`

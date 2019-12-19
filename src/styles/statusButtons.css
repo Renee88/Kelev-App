@@ -55,6 +55,20 @@
     left: 50%;
     transform: translate(-50%);
   }
+
+  #cross{
+    position: relative;
+    font-size: 25px;
+    color: black;
+    bottom: -3rem ;
+    }
+
+  #paw3{
+    position: absolute ;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%);
+  }
   
   #part1{
     position: absolute ;

@@ -16,19 +16,19 @@ body {
 
 .ant-layout-content {
     display: block;
-    /* background: rgba(16, 142, 233, 1); */
     color: #fff;
   }
+
   #info{
-      background-color: black;
+    background-color: #5B9BD5;
       height: 12rem;
       width: 100vw;
   }
+
   #inside {
       position: relative;
       width: 100vw;
       height: 10rem;
-      background-color: yellow;
   }
   
   #dogs{
@@ -72,7 +72,6 @@ body {
     color:black;
     width: 100vw;
     height: 20vh;
-    padding: 20px;
     background-color: white;
   }
 
@@ -120,9 +119,49 @@ body {
       /* height: 100%; */
     }
 
-
-   .slick-dots-bottom{
+    .stars-outer {
+      color: rgb(143, 181, 216);
+      display: inline-block;
       position: relative;
-      /* top: 50;ss/ */
+      overflow: hidden;
+    }
+     
+     
+    .stars-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
       color: white;
     }
+
+    #park-name{
+      color: white;
+      
+  }
+
+  #general-info{
+    margin: 10px;
+  }
+
+  #rating{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  #rating > span{
+    margin-right: 10px;
+  }
+
+  #back-button{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+  }

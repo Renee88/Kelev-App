@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class PopUp extends Component {
+class DogProfile extends Component {
     render() {
         return (
             <div>
+                
             </div>
-            
         );
     }
 }
 
-export default PopUp;
+export default DogProfile;

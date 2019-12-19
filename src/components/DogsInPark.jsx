@@ -11,9 +11,6 @@ class DogsInPark extends Component {
         return (
             <div>
 
-                <div id="spans">
-                <span id="atThePark">4 at the park</span><span id="onTheWay">6 on the way</span>
-                </div>
                 <div id="inPark">
                {dogs.map(d => <div>
                   <img id="pic" src={d.picture}></img> 

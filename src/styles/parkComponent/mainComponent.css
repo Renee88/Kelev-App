@@ -76,8 +76,6 @@ body {
     bottom: 10px;
   }
 
-
-  }
   
   #amenities{
     position:relative;
@@ -251,7 +249,7 @@ body {
     box-shadow: 1px 1px 3px 0px rgba(71, 71, 71, 0.932);
   }   
 
-  }
+
   #minsAway{
     font-size: 12px;
     color: rgba(128, 128, 128, 0.863);

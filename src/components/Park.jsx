@@ -30,7 +30,7 @@ class Park extends Component {
 
               </Content>
               <div id="spans">
-                <span id="atThePark">3 at the park</span><span id="onTheWay">2 on the way</span>
+                <span id="atThePark">4 at the park</span><span id="onTheWay">6 on the way</span>
                 <Content id="dogs"><DogsInPark /></Content>            
                 </div>
                 

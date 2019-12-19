@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Rate } from 'antd';
+import AlertButton from './AlertButton';
+import DirectionButton from './DirectionButton';
 
 @inject("parksStore")
 @observer
@@ -46,6 +48,13 @@ class ParkGeneralInfo extends Component {
                 </div>
                 </div> 
                 <p>{this.state.chosen_park.address}</p>
+                <div className="directionButton">
+                <DirectionButton />
+                </div>
+                <div className="alertButton">
+                <AlertButton />
+                </div>
+
             </div>
         );
     }

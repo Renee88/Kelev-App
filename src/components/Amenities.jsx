@@ -20,7 +20,6 @@ class Ameneties extends Component {
             }
 
         }
-        console.log(randomAmeneties)
         return randomAmeneties
     }
 

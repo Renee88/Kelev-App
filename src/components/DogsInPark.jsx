@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 const dogs = require("../dummyData/dogs.json")
 
+@observer
 class DogsInPark extends Component {
     
     render() {  

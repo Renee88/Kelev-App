@@ -2,11 +2,12 @@ import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-
-@inject("MapStore","ownerStore")
+import Popup from './Popup'
+@inject("MapStore", "ownerStore", "parksStore")
 @observer
+
 class MapContainer extends Component {
     constructor() {
         super()
@@ -21,6 +22,10 @@ class MapContainer extends Component {
 
     onMarkerClick = async (props, marker, e) => {
         await this.getDistance(marker.id)
+        await this.props.parksStore.insertId(marker.id)
+        let parkId = this.props.parksStore.parkId
+        await this.props.parksStore.getPark(parkId)
+
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
@@ -34,16 +39,18 @@ class MapContainer extends Component {
         let destination = `${marker.position.lat},${marker.position.lng}`
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
-                
+
                 console.log(res.data.rows[0].elements[0])
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
-                },this.beAtThePark)
-               
+                }, this.beAtThePark)
+
             })
             .catch(err => console.log(`unable to get distance, ${err}`))
     }
+
+   
 
     onClose = props => {
         if (this.state.showingInfoWindow) {
@@ -55,8 +62,8 @@ class MapContainer extends Component {
     }
 
     beAtThePark = async () => {
-        if(this.state.meters < 100){
-            if(this.props.ownerStore.status === 2){
+        if (this.state.meters < 100) {
+            if (this.props.ownerStore.status === 2) {
                 console.log(this.props.ownerStore.status)
                 await this.props.ownerStore.changeUserStatus()
             }
@@ -65,7 +72,7 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
-        
+
     }
 
     render() {
@@ -85,7 +92,7 @@ class MapContainer extends Component {
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}
                 streetView={false}
-                
+
                 initialCenter={{
                     lat: this.props.MapStore.location.latitude,
                     lng: this.props.MapStore.location.longitude
@@ -112,13 +119,7 @@ class MapContainer extends Component {
                     visible={this.state.showingInfoWindow}
                     onClose={this.onClose}
                 >
-                    <Router>
-                        <Link to="/park" style={{ textDecoration: "none" }} >
-                            <div>{this.state.mins} away</div>
-                            <hr></hr>
-                            <div>4 dogs at the park</div>
-                        </Link>
-                    </Router>
+                    <Popup mins = {this.state.mins} />
                 </InfoWindow>
             </Map>
         );

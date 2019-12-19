@@ -136,6 +136,25 @@ body {
       color: white;
     }
 
+    .stars-outer {
+      color: rgb(143, 181, 216);
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+     
+     
+    .stars-inner {
+      position: absolute;
+      top: 0;
+      left: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      color: white;
+    }
+
+
     #park-name{
       color: white;
       
@@ -190,4 +209,5 @@ body {
     color: rgb(90, 245, 90);
     font-size: 8px;
     padding-right: 8px;
+
   }

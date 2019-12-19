@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import { faPaw, faTimes, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
-
-
 @inject("ownerStore","MapStore")
 @observer
 

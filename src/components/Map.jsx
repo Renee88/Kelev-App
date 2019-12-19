@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
 
-@inject("MapStore", "ownerStore")
+@inject("MapStore","ownerStore")
 @observer
 class MapContainer extends Component {
     constructor() {
@@ -45,6 +45,7 @@ class MapContainer extends Component {
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
                 }, this.beAtThePark)
+
 
             })
             .catch(err => console.log(`unable to get distance, ${err}`))
@@ -130,6 +131,7 @@ class MapContainer extends Component {
                             <div className="popupText" id="numDogs" >
                             <i  class="far fa-map"></i>
                                 4 dogs at the park</div>
+
                         </Link>
                     </Router>
                 </InfoWindow>

@@ -3,8 +3,8 @@ import axios from 'axios'
 
 class ParksStore{
     @observable parks = []
-    @observable chosenPark
-    @observable parkRating
+    @observable chosenPark 
+    @observable parkRating 
     @observable parkId
 
     @action loadParks = async() =>{
@@ -12,12 +12,11 @@ class ParksStore{
        this.parks = parks.data
     }
 
-    @action getPark = async (id)=>{
+    @action async getPark(id){
         let park = await axios.get(`http://localhost:4000/park/${id}`)
-        console.log(park.data)
         let chosenPark = park.data
         this.chosenPark = chosenPark
-        this.parkRating = park.rating
+        this.parkRating = chosenPark.rating
     }
 
     @action insertId = (id) =>{

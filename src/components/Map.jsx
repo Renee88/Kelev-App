@@ -9,7 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
-@inject("MapStore", "ownerStore","parksStore")
+@inject("MapStore", "ownerStore", "parksStore")
 @observer
 class MapContainer extends Component {
     constructor() {
@@ -25,12 +25,15 @@ class MapContainer extends Component {
 
     onMarkerClick = async (props, marker, e) => {
         await this.getDistance(marker.id)
+        await this.props.parksStore.insertId(marker.id)
+        await this.props.parksStore.getPark(marker.id)
+        // await this.props.parksStore.insertId(marker.id)
+        
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
             showingInfoWindow: true
-        }, function(){
-            this.props.parksStore.getPark(marker.id)
+        }, function () {
         });
     }
 
@@ -71,6 +74,7 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
+        
     }
 
     render() {
@@ -118,20 +122,22 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
-                        <Link to="/park" style={{ textDecoration: "none" }} >
-                            <div className="popupText" id="eta" >
-                                
-                                <i className="far fa-clock"></i>
-                                {this.state.mins} away
+                    <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
+                    
+                        <div className="popupText" id="eta" >
+
+                            <i className="far fa-clock"></i>
+                            {this.state.mins} away
                                 </div>
 
-                            <hr  style={{ textDecoration: "none" }}></hr>
+                        <hr style={{ textDecoration: "none" }}></hr>
 
-                            <div className="popupText" id="numDogs" >
-                            <i  className="far fa-map"></i>
-                                4 dogs at the park</div>
+                        <div className="popupText" id="numDogs" >
+                            <i className="far fa-map"></i>
+                            4 dogs at the park</div>
+                   
 
-                        </Link>
+                    </Link>
                     </Router>
                 </InfoWindow>
             </Map>

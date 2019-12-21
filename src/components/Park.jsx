@@ -24,7 +24,6 @@ class Park extends Component {
                     <ParkPictures />
                 </Content>
                 <Content>
-                   
                     <ParkGeneralInfo />
                 </Content>
 

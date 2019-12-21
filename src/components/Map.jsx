@@ -86,7 +86,6 @@ class MapContainer extends Component {
                 fullscreenControl={false}
                 streetViewControl={false}
                 mapTypeControl={false}
-                center={currentPosition}
                 onClick={this.onClose}
                 setCenter={currentPosition}
                 centerAroundCurrentLocation={true}

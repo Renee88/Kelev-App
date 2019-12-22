@@ -7,31 +7,25 @@ import DirectionButton from './DirectionButton';
 @inject("parksStore")
 @observer
 class ParkGeneralInfo extends Component {
+
+
+    async componentDidMount (){
+        const parkId = parseInt(this.props.match.params.id)
+        await this.props.parksStore.getPark(parkId)
+    }
     
-    constructor(){
-        super()
-        this.state = {
-            chosen_park: {}
-        }
-    }
-
-    async componentDidMount() {
-        await this.props.parksStore.getPark()
-        const chosen_park = this.props.parksStore.chosenPark
-        this.setState({chosen_park})
-    }
-
-
+    
     render() {
-        const rating = this.props.parksStore.parkRating
+        const rating = this.props.parksStore.chosenPark? parseFloat(this.props.parksStore.chosenPark.rating) : null
         const starPercentage = (rating / 5) * 100;
         const starPercentageRounded = Math.round(starPercentage / 10) * 10 + '%'
 
         return (
+            this.props.parksStore.chosenPark?
             <div id="general-info">
-                <h1 id="park-name">{this.state.chosen_park.park_name}</h1>
+                <h1 id="park-name">{this.props.parksStore.chosenPark.park_name}</h1>
                 <div id = "rating">
-                <span>{rating + '.0'}</span>
+                <span>{rating}</span>
                 <div className="stars-outer" >
                     <i className="fas fa-star"></i>
                     <i className="fas fa-star"></i>
@@ -47,7 +41,7 @@ class ParkGeneralInfo extends Component {
                     </div>
                 </div>
                 </div> 
-                <p>{this.state.chosen_park.address}</p>
+                <p>{this.props.parksStore.chosenPark.address}</p>
                 <div className="directionButton">
                 <DirectionButton />
                 </div>
@@ -56,6 +50,7 @@ class ParkGeneralInfo extends Component {
                 </div>
 
             </div>
+            :null
         );
     }
 }

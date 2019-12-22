@@ -5,13 +5,11 @@ import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
+import { observer } from 'mobx-react';
 // import '../pictures'
 const { Header, Footer, Sider, Content } = Layout;
 
-
-// @inject("ownerStore")
-// @observer
-
+@observer
 class ParkPictures extends Component {
 
 

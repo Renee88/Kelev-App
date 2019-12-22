@@ -7,14 +7,16 @@ import { Layout } from 'antd';
 import Amenities from  './Amenities'
 import ParkGeneralInfo from './ParkGeneralInfo';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
+import { observer, inject } from 'mobx-react';
 
 const { Header, Footer, Sider, Content } = Layout;
 
+@inject("parksStore")
+@observer
 class Park extends Component {
 
 
     render() {
-
         return (
             <div className="parkComponent">
             <Layout id="parkLayout"  style={{height:"100vh"}}>
@@ -25,7 +27,7 @@ class Park extends Component {
                 </Content>
                 <Content>
                    
-                    <ParkGeneralInfo />
+                    <ParkGeneralInfo match = {this.props.match}/>
                 </Content>
 
               </Content>

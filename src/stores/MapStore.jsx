@@ -6,7 +6,7 @@ export class MapStore {
 
     @observable location = {}
     @observable markers = [];
-
+    @observable watchPos = {}
 
     @action getParks(parks) {
         this.markers = [...this.markers, ...parks]
@@ -30,5 +30,13 @@ export class MapStore {
         this.location.longitude = position.coords.longitude
     }
 
+    @action watchPosition = () => {
+        let id = navigator.geolocation.watchPosition((position) => {
+            this.watchPos.latitude = position.coords.latitude
+            this.watchPos.longitude = position.coords.longitude
+        }, null , {distanceFilter : 10}) 
+            
 
+        
+    }
 }

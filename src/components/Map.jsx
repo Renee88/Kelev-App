@@ -74,7 +74,7 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
-        
+        this.props.MapStore.watchPosition()
     }
 
     render() {

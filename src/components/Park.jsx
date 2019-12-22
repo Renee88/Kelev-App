@@ -26,8 +26,10 @@ class Park extends Component {
                     <ParkPictures />
                 </Content>
                 <Content>
+
                    
                     <ParkGeneralInfo match = {this.props.match}/>
+
                 </Content>
 
               </Content>
@@ -36,7 +38,6 @@ class Park extends Component {
                 <Content id="dogs"><DogsInPark /></Content>            
                 </div>
                 
-             
                 <Content id="amenities"><Amenities/> </Content>
             </Layout>
             </div>

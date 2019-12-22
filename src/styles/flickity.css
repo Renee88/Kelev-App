@@ -1,0 +1,118 @@
+body{
+    overflow-x: hidden  !important;
+    overflow-y: hidden  !important;
+
+}
+#root{
+    overflow-x: hidden  !important;
+    overflow-y: hidden  !important;
+}
+.caroo {
+position: relative;
+text-align: center;
+overflow-x: hidden  !important;
+overflow-y: hidden  !important;
+}
+
+.slick-list{
+    height: 80vh;
+    width: 100vw;
+}
+
+.buttons{
+    position: relative;
+    bottom: 9rem;
+}
+
+#previous{
+position: relative;
+float: right;
+}
+
+#forward{
+position: relative;
+float: left;
+}
+
+.text{
+    position: absolute;
+    top: 60vh;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+    /* color:white; */
+
+}
+
+.test {
+    position: relative;
+    height: 80vh;
+    align-content: center;
+    overflow-x: hidden  !important;
+    overflow-y: hidden  !important;
+}
+
+.illustration{
+    background: linear-gradient(45deg,#8C88F9 10%,rgb(173, 170, 241) 200%);
+    /* background-color: #8C88F9; */
+    height: 50vh;
+    /* border-radius: 0px 0px 40px 40px; */
+    border-radius: 0px 120px 20px 120px;
+}
+.slick-dots{
+ position: relative;
+ bottom: 1.5rem;   
+}
+
+.slick-dots li{
+    margin: 0;
+}
+.slick-dots li button:before{
+    margin: 0;
+    font-size: 10px;
+    line-height: 0;
+
+}
+
+h2{
+    position: absolute;
+    font-weight: 550;
+    font-size: 19px;
+    left: 50%;
+    color: rgb(73, 73, 73);
+    transform: translate(-50%);
+    top: 53vh;
+    font-family: Helvetica, sans-serif;
+    width: 100%;
+}
+
+#img1{
+    position: relative;
+    width: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.ant-btn-primary{
+    width: 30%;
+    
+}
+
+p{
+    color: rgb(37, 174, 228);
+    font-family: sans-serif;
+    margin-top: 5px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+#leftIcon{
+    font-size: 40px;
+    float: left;
+}
+
+#rightIcon{
+    font-size: 40px;
+    float: right;
+}

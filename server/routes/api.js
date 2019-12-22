@@ -3,7 +3,7 @@ const router = express.Router()
 const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
+const sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL || 'mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
 
@@ -118,7 +118,14 @@ router.post('/dog-profile', async function (req, res) {
 })
 
 router.delete('/dog-profile',function(req,res){
-    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+    const dogToRemove = req.body
+    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dogToRemove.id} AND owner_id = ${dogToRemove.owner_id}`)
+    .then(function(){
+        sequelize.query(`DELETE FROM dogs WHERE dogs.id = ${dogToRemove.id}`)
+        .then(function(){
+            res.send(`Dog with the id of ${dogToRemove.id} was deleted from user ${dogToRemove.owner_id}`)
+        })
+    })
 })
 
 

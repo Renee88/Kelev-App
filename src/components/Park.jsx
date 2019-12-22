@@ -33,7 +33,6 @@ class Park extends Component {
                 <Content id="dogs"><DogsInPark /></Content>            
                 </div>
                 
-             
                 <Content id="amenities"><Amenities/> </Content>
             </Layout>
             </div>

@@ -8,6 +8,8 @@ import img3 from '../pictures/7.png'
 import onTheWay from '../pictures/onTheWay.png'
 import FindPark from '../pictures/FindPark.png'
 import AtThePark from '../pictures/AtThePark.png'
+import { BrowserRouter as Router ,Link } from 'react-router-dom';
+
 
 
 import '../styles/flickity.css'
@@ -59,9 +61,15 @@ export default class SimpleSlider extends Component {
                     <Icon id="leftIcon" type="left" />
                     <Icon id="rightIcon" type="right" />
                 </div>
-                <Button id="startBtn" type="primary" size="large">
-                    Start
+
+               
+                <Link to="/">
+                    <Button id="startBtn" type="primary" size="large">
+                        Start
                      </Button>
+                </Link>
+              
+
                 <p>Already a member? Login</p>
             </div>
 

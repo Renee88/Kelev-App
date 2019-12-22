@@ -11,12 +11,12 @@ router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
 
-    requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
+    requestPromise(`http://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
     .then(response => res.send(response))
 })
 
 router.post('/directions', (req, res) => {
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
+    requestPromise(`http://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
         .then(response => res.send(response.data))
 })
 

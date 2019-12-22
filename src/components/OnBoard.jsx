@@ -56,8 +56,6 @@ export default class SimpleSlider extends Component {
                 </Slider>
 
                 <div className="buttons">
-                    {/* <button type="button" id="forward" > previous</button> */}
-                    {/* <button type="sbutton" id="previous" > forward</button> */}
                     <Icon id="leftIcon" type="left" />
                     <Icon id="rightIcon" type="right" />
                 </div>

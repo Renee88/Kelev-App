@@ -21,7 +21,6 @@ class ParksStore{
 
     @action insertId = (id) =>{
         this.parkId = id
-        console.log(this.parkId)
     }
     
 }

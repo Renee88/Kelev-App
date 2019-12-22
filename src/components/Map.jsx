@@ -122,12 +122,14 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
+
                     <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
                     
                         <div className="popupText" id="eta" >
 
                             <i className="far fa-clock"></i>
                             {this.state.mins} away
+
                                 </div>
 
                         <hr style={{ textDecoration: "none" }}></hr>

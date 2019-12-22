@@ -22,7 +22,6 @@ body {
 
   .ant-layout-header{
       position: relative;
-    /* display: block; */
     line-height: 16px;
     font-size: 20px;
     height: 23%;   
@@ -36,6 +35,7 @@ body {
       color: black;
       height: 100%;
       padding-top: 30px;
+
   }
 
   .dogLine{
@@ -54,11 +54,7 @@ body {
 
 .fa-edit{
     position: absolute;
-    right: 0;
-padding-right: 15px;
-/* top: 50%; */
-/* transform: translate(0, -50%); */
-
+    right: 10px;
 }
 
 .avatar{

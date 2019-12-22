@@ -1,0 +1,89 @@
+/* @import '~antd/dist/antd.css'; */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #headerTitle {
+      position: absolute;
+      bottom: 2px;
+      left: 1.2rem;
+      color:  white;
+      font-size: 30px;
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.562);
+  }
+
+  .ant-layout-header{
+      position: relative;
+    /* display: block; */
+    line-height: 16px;
+    font-size: 20px;
+    height: 23%;   
+    padding: 0;
+    width: 100%;
+  }
+
+  .profileContent{
+      position: relative;
+      top: 0;
+      color: black;
+      height: 100%;
+      padding-top: 30px;
+  }
+
+  .dogLine{
+      display: flex;
+      position: relative;
+      height: 5rem;
+      padding-left: 15px;
+      align-items: center;
+
+      
+      }
+
+#dogName{
+    margin-left: 15px;
+}
+
+.fa-edit{
+    position: absolute;
+    right: 0;
+padding-right: 15px;
+/* top: 50%; */
+/* transform: translate(0, -50%); */
+
+}
+
+.avatar{
+    margin-left: 15px;
+}
+
+#addDog{
+    position: absolute;
+    right: 1rem;
+    width: 60px;
+    float: right;
+    height: 60px;
+    background-color: rgb(252, 67, 67);
+    border: none;
+    bottom: 4rem;
+    box-shadow: 1px 1px 4px gray;
+    }
+
+    .fa-user-plus{
+        font-size: 20px; 
+    }
+
+  #divider{
+
+        margin: 0;
+        height: 1px;
+        background-color: rgb(136, 204, 226);
+    }

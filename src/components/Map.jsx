@@ -121,7 +121,7 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
-
+                    {this.state.activeMarker != null ?
                     <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
                     
                         <div className="popupText" id="eta" >
@@ -137,8 +137,8 @@ class MapContainer extends Component {
                             <i className="far fa-map"></i>
                             4 dogs at the park</div>
                    
-
                     </Link>
+                        : null}
                     </Router>
                 </InfoWindow>
             </Map>

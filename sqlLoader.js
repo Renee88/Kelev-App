@@ -51,12 +51,12 @@ const loadParks = async function(parks){
     for(let park of parks){
         let parkPicture = park.photos ? park.photos[0].photo_reference : null
         await sequelize.query(`INSERT INTO parks 
-        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPicture}",${park.rating})`)
+        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPicture}","${park.rating}")`)
     }
 }
 
 // loadDogs(dogs)
 // loadOwners(owners)
-// loadParks(parks)
+loadParks(parks)
 // loadOwnersAndDogs(owners)
 

@@ -5,17 +5,8 @@ import ParksStore from './ParksStore';
 export class MapStore {
 
     @observable location = {}
-    @observable markers = [
-        {
-            name: 'park',
-            position: {
-                lat: 32.080756,
-                lng: 34.780405
-            },
-            id: 1,
-            distance: {}
-        }
-    ];
+    @observable markers = [];
+
 
     @action getParks(parks) {
         this.markers = [...this.markers, ...parks]
@@ -38,4 +29,6 @@ export class MapStore {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
     }
+
+
 }

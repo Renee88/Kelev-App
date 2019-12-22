@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { observer } from 'mobx-react';
 const dogs = require("../dummyData/dogs.json")
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
 // import { library } from '@fortawesome/fontawesome-svg-core'
 
 
+@observer
 class DogsInPark extends Component {
     
     render() {  

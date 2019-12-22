@@ -43,12 +43,12 @@ router.get('/map', function (req, res) {
         })
 })
 
-router.get('/park',async function(req,res){
-    sequelize.query(`SELECT * FROM parks`)
+router.get('/park/:id',async function(req,res){
+    const parkId = req.params.id
+    sequelize.query(`SELECT * FROM parks WHERE parks.id = ${parkId}`)
     .then(function(results){
-        const parks = results[0]
-        const randomNumber = Math.floor(Math.random() * parks.length)
-        res.send(parks[randomNumber])
+        const chosenPark = results[0][0]
+        res.send(chosenPark)
     })
 })
 

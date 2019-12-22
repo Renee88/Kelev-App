@@ -13,7 +13,14 @@ import OnBoard from './components/OnBoard';
 @observer
 class App extends Component {
 
-  async componentDidMount() {
+  constructor(){
+    super()
+    this.state = {
+      chosenPark: {}
+    }
+  }
+
+   componentDidMount = async () => {
     await this.props.parksStore.loadParks()
     await this.props.dogsStore.loadDogs()
     const parks = this.props.parksStore.parks
@@ -24,14 +31,17 @@ class App extends Component {
     return (
       <Router >
         <div className="App">
-          <Route exact path="/"   >
+          <Route exact path="/"  >
             <Map />
             <StatusButton />
             <HeaderButtons />
             <ReCenterButton />
           </Route>
-          <Route path="/park" exact render={() => <Park />} />
+
           <Route path="/onboard" exact render={() => <OnBoard />} />
+
+
+          <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
 
         </div>
       </Router>

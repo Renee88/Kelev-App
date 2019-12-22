@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 // import '../App.css';
 // import '../styles/parkComponent/mainComponent.css';
 
-import { Layout, Divider , Avatar, Icon, Button } from 'antd';
+import { Layout, Divider, Avatar, Icon, Button } from 'antd';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { observer, inject } from 'mobx-react';
 import '../../styles/profile/Profile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Checkbox } from 'antd';
+import ProfileList from './ProfileList';
+import AddDog from './AddDog';
 // import { Avatar, Icon, Button } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -18,54 +20,48 @@ const { Header, Footer, Sider, Content } = Layout;
 class Profile extends Component {
 
 
+    constructor() {
+        super();
+        this.state = {
+
+            dogList: true
+
+        }
+    }
+
+    onToggle = () => {
+        let opposite = !this.state.dogList
+        this.setState({
+            dogList : opposite
+        })
+    }
+
     onChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
     }
 
     render() {
+        const state = this.state;
+
+
         return (
-            <div className="ProfileComponent">
-                <Layout id="profileLayout" style={{ height: "100vh" }}>
-                    <Header id="header" >
-                        <span id="headerTitle">Profile</span>
-                    </Header>
+            <Router>
+                <div className="ProfileComponent">
+                    <Layout id="profileLayout" style={{ height: "100vh" }}>
+                        <Header id="header" >
+                            <span id="headerTitle">this is a main component</span>
+                        </Header>
 
-                    <Content className="profileContent">
-                        <Button id="addDog" type="primary" shape="circle">
-                        <i class="fas fa-user-plus"></i>
-                        </Button>
+                        <Content className="profileContent">
 
-                        <div className="dogLine">
-                            <Checkbox checked = "checked" ></Checkbox>
-                            <Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                            {this.state.dogList ? <ProfileList state={state} onToggle={this.onToggle} /> : <AddDog />}
 
-                            <span id="dogName">Dogs Name</span>
-                            <i className="far fa-edit"></i>
-                        </div>
-                        <Divider id="divider"/>
+                        </Content>
+                    </Layout>
 
-                        <div className="dogLine">
-                            <Checkbox onChange={this.onChange}></Checkbox>
-                            <Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+                </div>
+            </Router>
 
-                            <span id="dogName">Dogs Name</span>
-                            <i className="far fa-edit"></i>
-                        </div>
-
-                        <Divider id="divider"/>
-
-                        <div className="dogLine">
-                            <Checkbox onChange={this.onChange}></Checkbox>
-                            <Avatar className="avatar" src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-
-                            <span id="dogName">Dogs Name</span>
-                            <i className="far fa-edit"></i>
-                        </div>
-                        <Divider id="divider"/>
-                    </Content>
-
-                </Layout>
-            </div>
         );
     }
 }

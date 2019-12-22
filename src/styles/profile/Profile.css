@@ -75,6 +75,7 @@ padding-right: 15px;
     border: none;
     bottom: 4rem;
     box-shadow: 1px 1px 4px gray;
+    cursor: pointer;
     }
 
     .fa-user-plus{
@@ -82,7 +83,6 @@ padding-right: 15px;
     }
 
   #divider{
-
         margin: 0;
         height: 1px;
         background-color: rgb(136, 204, 226);

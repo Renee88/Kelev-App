@@ -1,4 +1,4 @@
-import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, InfoWindow, GoogleApiWrapper,Polyline } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
@@ -19,7 +19,8 @@ class MapContainer extends Component {
             activeMarker: {},
             selectedPlace: {},
             mins: '0 mins',
-            distance: 0
+            distance: 0,
+            polyline: []
         };
     }
 
@@ -28,11 +29,12 @@ class MapContainer extends Component {
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
         await this.props.MapStore.getDirections(marker.id)
-        
+
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
-            showingInfoWindow: true
+            showingInfoWindow: true,
+            polyline: this.props.MapStore.getDirections(marker.id)
         }, function () {
         });
     }
@@ -75,7 +77,7 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
-        
+
     }
 
     render() {
@@ -107,7 +109,11 @@ class MapContainer extends Component {
                         scaledSize: new window.google.maps.Size(60, 60)
                     }}
                 />
-
+                <Polyline
+                    path={this.props.MapStore.polyline}
+                    strokeColor="#3471eb"
+                    strokeOpacity={0.7}
+                    strokeWeight={6} />
                 {this.props.MapStore.markers.map((m, i) =>
                     <Marker
                         key={i}
@@ -122,23 +128,23 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
-                    {this.state.activeMarker != null ?
-                    <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
-                    
-                        <div className="popupText" id="eta" >
+                        {this.state.activeMarker != null ?
+                            <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
 
-                            <i className="far fa-clock"></i>
-                            {this.state.mins} away
+                                <div className="popupText" id="eta" >
 
+                                    <i className="far fa-clock"></i>
+                                    {this.state.mins} away
+        
                                 </div>
 
-                        <hr style={{ textDecoration: "none" }}></hr>
+                                <hr style={{ textDecoration: "none" }}></hr>
 
-                        <div className="popupText" id="numDogs" >
-                            <i className="far fa-map"></i>
-                            4 dogs at the park</div>
-                    </Link>
-                            :null}
+                                <div className="popupText" id="numDogs" >
+                                    <i className="far fa-map"></i>
+                                    4 dogs at the park</div>
+                            </Link>
+                            : null}
                     </Router>
                 </InfoWindow>
             </Map>

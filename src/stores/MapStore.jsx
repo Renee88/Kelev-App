@@ -1,12 +1,12 @@
 import { observable, action, computed } from 'mobx';
 import axios from 'axios';
 import ParksStore from './ParksStore';
-
+import decodePolyline from 'decode-google-map-polyline'
 export class MapStore {
 
     @observable location = {}
     @observable markers = [];
-
+    @observable polyline = []
 
     @action getParks(parks) {
         this.markers = [...this.markers, ...parks]
@@ -16,8 +16,13 @@ export class MapStore {
         const marker = this.markers.find(m => m.id === destinationId)
         let destination = `${marker.position.lat},${marker.position.lng}`
         let currLoc = `${this.location.latitude},${this.location.longitude}`
-        axios.post(`http://localhost:4000/directions/?origin=${currLoc}&destination=${destination}`)
-            .then(res => console.log(res.data))
+        axios.get(`http://localhost:4000/directions/?origin=${currLoc}&destination=${destination}`)
+            .then((res)=> {
+                let polyline = res.data.routes[0].overview_polyline.points
+                this.polyline = decodePolyline(polyline)
+            
+            } )
+            
     }
 
     @action getLocation = () => {

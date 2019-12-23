@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import '../App.css';
 // import '../styles/parkComponent/mainComponent.css';
 
-import { Layout, Divider, Input, Avatar, Icon, Button, InputNumber } from 'antd';
+import { Layout, Divider, Input, Avatar, Icon, Button, Switch, InputNumber } from 'antd';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { observer, inject } from 'mobx-react';
@@ -87,3 +87,6 @@ class AddDog extends Component {
 }
 
 export default AddDog;
+
+
+

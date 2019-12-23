@@ -32,7 +32,7 @@ class AddDog extends Component {
         return (
 
             <div className="dogInputs">
-
+                    <Link to = "/dog-profiles"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
                 <div className="dogNameDiv">
                     <h1>here will be a div for pic</h1>
                 </div>

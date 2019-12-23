@@ -20,12 +20,12 @@ const { Header, Footer, Sider, Content } = Layout;
 
 class EditDog extends Component {
     state = {
-        imgDisabled: false,
-        nameDisabled: false,
-        ageDisabled: false,
-        weightDisabled: false,
-        genderDisabled: false,
-        vaccinatedDisabled: false,
+        imgDisabled: true,
+        nameDisabled: true,
+        ageDisabled: true,
+        weightDisabled: true,
+        genderDisabled: "hotpink",
+        vaccinatedDisabled: "close",
         neaturedDisabled: false
     };
 
@@ -55,19 +55,41 @@ class EditDog extends Component {
 
     };
 
+    colorChanger = () => { 
+        if(this.state.genderDisabled == "hotpink"){
+            this.setState({
+                genderDisabled : "mediumblue"
+            }) }
+            if (this.state.genderDisabled == "mediumblue"){
+                this.setState({
+                    genderDisabled : "hotpink"
+                })
+            }
+        
+    }
+
     render() {
+
+        let state = this.state
+
         return (
 
+            
             <div className="dogInputs">
+                <Link to = "/dog-profiles/dog-list"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
 
-                <div className="dogNameDiv">
-                    <h1>here will be a div for pic</h1>
+                <Divider id="divider" />
+
+                <div className="detaildiv">
+                    <h1 style={{ paddingLeft: "10px" }} >Edit Profile Picture</h1>
                 </div>
 
                 <Divider id="divider" />
 
-                <div className="dogNameDiv">
-                    <Input id="inputDogName" size="large" placeholder="Dogs Name" disabled={this.state.nameDisabled} />
+                <div className="detaildiv">
+                <span id="nameText">Name</span>
+
+                    <Input id="inputDogName" size="large" placeholder="Lychee" disabled={this.state.nameDisabled} />
                     <Button id="btnDogName" onClick={this.toggle} type="primary">
                         Edit
                     </Button>
@@ -75,8 +97,10 @@ class EditDog extends Component {
 
                 <Divider id="divider" />
 
-                <div className="dogNameDiv">
-                    <Input id="inputDogName" size="large" placeholder="Age" disabled={this.state.ageDisabled} />
+                <div className="detaildiv">
+                <span id="ageText">Age</span>
+
+                    <Input id="inputDogAge" size="large" placeholder="6 years" disabled={this.state.ageDisabled} />
                     <Button id="btnDogAge" onClick={this.toggle} type="primary">
                         Edit
                     </Button>
@@ -84,8 +108,10 @@ class EditDog extends Component {
 
                 <Divider id="divider" />
 
-                <div className="dogNameDiv">
-                    <Input id="inputDogName" size="large" placeholder="Weight" disabled={this.state.weightDisabled} />
+                <div className="detaildiv">
+                <span id="weightText">Weight</span>
+
+                    <Input id="inputDogWeight" size="large" placeholder="10 kg" disabled={this.state.weightDisabled} />
                     <Button id="btnDogWeight" onClick={this.toggle} type="primary">
                         Edit
                     </Button>
@@ -93,24 +119,41 @@ class EditDog extends Component {
 
                 <Divider id="divider" />
 
-                <div className="dogNameDiv">
-                        <span id="genderText">Gender</span> 
-                        <Switch
-                            onChange={this.changeGender}
-                            // style = {{backgroundColor: "pink"}}
-                            id="gender_switch"
-                            checkedChildren="M"
-                            unCheckedChildren="F" />
+                <div className="detaildiv">
+                    <span id="genderText">Gender</span>
+                    <Switch
+                        onChange={this.colorChanger}
+                        style =  {{backgroundColor: state.genderDisabled }}
+                        id="gender_switch"
+                        checkedChildren="M"
+                        unCheckedChildren="F" />
                 </div>
 
                 <Divider id="divider" />
 
-                <div className="dogNameDiv">
-                    {/* <Input id="inputDogName" size="large" placeholder="Dogs Name" disabled={this.state.disabled} /> */}
-                    <Button id="btnDogName" onClick={this.toggle} type="primary">
-                        DELETE
-                    </Button>
+                <div className="detaildiv">
+                    <span id="vaccinatedText">Vaccinated</span>
+                    <Switch onChange={this.changeVaccinated}
+                        id="vaccinated"
+                        checkedChildren={<Icon type="check" />}
+                        unCheckedChildren={<Icon type="close" />}
+                        defaultChecked
+                    />
                 </div>
+
+                <Divider id="divider" />
+
+                <div className="detaildiv">
+                    <span id="neuteredText">Neutered</span>
+                    <Switch onChange={this.changeVaccinated}
+                        id="neutered"
+                        checkedChildren={<Icon type="check" />}
+                        unCheckedChildren={<Icon type="close" />}
+                        defaultChecked
+                    />
+                </div>
+
+
 
             </div>
 
@@ -125,23 +168,10 @@ export default EditDog;
 
 
 
-// <div className="dogNameDiv">
-//     Gender: <Switch
-//         onChange={this.changeGender}
-//         // style = {{backgroundColor: "pink"}}
-//         id="gender_switch"
-//         checkedChildren="M"
-//         unCheckedChildren="F" />
-// </div>
-
 //     <Divider id="divider" />
 
 //     <div className="dogNameDiv">
-//         Vaccinated: <Switch onChange={this.changeVaccinated}
-//             checkedChildren={<Icon type="check" />}
-//             unCheckedChildren={<Icon type="close" />}
-//             defaultChecked
-//         />
+
 //     </div>
 
 //     <Divider id="divider" />

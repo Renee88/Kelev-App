@@ -11,8 +11,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Checkbox } from 'antd';
 import ProfileList from './ProfileList';
 import AddDog from './AddDog';
-// import { Avatar, Icon, Button } from 'antd';
-// import OnBoard from './components/OnBoard';
 import EditDog from './EditDog';
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -50,7 +48,9 @@ class Profile extends Component {
             <div className="ProfileComponent">
                 <Layout id="profileLayout" style={{ height: "100vh" }}>
                     <Header id="header" >
-                        <span id="headerTitle">this is a main component</span>
+                    <div id="profileImgDiv">
+                    </div>
+                    {/* <span id="headerTitle"> Profile</span> */}
                     </Header>
 
                     <Content className="profileContent">

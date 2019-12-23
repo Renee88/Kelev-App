@@ -8,9 +8,10 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
 import { inject, observer } from 'mobx-react';
 import OnBoard from './components/OnBoard';
+import EditDog from './components/EditDog_test'
 import Profile from './components/Profile/Profile';
-import AddDog from './components/Profile/AddDog';
 import ProfileList from './components/Profile/ProfileList';
+
 
 @inject("parksStore", "MapStore", "dogsStore")
 @observer
@@ -43,13 +44,10 @@ class App extends Component {
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
           <Route path="/dog-profiles"  render={() => <Profile />} />
-
-          <Route path="/park/:id" exact render={({match}) => <Park match = {match}/>} />
-
-          </div>
+          <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
+        </div>
       </Router>
     );
   }
 }
 export default App;
-

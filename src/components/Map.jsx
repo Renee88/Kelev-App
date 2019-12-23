@@ -28,12 +28,8 @@ class MapContainer extends Component {
         await this.getDistance(marker.id)
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
-<<<<<<< HEAD
-        
-=======
         await this.props.MapStore.getDirections(marker.id)
 
->>>>>>> master
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
@@ -81,11 +77,7 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
-<<<<<<< HEAD
         this.props.MapStore.watchPosition()
-=======
-
->>>>>>> master
     }
 
     render() {
@@ -136,20 +128,10 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
-<<<<<<< HEAD
-                    {this.state.activeMarker != null ?
-                    <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
-                    
-                        <div className="popupText" id="eta" >
-
-                            <i className="far fa-clock"></i>
-                            {this.state.mins} away
-=======
                         {this.state.activeMarker != null ?
                             <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
 
                                 <div className="popupText" id="eta" >
->>>>>>> master
 
                                     <i className="far fa-clock"></i>
                                     {this.state.mins} away
@@ -158,16 +140,11 @@ class MapContainer extends Component {
 
                                 <hr style={{ textDecoration: "none" }}></hr>
 
-<<<<<<< HEAD
-                    </Link>
-                    : null}
-=======
                                 <div className="popupText" id="numDogs" >
                                     <i className="far fa-map"></i>
                                     4 dogs at the park</div>
                             </Link>
                             : null}
->>>>>>> master
                     </Router>
                 </InfoWindow>
             </Map>

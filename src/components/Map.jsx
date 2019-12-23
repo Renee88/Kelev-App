@@ -136,9 +136,8 @@ class MapContainer extends Component {
                         <div className="popupText" id="numDogs" >
                             <i className="far fa-map"></i>
                             4 dogs at the park</div>
-                   
                     </Link>
-                        : null}
+                            :null}
                     </Router>
                 </InfoWindow>
             </Map>

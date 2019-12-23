@@ -41,7 +41,7 @@ class ParkGeneralInfo extends Component {
                     </div>
                 </div>
                 </div> 
-                <p>{this.props.parksStore.chosenPark.address}</p>
+                <p id="per">{this.props.parksStore.chosenPark.address}</p>
                 <div className="directionButton">
                 <DirectionButton />
                 </div>

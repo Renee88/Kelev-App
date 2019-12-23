@@ -62,7 +62,8 @@ router.get('/park/:id', async function (req, res) {
     sequelize.query(`SELECT * FROM parks WHERE parks.id = ${parkId}`)
         .then(function (results) {
             const chosenPark = results[0][0]
-            res.send(chosenPark)
+            const chosenParkParsed = JSON.parse(chosenPark)
+            res.send(chosenParkParsed)
         })
 })
 

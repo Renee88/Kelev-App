@@ -6,7 +6,11 @@ const Sequelize = require('sequelize')
 const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
-// const decodePolyline = require('decode-google-map-polyline');
+
+
+// mysql://bc4d67280c9d6e:63039853@us-cdbr-iron-east-05.cleardb.net/heroku_a02de44653b3060?reconnect=true
+
+
 
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
@@ -123,8 +127,15 @@ router.post('/dog-profile', async function (req, res) {
 
 })
 
-router.delete('/dog-profile', function (req, res) {
-    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+router.delete('/dog-profile',function(req,res){
+    const dogToRemove = req.body
+    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dogToRemove.id} AND owner_id = ${dogToRemove.owner_id}`)
+    .then(function(){
+        sequelize.query(`DELETE FROM dogs WHERE dogs.id = ${dogToRemove.id}`)
+        .then(function(){
+            res.send(`Dog with the id of ${dogToRemove.id} was deleted from user ${dogToRemove.owner_id}`)
+        })
+    })
 })
 
 router.get(`/park-picture/:photoReference`, function(req,res){

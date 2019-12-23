@@ -12,9 +12,12 @@ export class MapStore {
         this.markers = [...this.markers, ...parks]
     }
 
-    @action getDirections = () => {
-        axios.post('http://localhost:4000/directions')
-            .then(res => console.log(res))
+    @action getDirections = (destinationId) => {
+        const marker = this.markers.find(m => m.id === destinationId)
+        let destination = `${marker.position.lat},${marker.position.lng}`
+        let currLoc = `${this.location.latitude},${this.location.longitude}`
+        axios.post(`http://localhost:4000/directions/?origin=${currLoc}&destination=${destination}`)
+            .then(res => console.log(res.data))
     }
 
     @action getLocation = () => {

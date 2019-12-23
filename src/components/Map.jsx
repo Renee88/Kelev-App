@@ -27,7 +27,7 @@ class MapContainer extends Component {
         await this.getDistance(marker.id)
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
-        // await this.props.parksStore.insertId(marker.id)
+        await this.props.MapStore.getDirections(marker.id)
         
         this.setState({
             selectedPlace: props,
@@ -41,10 +41,11 @@ class MapContainer extends Component {
         let marker = this.props.MapStore.markers.find(m => m.id === id)
         let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
         let destination = `${marker.position.lat},${marker.position.lng}`
+        console.log(origin + " " + destination)
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
 
-                console.log(res.data.rows[0].elements[0])
+                // console.log(res.data.rows[0].elements[0])
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value

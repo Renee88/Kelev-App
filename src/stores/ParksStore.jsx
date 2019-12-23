@@ -13,8 +13,7 @@ class ParksStore{
     }
 
     @action async getPark(id){
-        console.log(id)
-        let park = await axios.get(`/park/${id}`)
+        let park = await axios.get(`/parks/${id}`)
         let chosenPark = park.data
         this.chosenPark = chosenPark
     }

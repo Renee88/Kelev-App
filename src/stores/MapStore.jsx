@@ -36,7 +36,16 @@ export class MapStore {
     @action getCoordinates = (position) => {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
+    
     }
 
+    @action watchPosition = () => {
+        let id = navigator.geolocation.watchPosition((position) => {
+            this.watchPos.latitude = position.coords.latitude
+            this.watchPos.longitude = position.coords.longitude
+        }, null , {distanceFilter : 10}) 
+            
 
+        
+    }
 }

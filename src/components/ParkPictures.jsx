@@ -5,15 +5,23 @@ import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
-import { observer } from 'mobx-react';
-// import '../pictures'
-const { Header, Footer, Sider, Content } = Layout;
+import { observer, inject } from 'mobx-react';
+import requestPromise from 'request-promise';
+const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 
+
+@inject("parksStore")
 @observer
 class ParkPictures extends Component {
 
+    async componentDidMount (){
+        const parkId = parseInt(this.props.match.params.id)
+        await this.props.parksStore.getPark(parkId)
+        let chosenPark = this.props.parksStore.chosenPark.park_picture
+    }
 
     render() {
+
 
         return (
             <div className="parkPictures">

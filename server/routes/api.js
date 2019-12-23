@@ -20,6 +20,7 @@ router.get('/directions', (req, res) => {
     const destinationCo = directions.destination
     requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
         .then(response => {
+            response = JSON.parse(response)
             res.send(response)
         })
 })
@@ -123,6 +124,14 @@ router.post('/dog-profile', async function (req, res) {
 
 router.delete('/dog-profile', function (req, res) {
     sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+})
+
+router.get(`/park-picture/:photoReference`, function(req,res){
+    const photoReference = req.params.photoReference
+    requestPromise(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=${apiKey}`
+        ).then(response => {
+            res.send(response.url)
+            console.log(response.url)})
 })
 
 

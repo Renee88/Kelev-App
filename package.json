@@ -2,6 +2,10 @@
   "name": "agora",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "@babel/core": "7.7.4",
     "@babel/plugin-proposal-decorators": "^7.7.4",
@@ -86,7 +90,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "node server.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },

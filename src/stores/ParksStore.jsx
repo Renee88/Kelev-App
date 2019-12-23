@@ -14,7 +14,7 @@ class ParksStore{
 
     @action async getPark(id){
         let park = await axios.get(`/park/${id}`)
-        let chosenPark = park.data
+        let chosenPark = JSON.parse(park.data)
         this.chosenPark = chosenPark
         this.parkRating = chosenPark.rating
     }

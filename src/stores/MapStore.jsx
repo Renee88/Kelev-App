@@ -13,7 +13,7 @@ export class MapStore {
     }
 
     @action getDirections = () => {
-        axios.post('http://localhost:4000/directions')
+        axios.post('/directions')
             .then(res => console.log(res))
     }
 

@@ -41,7 +41,7 @@ class App extends Component {
           <Route path="/onboard" exact render={() => <OnBoard />} />
 
 
-          <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
+          <Route path="/park/:id" exact render={({match}) => <Park match = {match}/>} />
 
           </div>
       </Router>

@@ -27,7 +27,6 @@ class MapContainer extends Component {
         await this.getDistance(marker.id)
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
-        // await this.props.parksStore.insertId(marker.id)
         
         this.setState({
             selectedPlace: props,

@@ -13,7 +13,7 @@ class ParksStore {
     }
 
     @action async getPark(id) {
-        let park = await axios.get(`http://localhost:4000/park/${id}`)
+        let park = await axios.get(`http://localhost:4000/parks/${id}`)
         let chosenPark = (park.data)
         console.log(chosenPark)
         this.chosenPark = chosenPark

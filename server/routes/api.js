@@ -53,7 +53,7 @@ router.get('/map', function (req, res) {
         })
 })
 
-router.get('/park/:id', async function (req, res) {
+router.get('/parks/:id', async function (req, res) {
     const parkId = req.params.id
     sequelize.query(`SELECT * FROM parks WHERE parks.id = ${parkId}`)
         .then(function (results) {

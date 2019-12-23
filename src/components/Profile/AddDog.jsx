@@ -3,7 +3,7 @@ import { observer, inject } from 'mobx-react';
 // import '../App.css';
 // import '../styles/parkComponent/mainComponent.css';
 
-import { Layout, Divider, Input, Avatar, Icon, Button, InputNumber, Switch } from 'antd';
+import { Layout, Divider, Input, Avatar, Icon, Button, InputNumber, Switch, Form } from 'antd';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import '../../styles/profile/AddDog.css'
@@ -44,7 +44,6 @@ class AddDog extends Component {
         return (
 
             <div className="dogInputs">
-
                 <div className="dogNameDiv">
                     <h1>here will be a div for pic</h1>
                 </div>

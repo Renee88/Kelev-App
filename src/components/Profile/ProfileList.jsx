@@ -26,7 +26,7 @@ class ProfileList extends Component {
     }
 
     render() {
-       
+
         return (
 
             <div>
@@ -58,8 +58,8 @@ class ProfileList extends Component {
                 </div>
 
                 <Divider id="divider" />
-
-                <Link to="/profile/">
+                
+                <Link to="/dog-profiles/add-dog">
                     <Button id="addDog" type="primary" shape="circle" onClick={this.props.onToggle}>
                         <i class="fas fa-user-plus"></i>
                     </Button>

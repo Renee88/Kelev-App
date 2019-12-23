@@ -14,7 +14,7 @@
 
     /* background-color: blue; */
     align-items: center;
-    height: 3rem;
+    height: 2.5rem;
 
 }
 
@@ -22,8 +22,9 @@
     position: relative;
     width: 12rem;
     top: 0;
-    height: 3rem;
+    height: 2rem;
     font-size: 30px;
+    float: right;
 }
 
 #btnDogName{
@@ -33,5 +34,11 @@
     padding: 0;
 }
 
+/* 
+ #gender_switch .ant-switch-checked{
+    background-color: pink;
+}
 
-
+.ant-switch #gender_switch{
+    background-color: pink;
+} */

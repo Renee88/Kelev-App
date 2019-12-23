@@ -57,6 +57,6 @@ const loadParks = async function(parks){
 
 // loadDogs(dogs)
 // loadOwners(owners)
-loadParks(parks)
+// loadParks(parks)
 // loadOwnersAndDogs(owners)
 

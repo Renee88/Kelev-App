@@ -66,17 +66,13 @@ router.get('/owner', function (req, res) {
         const owner = results[0]
         res.send(owner)
     })
-        
 })
 
 router.put('/owner', function (req, res) {
     let userStatus = req.body.userStatus
     sequelize.query(`UPDATE owners 
     SET owner_status = '${userStatus}' WHERE owners.id = 1`)
-    
-        res.send("done")
-    
-        
+        res.send("done")  
 })
 
 router.put('/dog-profile', function (req, res) {
@@ -84,7 +80,7 @@ router.put('/dog-profile', function (req, res) {
     const fieldName = detailsForEdit.fieldName
     const fieldValue = detailsForEdit[fieldName]
     const dogId = detailsForEdit.id
-
+  
     sequelize.query(`UPDATE dogs 
     SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)
         .then(function (results) {
@@ -113,8 +109,6 @@ router.post('/dog-profile', async function (req, res) {
     .then(function(results){
         res.send(dogs[lastIndex])
     })
-
-
 })
 
 router.delete('/dog-profile',function(req,res){

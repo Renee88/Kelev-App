@@ -55,8 +55,6 @@ class Profile extends Component {
 
                     <Content className="profileContent">
 
-                        {/* {this.state.dogList ? <ProfileList state={state} onToggle={this.onToggle} /> : <AddDog />} */}
-
                         <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
                         <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
                         <Route path="/dog-profiles/edit-dog" exact render={() => <OnBoard />} />

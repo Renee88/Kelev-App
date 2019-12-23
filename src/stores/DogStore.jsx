@@ -6,11 +6,11 @@ class DogStore  {
     @observable id = null
     @observable dog_name
     @observable dog_picture
-    @observable gender
+    @observable gender = "female"
     @observable age
     @observable weight
-    @observable vaccinated
-    @observable neutered
+    @observable vaccinated = false
+    @observable neutered = false
     @observable owner_id = 5
     @observable dog_status = 1
     

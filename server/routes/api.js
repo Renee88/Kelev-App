@@ -3,7 +3,8 @@ const router = express.Router()
 const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
+// const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
+const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
 
@@ -97,6 +98,8 @@ router.post('/dog-profile', async function (req, res) {
     const newDog = req.body
     newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
     newDog.neutered ? newDog.neutered = 1 : newDog.neutered = 0
+    console.log(newDog);
+    
 
     await sequelize.query(`INSERT INTO dogs VALUES(null,"${newDog.dog_name}","${newDog.dog_picture}","${newDog.gender}",${newDog.age},${newDog.weight},${newDog.vaccinated},${newDog.neutered},${newDog.dog_status})`)
     

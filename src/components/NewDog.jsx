@@ -9,9 +9,7 @@ class NewDog extends Component {
         let value = event.target.value
         this.props.dogStore.getDogInput(inputName, value)
         console.log(this.props.dogStore);
-
     }
-
 
     render() {
         return (
@@ -41,7 +39,7 @@ class NewDog extends Component {
                         <option value="no">no</option>
                     </select>
                 </div>
-                <div><button onClick={this.props.dogStore.saveNewDog}>Submit</button></div>
+                <div><button onClick={this.props.dogStore.saveNewDog}>ADD</button></div>
             </div>
         );
     }

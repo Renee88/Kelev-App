@@ -1,7 +1,5 @@
 import { observable, action } from "mobx";
 import axios from 'axios'
-import request from "request";
-const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 
 
 class ParksStore {
@@ -26,11 +24,10 @@ class ParksStore {
         this.parkId = id
     }
 
-    getPhoto(photoReference) {
-        request(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU&key=${apiKey}`
-            ,function (error, response) {
-                console.log(response)
-            })
+    async getPhoto(photoReference) {
+        photoReference = 'CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU'
+       const photo = await axios.get(`http://localhost:4000/park-photo/${photoReference}`)
+       console.log(photo.data)
     }
 
 }

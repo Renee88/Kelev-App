@@ -5,8 +5,8 @@ const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 const loader = require('../../sqlLoader')
 
-const sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL || 'mysql://root:@localhost/sql_intro')
-// const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
+// const sequelize = new Sequelize(process.env.CLEARDB_DATABASE_URL || 'mysql://root:@localhost/sql_intro')
+const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 const requestPromise = require('request-promise')
 // const decodePolyline = require('decode-google-map-polyline');

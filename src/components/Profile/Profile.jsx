@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 import { Layout, Divider, Avatar, Icon, Button } from 'antd';
 
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import { observer, inject } from 'mobx-react';
 import '../../styles/profile/Profile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -56,7 +56,9 @@ class Profile extends Component {
                     <Content className="profileContent">
 
                         {/* {this.state.dogList ? <ProfileList state={state} onToggle={this.onToggle} /> : <AddDog />} */}
-
+                        <Route exact path="/dog-profiles">
+                            <Redirect to="/dog-profiles/dog-list" />
+                        </Route>
                         <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
                         <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
                         <Route path="/dog-profiles/edit-dog" exact render={() => <OnBoard />} />

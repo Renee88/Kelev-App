@@ -14,7 +14,7 @@ class DogsInPark extends Component {
             <div>
 
                 <div id="inPark">
-               {dogs.map(d => <div>
+               {dogs.map((d,i) => <div key = {i}>
                   <img id="pic" src={d.picture}></img> 
                   <span id="name"><i className={d.status ? "fas fa-circle" : "far fa-circle"}></i>{d.dog_name}</span><br></br>
                   <span id="minsAway"> <i id="clock" className={d.away ? "far fa-clock" : null}></i> {d.away ? `${d.away} mins away` : null}</span>

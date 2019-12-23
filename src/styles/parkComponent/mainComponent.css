@@ -110,7 +110,7 @@ body {
     overflow: hidden;
   }
 
-  #img1{
+  #imgheader{
     width: 100vw;
     object-fit: cover;
     }
@@ -171,6 +171,9 @@ body {
     flex-direction: row;
     margin-bottom: 10px;
   }
+   #per{
+     color: white;
+   }
 
   #rating > span{
     margin-right: 10px;

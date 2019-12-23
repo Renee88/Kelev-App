@@ -19,16 +19,16 @@ class ParkPictures extends Component {
             <div className="parkPictures">
                 <Carousel autoplay>
                     <div>
-                    <img id="img1" src={require('../pictures/1.jpg')} />
+                    <img id="imgheader" src={require('../pictures/1.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/2.jpg')} />
+                    <img id="imgheader" src={require('../pictures/2.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/3.jpg')} />
+                    <img id="imgheader" src={require('../pictures/3.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/4.jpg')} />
+                    <img id="imgheader" src={require('../pictures/4.jpg')} />
                     </div>
                 </Carousel>
 

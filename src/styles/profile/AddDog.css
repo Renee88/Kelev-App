@@ -1,0 +1,37 @@
+
+.profileContent {
+    /* background-color: black; */
+    position: relative;
+}
+
+.dogNameDiv{
+    display: flex;
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    /* background-color: blue; */
+    align-items: center;
+    height: 3rem;
+
+}
+
+#inputDogName {
+    position: relative;
+    width: 12rem;
+    top: 0;
+    height: 3rem;
+    font-size: 30px;
+}
+
+#btnDogName{
+    position: absolute;
+    width: 40px;
+    right: 1rem;
+    padding: 0;
+}
+
+
+

@@ -1,4 +1,4 @@
-import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react';
+import { Map, Marker, InfoWindow, GoogleApiWrapper,Polyline } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
@@ -19,7 +19,8 @@ class MapContainer extends Component {
             activeMarker: {},
             selectedPlace: {},
             mins: '0 mins',
-            distance: 0
+            distance: 0,
+            polyline: []
         };
     }
 
@@ -27,11 +28,17 @@ class MapContainer extends Component {
         await this.getDistance(marker.id)
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
+<<<<<<< HEAD
         
+=======
+        await this.props.MapStore.getDirections(marker.id)
+
+>>>>>>> master
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
-            showingInfoWindow: true
+            showingInfoWindow: true,
+            polyline: this.props.MapStore.getDirections(marker.id)
         }, function () {
         });
     }
@@ -40,10 +47,11 @@ class MapContainer extends Component {
         let marker = this.props.MapStore.markers.find(m => m.id === id)
         let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
         let destination = `${marker.position.lat},${marker.position.lng}`
+        console.log(origin + " " + destination)
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
 
-                console.log(res.data.rows[0].elements[0])
+                // console.log(res.data.rows[0].elements[0])
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
@@ -73,7 +81,11 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
         await this.props.MapStore.getLocation()
+<<<<<<< HEAD
         this.props.MapStore.watchPosition()
+=======
+
+>>>>>>> master
     }
 
     render() {
@@ -105,7 +117,11 @@ class MapContainer extends Component {
                         scaledSize: new window.google.maps.Size(60, 60)
                     }}
                 />
-
+                <Polyline
+                    path={this.props.MapStore.polyline}
+                    strokeColor="#3471eb"
+                    strokeOpacity={0.7}
+                    strokeWeight={6} />
                 {this.props.MapStore.markers.map((m, i) =>
                     <Marker
                         key={i}
@@ -120,6 +136,7 @@ class MapContainer extends Component {
                     onClose={this.onClose}
                 >
                     <Router>
+<<<<<<< HEAD
                     {this.state.activeMarker != null ?
                     <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
                     
@@ -127,18 +144,30 @@ class MapContainer extends Component {
 
                             <i className="far fa-clock"></i>
                             {this.state.mins} away
+=======
+                        {this.state.activeMarker != null ?
+                            <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
 
+                                <div className="popupText" id="eta" >
+>>>>>>> master
+
+                                    <i className="far fa-clock"></i>
+                                    {this.state.mins} away
+        
                                 </div>
 
-                        <hr style={{ textDecoration: "none" }}></hr>
+                                <hr style={{ textDecoration: "none" }}></hr>
 
-                        <div className="popupText" id="numDogs" >
-                            <i className="far fa-map"></i>
-                            4 dogs at the park</div>
-                   
-
+<<<<<<< HEAD
                     </Link>
                     : null}
+=======
+                                <div className="popupText" id="numDogs" >
+                                    <i className="far fa-map"></i>
+                                    4 dogs at the park</div>
+                            </Link>
+                            : null}
+>>>>>>> master
                     </Router>
                 </InfoWindow>
             </Map>

@@ -43,7 +43,6 @@ class App extends Component {
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
           <Route path="/dog-profiles"  render={() => <Profile />} />
-          <Route path="/dog-profiles/edit-dog" exact render={() => <OnBoard />} />
 
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
 

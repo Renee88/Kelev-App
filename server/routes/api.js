@@ -19,7 +19,7 @@ router.get('/directions', (req, res) => {
     const directions = req.query
     const originCo = directions.origin
     const destinationCo = directions.destination
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
+    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY&mode=walking`)
         .then(response => {
             res.send(response)
         })

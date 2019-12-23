@@ -56,6 +56,10 @@ export default class SimpleSlider extends Component {
                 </Slider>
 
                 <div className="buttons">
+
+                   
+
+
                     <Icon id="leftIcon" type="left" />
                     <Icon id="rightIcon" type="right" />
                 </div>

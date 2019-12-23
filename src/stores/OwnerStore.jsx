@@ -23,10 +23,10 @@ class OwnerStore {
     }
 
     @action changeUserStatus = async () => {
-        let owner =  await axios.get('http://localhost:4000/owner')
+        let owner =  await axios.get('/owner')
         // console.log(owner.data[0].owner_status)
         let newStatus = this.changeStatus(owner.data.owner_status)
-        await axios.put('http://localhost:4000/owner', {userStatus: newStatus })
+        await axios.put('/owner', {userStatus: newStatus })
     }
 
     @action addDogToOwner(dog){

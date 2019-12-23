@@ -8,20 +8,21 @@ class ParksStore{
     @observable parkId
 
     @action loadParks = async() =>{
-       const parks = await axios.get('http://localhost:4000/map')
+       const parks = await axios.get('/map')
        this.parks = parks.data
     }
 
     @action async getPark(id){
-        let park = await axios.get(`http://localhost:4000/park/${id}`)
-        let chosenPark = park.data
+        let park = await axios.get(`/park/${id}`)
+        let chosenPark = JSON.parse(park.data)
+        console.log(chosenPark)
         this.chosenPark = chosenPark
         this.parkRating = chosenPark.rating
     }
 
     @action insertId = (id) =>{
         this.parkId = id
-    }
+    } 
     
 }
 

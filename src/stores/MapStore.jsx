@@ -16,7 +16,7 @@ export class MapStore {
         const marker = this.markers.find(m => m.id === destinationId)
         let destination = `${marker.position.lat},${marker.position.lng}`
         let currLoc = `${this.location.latitude},${this.location.longitude}`
-        axios.get(`http://localhost:4000/directions/?origin=${currLoc}&destination=${destination}`)
+        axios.get(`/directions/?origin=${currLoc}&destination=${destination}`)
             .then((res)=> {
                 let polyline = res.data.routes[0].overview_polyline.points
                 this.polyline = decodePolyline(polyline)
@@ -39,5 +39,13 @@ export class MapStore {
     
     }
 
+    @action watchPosition = () => {
+        let id = navigator.geolocation.watchPosition((position) => {
+            this.watchPos.latitude = position.coords.latitude
+            this.watchPos.longitude = position.coords.longitude
+        }, null , {distanceFilter : 10}) 
+            
 
+        
+    }
 }

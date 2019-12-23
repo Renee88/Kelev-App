@@ -76,12 +76,14 @@ class MapContainer extends Component {
     }
     
     componentDidMount = async () => {
+
         // await this.props.MapStore.getLocation()
          navigator.geolocation.watchPosition((position)=> {
             this.props.MapStore.location.latitude = position.coords.latitude
             this.props.MapStore.location.longitude = position.coords.longitude
             console.log(this.props.MapStore.location)
         } , null, {enableHighAccuracy:true})
+
     }
 
     render() {

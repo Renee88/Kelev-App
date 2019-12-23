@@ -5,7 +5,7 @@ class DogsStore {
     @observable dogs = []
 
     @action loadDogs = async () => {
-        let dogs = await axios.get('http://localhost:4000/dogs')
+        let dogs = await axios.get('/dogs')
         dogs = dogs.data
         this.dogs = [...dogs]
     }

@@ -5,32 +5,40 @@ import ChatButton from './ChatButton';
 import ProfileButton from './profileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
-// import '../pictures'
-const { Header, Footer, Sider, Content } = Layout;
+import { observer, inject } from 'mobx-react';
+import requestPromise from 'request-promise';
+const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 
 
-// @inject("ownerStore")
-// @observer
-
+@inject("parksStore")
+@observer
 class ParkPictures extends Component {
 
+    async componentDidMount (){
+        const parkId = parseInt(this.props.match.params.id)
+        await this.props.parksStore.getPark(parkId)
+        let chosenParkPhoto = this.props.parksStore.chosenPark.park_picture
+        this.props.parksStore.getPhoto(chosenParkPhoto)
+        console.log(this.props.parksStore.parkPhoto)
+    }
 
     render() {
+
 
         return (
             <div className="parkPictures">
                 <Carousel autoplay>
                     <div>
-                    <img id="img1" src={require('../pictures/1.jpg')} />
+                    <img id="imgheader" src={require('../pictures/1.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/2.jpg')} />
+                    <img id="imgheader" src={require('../pictures/2.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/3.jpg')} />
+                    <img id="imgheader" src={require('../pictures/3.jpg')} />
                     </div>
                     <div>
-                    <img id="img1" src={require('../pictures/4.jpg')} />
+                    <img id="imgheader" src={require('../pictures/4.jpg')} />
                     </div>
                 </Carousel>
 

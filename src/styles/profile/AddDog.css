@@ -1,0 +1,55 @@
+
+.profileContent {
+    /* background-color: black; */
+    position: relative;
+}
+
+.dogNameDiv{
+    display: flex;
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+    /* background-color: blue; */
+    align-items: center;
+    height: 2.5rem;
+
+}
+
+#inputDogName {
+    position: relative;
+    width: 12rem;
+    top: 0;
+    height: 2rem;
+    font-size: 30px;
+    float: right;
+}
+
+#btnDogName{
+    position: absolute;
+    width: 40px;
+    right: 1rem;
+    padding: 0;
+}
+
+/* 
+ #gender_switch .ant-switch-checked{
+    background-color: pink;
+}
+
+#back-button{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+.ant-switch #gender_switch{
+    background-color: pink;
+}
+

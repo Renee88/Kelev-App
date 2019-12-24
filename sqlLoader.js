@@ -2,7 +2,7 @@ const dogs = require('./src/dummyData/dogs.json')
 const parks = require('./src/dummyData/dogParks.json')
 const owners = require('./src/dummyData/owners.json')
 const Sequelize = require('sequelize')
-const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
+const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 
@@ -51,7 +51,7 @@ const loadParks = async function(parks){
     for(let park of parks){
         let parkPicture = park.photos ? park.photos[0].photo_reference : null
         await sequelize.query(`INSERT INTO parks 
-        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPicture}",${park.rating})`)
+        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPicture}","${park.rating}")`)
     }
 }
 
@@ -60,3 +60,4 @@ const loadParks = async function(parks){
 // loadParks(parks)
 // loadOwnersAndDogs(owners)
 
+module.exports = {loadParks, loadOwners,loadDogs , loadOwnersAndDogs}

@@ -1,4 +1,4 @@
-USE sql_intro;
+-- USE kelev_app;
 
 -- CREATE TABLE dogs (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -11,6 +11,8 @@ USE sql_intro;
 --     neutered BOOLEAN,
 --     dog_status TINYINT DEFAULT 1
 -- );
+
+-- DROP TABLE parks;
 
 
 
@@ -40,7 +42,7 @@ USE sql_intro;
 --     lat VARCHAR(20),
 --     address VARCHAR(80),
 --     park_picture VARCHAR(500),
---     rating TINYINT
+--     rating VARCHAR(4)
 -- );
 
 
@@ -66,10 +68,6 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"onTheWay");
 -- INSERT INTO status VALUES (null,"inThePark");
 
-<<<<<<< HEAD
--- DROP TABLE parks;
-=======
 
 
 
->>>>>>> a84203c9e816ad241bffea2a589b500865c72b2c

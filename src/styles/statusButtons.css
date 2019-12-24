@@ -46,7 +46,6 @@
   #paw1{
     position: absolute ;
     font-size: 17px;
-  
     left: 50%;
     transform: translate(-50%);
     top: 10px;
@@ -54,7 +53,7 @@
   
   #paw2{
     position: absolute ;
-    top: 15px;
+    top: 10px;
     left: 50%;
     transform: translate(-50%);
   }

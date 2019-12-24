@@ -7,17 +7,33 @@ const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 const requestPromise = require('request-promise')
 
+
+// mysql://bc4d67280c9d6e:63039853@us-cdbr-iron-east-05.cleardb.net/heroku_a02de44653b3060?reconnect=true
+
+
+
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
-
     requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
-    .then(response => res.send(response))
+        .then(response => { res.send(response) })
 })
 
+<<<<<<< HEAD
 router.post('/directions', (req, res) => {
     requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Jerusalem&destination=Holon&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
         .then(response => res.send(response.data))
+=======
+router.get('/directions', (req, res) => {
+    const directions = req.query
+    const originCo = directions.origin
+    const destinationCo = directions.destination
+    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY&mode=walking`)
+        .then(response => {
+            response = JSON.parse(response)
+            res.send(response)
+        })
+>>>>>>> 88417ad6f89e67a99d8cae2434afa8a96cc335a6
 })
 
 router.get('/map', function (req, res) {
@@ -43,13 +59,13 @@ router.get('/map', function (req, res) {
         })
 })
 
-router.get('/park',async function(req,res){
-    sequelize.query(`SELECT * FROM parks`)
-    .then(function(results){
-        const parks = results[0]
-        const randomNumber = Math.floor(Math.random() * parks.length)
-        res.send(parks[randomNumber])
-    })
+router.get('/parks/:id', async function (req, res) {
+    const parkId = req.params.id
+    sequelize.query(`SELECT * FROM parks WHERE parks.id = ${parkId}`)
+        .then(function (results) {
+            const chosenPark = results[0][0]
+            res.send(chosenPark)
+        })
 })
 
 router.get('/dogs', function (req, res) {
@@ -66,17 +82,13 @@ router.get('/owner', function (req, res) {
         const owner = results[0]
         res.send(owner)
     })
-        
 })
 
 router.put('/owner', function (req, res) {
     let userStatus = req.body.userStatus
     sequelize.query(`UPDATE owners 
     SET owner_status = '${userStatus}' WHERE owners.id = 1`)
-    
-        res.send("done")
-    
-        
+        res.send("done")  
 })
 
 router.put('/dog-profile', function (req, res) {
@@ -84,7 +96,7 @@ router.put('/dog-profile', function (req, res) {
     const fieldName = detailsForEdit.fieldName
     const fieldValue = detailsForEdit[fieldName]
     const dogId = detailsForEdit.id
-
+  
     sequelize.query(`UPDATE dogs 
     SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)
         .then(function (results) {
@@ -101,24 +113,40 @@ router.post('/dog-profile', async function (req, res) {
     const newDog = req.body
     newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
     newDog.neutered ? newDog.neutered = 1 : newDog.neutered = 0
+    console.log(newDog);
+    
 
     await sequelize.query(`INSERT INTO dogs VALUES(null,"${newDog.dog_name}","${newDog.dog_picture}","${newDog.gender}",${newDog.age},${newDog.weight},${newDog.vaccinated},${newDog.neutered},${newDog.dog_status})`)
-    
+
     const results = await sequelize.query(`SELECT * FROM dogs`)
     const dogs = results[0]
     const lastIndex = dogs.length - 1
     const newDogId = dogs[lastIndex].id
-    
+
     sequelize.query(`INSERT INTO dog_owner VALUES (null,${newDog.owner_id},${newDogId})`)
     .then(function(results){
         res.send(dogs[lastIndex])
     })
-
-
 })
 
-router.delete('/dog-profile',function(req,res){
-    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dog.id} AND owner_id = ${owner.id}`)
+router.delete('/dog-profile', function (req, res) {
+    const dogToRemove = req.body
+    sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dogToRemove.id} AND owner_id = ${dogToRemove.owner_id}`)
+        .then(function () {
+            sequelize.query(`DELETE FROM dogs WHERE dogs.id = ${dogToRemove.id}`)
+                .then(function () {
+                    res.send(`Dog with the id of ${dogToRemove.id} was deleted from user ${dogToRemove.owner_id}`)
+                })
+        })
+})
+
+router.get(`/park-photo/:photoReference`, async function (req, res) {
+    const photoReference = req.params.photoReference
+    const promise = await requestPromise(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${apiKey}`)
+        .then(response => {
+            console.log(response)
+            res.send(response)
+        })
 })
 
 

@@ -1,11 +1,12 @@
 import { observable, action } from "mobx";
 import axios from 'axios'
+import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
 
 
 class ParksStore {
     @observable parks = []
     @observable chosenPark
-    @observable parkPhoto
+    @observable parkPhotos = []
 
     @action loadParks = async () => {
         const parks = await axios.get('http://localhost:4000/map')
@@ -23,9 +24,16 @@ class ParksStore {
     }
 
     async getPhoto() {
-        const photoReference = 'CnRtAAAATLZNl354RwP_9UKbQ_5Psy40texXePv4oAlgP4qNEkdIrkyse7rPXYGd9D_Uj1rVsQdWT4oRz4QrYAJNpFX7rzqqMlZw2h2E2y5IKMUZ7ouD_SlcHxYq1yL4KbKUv3qtWgTK0A6QbGh87GB3sscrHRIQiG2RrmU_jF4tENr9wGS_YxoUSSDrYjWmrNfeEHSGSc3FyhNLlBU'
-       const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${process.env.REACT_APP_API_KEY}`
-       this.parkPhoto = photoUrl
+            const photoReferences = this.chosenPark.park_pictures.split(",")
+            console.log(photoReferences)
+            if(photoReferences != "null"){
+                for(let photoReference of photoReferences){
+                    const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${photoReference}&key=${process.env.REACT_APP_API_KEY}`
+                    this.parkPhotos.push(photoUrl)  
+                }
+            } else {
+                this.parkPhotos.push(cover)
+            }
     }
 
 }

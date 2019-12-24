@@ -19,11 +19,6 @@ router.post('/distance', (req, res) => {
         .then(response => { res.send(response) })
 })
 
-<<<<<<< HEAD
-router.post('/directions', (req, res) => {
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Jerusalem&destination=Holon&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
-        .then(response => res.send(response.data))
-=======
 router.get('/directions', (req, res) => {
     const directions = req.query
     const originCo = directions.origin
@@ -33,7 +28,6 @@ router.get('/directions', (req, res) => {
             response = JSON.parse(response)
             res.send(response)
         })
->>>>>>> 88417ad6f89e67a99d8cae2434afa8a96cc335a6
 })
 
 router.get('/map', function (req, res) {

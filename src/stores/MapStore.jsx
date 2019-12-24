@@ -36,9 +36,6 @@ export class MapStore {
     @action getCoordinates = (position) => {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
-<<<<<<< HEAD
-        console.log(this.location)
-=======
     
     }
 
@@ -50,6 +47,5 @@ export class MapStore {
             
 
         
->>>>>>> 88417ad6f89e67a99d8cae2434afa8a96cc335a6
     }
 }

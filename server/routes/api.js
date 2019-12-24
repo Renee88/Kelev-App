@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
+const apiKey = process.env.REACT_APP_API_KEY
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 
@@ -9,10 +9,6 @@ const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 const requestPromise = require('request-promise')
-
-
-// mysql://bc4d67280c9d6e:63039853@us-cdbr-iron-east-05.cleardb.net/heroku_a02de44653b3060?reconnect=true
-
 
 
 router.post('/distance', (req, res) => {

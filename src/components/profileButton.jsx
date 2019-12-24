@@ -22,10 +22,13 @@ class ProfileButton extends Component {
         return (
 
             <div className="profileButton">
-                <Button id="profileBtn" type="primary" shape="circle"  >
-                <FontAwesomeIcon icon={faDog} />
-                     </Button>
-            </div>
+                <Link to="/dog-profiles/add-dog">
+                    <Button id="profileBtn" type="primary" shape="circle"  >
+                        <FontAwesomeIcon icon={faDog} />
+                    </Button>
+                </Link>
+
+            </div >
         );
     }
 }

@@ -11,6 +11,7 @@ import OnBoard from './components/OnBoard';
 import EditDog from './components/EditDog_test'
 import Profile from './components/Profile/Profile';
 import ProfileList from './components/Profile/ProfileList';
+import MainProfile from './components/Profile/MainProfile';
 
 
 @inject("parksStore", "MapStore", "dogsStore")
@@ -45,6 +46,7 @@ class App extends Component {
           <Route path="/onboard" exact render={() => <OnBoard />} />
           <Route path="/dog-profiles"  render={() => <Profile />} />
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
+          <Route path="/main-profile"  render={() => <MainProfile />} />
         </div>
       </Router>
     );

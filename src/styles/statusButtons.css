@@ -10,15 +10,13 @@
   #statusOne{
     width: 6rem;
     height: 6rem;
-    font-size: 20px;
+    font-size: 22px;
     border: none;
     background-color: #4545b6;
     border:none;
     box-shadow:
     0 0 0 5px #4545b669,
     0 0 0 10px #4545b623;
-    /* box-shadow: 0px 1px 1px 1px rgba(0,0,0,0.15); */
-    
   }
 
   

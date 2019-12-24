@@ -15,14 +15,13 @@ const { Header, Footer, Sider, Content } = Layout;
 @observer
 class Park extends Component {
 
-
     render() {
         return (
             <div className="parkComponent">
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
                 <Content id="inside">
-                    <Link to = "/"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                    <Link to = "/"><div id = "back-button1"><i className="fas fa-chevron-left"></i></div></Link>
                     <ParkPictures match = {this.props.match} />
                 </Content>
                 <Content>

@@ -23,7 +23,7 @@ class ProfileList extends Component {
         return (
 
             <div>
-                <Link to="/"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to="/main-profile"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
 
                 <span id="dogListHeader"> My Dogs</span>
 

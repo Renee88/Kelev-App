@@ -61,7 +61,7 @@ class AddDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="nameText">Add Profile Picture</span>
+                    <span id="imgText">Add Profile Picture</span>
                     <Upload >
                         <Button id="uploadBtn">
                             <Icon type="upload" />Upload
@@ -97,7 +97,7 @@ class AddDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="genderText">Gender</span>
+                    <span id="genderText">Sex</span>
                     <Switch
                         onChange={this.changeGender}
                         style={{ backgroundColor: state.genderDisabled }}
@@ -120,7 +120,7 @@ class AddDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="neuteredText">Neutered</span>
+                    <span id="neuteredText">{state.genderDisabled == "hotpink" ? `Spayed` : "Fixed"}</span>
                     <Switch onChange={this.changeNeutered}
                         id="neutered"
                         checkedChildren={<Icon type="check" />}

@@ -12,6 +12,7 @@ import EditDog from './components/EditDog_test'
 import Profile from './components/Profile/Profile';
 import ProfileList from './components/Profile/ProfileList';
 import MainProfile from './components/Profile/MainProfile';
+import SplashScreen from './components/Splash';
 
 
 @inject("parksStore", "MapStore", "dogsStore")
@@ -42,6 +43,8 @@ class App extends Component {
             <HeaderButtons />
             <ReCenterButton />
           </Route>
+
+          <Route path="/splash" exact render={() => <SplashScreen />} />
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
           <Route path="/dog-profiles"  render={() => <Profile />} />

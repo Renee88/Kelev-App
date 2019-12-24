@@ -91,6 +91,7 @@ class MapContainer extends Component {
                 google={this.props.google}
             >
                 <Marker
+                    position={{lat: this.props.MapStore.location.latitude,lng: this.props.MapStore.location.longitude}}
                     name={'current location'}
                     icon={{
                         url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",

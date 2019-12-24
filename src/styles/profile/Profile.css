@@ -9,7 +9,7 @@ body {
     overflow-y: hidden;
     width: 100vw;
     height: 100vh;
-  }
+      }
 
   #headerTitle {
       position: absolute;
@@ -35,6 +35,7 @@ body {
       color: black;
       height: 100%;
       padding-top: 30px;
+    background-image: linear-gradient(to bottom, #aeceea, #bfd8ee, #cfe2f2, #e0ecf6, #f1f6fa);
 
   }
 
@@ -44,21 +45,22 @@ body {
       height: 5rem;
       padding-left: 15px;
       align-items: center;
-
-      
-      }
+ }
 
 #dogName{
     margin-left: 15px;
+    font-size: 20px;
 }
 
 .fa-edit{
     position: absolute;
     right: 10px;
+    font-size: 18px;
 }
 
 .avatar{
     margin-left: 15px;
+    /* width: 60px; */
 }
 
 #addDog{
@@ -83,3 +85,46 @@ body {
         height: 1px;
         background-color: rgb(136, 204, 226);
     }
+
+    #profileImgDiv{
+        position: relative;;
+        height: 100%;
+        background-image: url('../../../src/pictures/parkVector.jpg');
+        background-size: cover;
+        background-size: 200px;
+     }
+
+
+     #dogListHeader{
+        position: absolute;
+        top: -2rem;
+        left: 1.2rem;
+        color:  white;
+        font-size: 30px;
+        text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.562);
+     }
+
+     #back-button{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        color: white;
+        font-size: 40px;
+        text-shadow: 3px 3px 3px #000000;
+        margin-left: 10px;
+        margin-top: 10px;
+      }
+
+      .fa-dog{
+          position: relative;
+          font-size: 25px;
+          left: 2.5px;
+      }
+
+      .fa-plus{
+          position: relative;
+          /* right: 2.5px; */
+          color: white;
+          font-size: 15px;
+          text-shadow: 1px 1px 3px black;
+      }

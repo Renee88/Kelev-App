@@ -29,14 +29,21 @@ class EditDog extends Component {
             genderDisabled: "hotpink",
             vaccinatedDisabled: "close",
             neaturedDisabled: false,
-            dog_name: '',
-            checked: null,
+            gender: null,
+            vaccinated: null,
+            neutered: null,
             dog: {}
         };
 
     }
 
-
+     /* editDogField = (fieldName, dogId) => {
+        axios.put('http://localhost:4000/dog-profile', {
+            fieldName,
+            fieldValue: this[fieldName],
+            dogId
+        })
+    } */
 
     handleInput = (event) => {
         let inputName = event.target.name
@@ -69,8 +76,8 @@ class EditDog extends Component {
 
     };
 
-    checkHandler = (e) => {
-        let checked = !this.state.checked
+    checkGender = (e) => {
+        let gender = !this.state.gender
         let dogs = this.props.dogsStore.dogs
         let dogId = this.props.match.params.id
         let dog = dogs.find(i => i.id == dogId)
@@ -78,7 +85,7 @@ class EditDog extends Component {
         let dogGender
         let genderDisabled
 
-        if(checked){
+        if(gender){
             dogGender = "male"
             genderDisabled = "mediumblue"
         } else{
@@ -88,7 +95,21 @@ class EditDog extends Component {
 
         dog.gender = dogGender
 
-        this.setState({ checked , dog, genderDisabled})
+        this.setState({ gender , dog, genderDisabled})
+    }
+
+    checkVaccinated = (e) => {
+        let vaccinated = !this.state.vaccinated
+        this.setState({
+            vaccinated
+        })
+    }
+
+    checkNeutered = (e) => {
+        let neutered = !this.state.neutered
+        this.setState({
+            neutered
+        })
     }
 
     async componentDidMount() {
@@ -97,19 +118,19 @@ class EditDog extends Component {
         let dogId = this.props.match.params.id
         let dog = dogs.find(i => i.id == dogId)
         let genderDisabled
-        let checked
-        
+        let gender
+
         if (dog) {
             if(dog.gender === "male"){
                 genderDisabled = "mediumblue"
-                checked = true
+                gender = true
             } else{
                 genderDisabled = "hotpink"
-                checked = false
+                gender = false
             } 
         }
 
-        this.setState({ dog, checked , genderDisabled})
+        this.setState({ dog, gender , genderDisabled, vaccinated: dog.vaccinated, neutered: dog.neutered})
     }
 
  
@@ -168,10 +189,10 @@ class EditDog extends Component {
                 <div className="detaildiv">
                     <span id="genderText">Gender</span>
                     <Switch
-                        onChange={this.checkHandler}
+                        onChange={this.checkGender}
                         style={{ backgroundColor: this.state.genderDisabled }}
                         id="gender_switch"
-                        checked={this.state.checked}
+                        checked={this.state.gender}
                         checkedChildren="M"
                         unCheckedChildren="F" />
                 </div>
@@ -180,8 +201,9 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="vaccinatedText">Vaccinated</span>
-                    <Switch onChange={this.changeVaccinated}
+                    <Switch onChange={this.checkVaccinated}
                         id="vaccinated"
+                        checked={this.state.vaccinated}
                         checkedChildren={<Icon type="check" />}
                         unCheckedChildren={<Icon type="close" />}
                         defaultChecked
@@ -192,16 +214,14 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="neuteredText">Neutered</span>
-                    <Switch onChange={this.changeVaccinated}
+                    <Switch onChange={e => {this.checkNeutered(); this.props.dogStore.editDogField()}}
                         id="neutered"
+                        checked={this.state.neutered}
                         checkedChildren={<Icon type="check" />}
                         unCheckedChildren={<Icon type="close" />}
                         defaultChecked
                     />
                 </div>
-
-
-
             </div>
             : null
 

@@ -1,7 +1,7 @@
+require('dotenv').config()
 import { Map, Marker, InfoWindow, GoogleApiWrapper, Polyline } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
-import Park from './Park';
 import '../styles/popup.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -46,11 +46,9 @@ class MapContainer extends Component {
         let marker = this.props.MapStore.markers.find(m => m.id === id)
         let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
         let destination = `${marker.position.lat},${marker.position.lng}`
-        console.log(origin + " " + destination)
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
 
-                console.log(res.data)
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
@@ -76,7 +74,6 @@ class MapContainer extends Component {
     beAtThePark = async () => {
         
             if (this.state.meters < 100 && this.props.ownerStore.status === 2) {
-                // console.log(this.props.ownerStore.status)
                 await this.props.ownerStore.changeUserStatus(2)
 
             }
@@ -170,5 +167,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY"
+    apiKey: process.env.REACT_APP_API_KEY_2
 })(MapContainer)

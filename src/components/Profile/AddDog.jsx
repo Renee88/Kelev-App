@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 // import '../App.css';
 // import '../styles/parkComponent/mainComponent.css';
-
 import { Layout, Divider, Input, Avatar, Icon, Button, InputNumber, Switch, Form } from 'antd';
 
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
@@ -44,6 +43,9 @@ class AddDog extends Component {
         return (
 
             <div className="dogInputs">
+                    <Link to = "/dog-profiles"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                    <span id="dogListHeader"> Add New Dog</span>
+
                 <div className="dogNameDiv">
                     <h1>here will be a div for pic</h1>
                 </div>
@@ -113,3 +115,6 @@ class AddDog extends Component {
 }
 
 export default AddDog;
+
+
+

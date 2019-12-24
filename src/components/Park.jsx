@@ -23,7 +23,7 @@ class Park extends Component {
                 <Content id="info">
                 <Content id="inside">
                     <Link to = "/"><div id = "back-button"><i className="fas fa-chevron-left"></i></div></Link>
-                    <ParkPictures />
+                    <ParkPictures match = {this.props.match} />
                 </Content>
                 <Content>
 

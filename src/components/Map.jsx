@@ -8,6 +8,7 @@ import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
+import CurrentLocation from './CurrentLocation';
 
 
 @inject("MapStore","ownerStore")
@@ -88,7 +89,11 @@ class MapContainer extends Component {
                 mapTypeControl={false}
                 center={currentPosition}
                 onClick={this.onClose}
-                // setCenter={currentPosition}
+                setCenter={this.props.MapStore.getLocation}
+                center={{
+                    lat: this.props.MapStore.location.latitude,
+                    lng: this.props.MapStore.location.longitude
+                }}
                 centerAroundCurrentLocation={true}
                 streetView={false}
 

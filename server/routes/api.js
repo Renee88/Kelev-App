@@ -16,7 +16,7 @@ router.post('/distance', (req, res) => {
 })
 
 router.post('/directions', (req, res) => {
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Toronto&destination=Montreal&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
+    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=Jerusalem&destination=Holon&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY`)
         .then(response => res.send(response.data))
 })
 

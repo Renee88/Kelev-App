@@ -37,5 +37,6 @@ export class MapStore {
     @action getCoordinates = (position) => {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
+        console.log(this.location)
     }
 }

@@ -26,6 +26,7 @@ class MapContainer extends Component {
 
     onMarkerClick = async (props, marker, e) => {
         await this.getDistance(marker.id)
+        await this.props.MapStore.getDirections(marker.id)
         this.setState({
             selectedPlace: props,
             activeMarker: marker,
@@ -122,14 +123,14 @@ class MapContainer extends Component {
                         <Link to="/park" style={{ textDecoration: "none" }} >
                             <div className="popupText" id="eta" >
                                 <FontAwesomeIcon icon="far fa-clock" />
-                                <i class="far fa-clock"></i>
+                                <i className="far fa-clock"></i>
                                 {this.state.mins} away
                                 </div>
 
                             <hr  style={{ textDecoration: "none" }}></hr>
 
                             <div className="popupText" id="numDogs" >
-                            <i  class="far fa-map"></i>
+                            <i className="far fa-map"></i>
                                 4 dogs at the park</div>
 
                         </Link>

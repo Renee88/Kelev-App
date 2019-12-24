@@ -111,7 +111,8 @@ class MapContainer extends Component {
                 <Marker
                     position={currentPosition}
                     icon={{
-                        url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
+                        url: "logo192.png",
+                        // url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
                         scaledSize: new window.google.maps.Size(60, 60)
                     }}
                 />

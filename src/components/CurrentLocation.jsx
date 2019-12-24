@@ -78,7 +78,11 @@ class CurrentLocation extends Component {
                 {},
                 {
                     center: center,
-                    zoom: zoom
+                    zoom: zoom,
+                    streetViewControl: false,
+                    mapTypeControl: false,
+                    streetView: false,
+                    fullscreenControl: false
                 }
             );
 

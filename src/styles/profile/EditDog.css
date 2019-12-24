@@ -60,12 +60,8 @@
 
 #inputDogAge {
     position: relative;
-    width: 7rem;
-    top: 0;
-    height: 3rem;
-    font-size: 27px;
+    font-size: 20px;
     color: rgb(44, 43, 43);
-    border: none;
 }
 
 #btnDogAge{
@@ -91,13 +87,10 @@
 
 #inputDogWeight {
     position: relative;
-    width: 10rem;
-    top: 0;
-    height: 3rem;
-    font-size: 27px;
+    font-size: 20px;
     color: rgb(44, 43, 43);
-    border: none;
 }
+
 
 #btnDogWeight{
     position: absolute;
@@ -108,7 +101,7 @@
 
 
 
-/**  Dog Weight Line  **/
+/**  Dog Gender Line  **/
 
 #genderText{
     position: relative;
@@ -172,4 +165,11 @@
     margin-left: 10px;
     margin-top: 10px;
     cursor: pointer;
+  }
+
+  .fa-arrow-right{
+      position: absolute;
+      font-size: 20px;
+      right: 27px;
+      color: rgb(77, 77, 77);
   }

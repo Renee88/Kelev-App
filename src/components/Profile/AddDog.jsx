@@ -79,7 +79,6 @@ class AddDog extends Component {
                 <div className="dogNameDiv">
                 Gender: <Switch
                         onChange={this.changeGender}
-                        // style = {{backgroundColor: "pink"}}
                         id = "gender_switch"
                         checkedChildren="M"
                         unCheckedChildren="F" />

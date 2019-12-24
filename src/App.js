@@ -26,7 +26,6 @@ class App extends Component {
 
    componentDidMount = async () => {
     await this.props.parksStore.loadParks()
-    await this.props.dogsStore.loadDogs()
     const parks = this.props.parksStore.parks
     this.props.MapStore.getParks(parks)
   }

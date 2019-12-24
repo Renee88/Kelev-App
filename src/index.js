@@ -8,13 +8,15 @@ import { MapStore as mapStore } from './stores/MapStore';
 import OwnerStore  from './stores/OwnerStore';
 import ParksStore from './stores/ParksStore';
 import DogsStore from './stores/DogsStore';
+import DogStore from './stores/DogStore';
 
 const ownerStore = new OwnerStore()
 const MapStore = new mapStore()
 const parksStore = new ParksStore()
 const dogsStore = new DogsStore()
+const dogStore = new DogStore()
 
-const stores = { MapStore , ownerStore, parksStore,dogsStore}
+const stores = { MapStore , ownerStore, parksStore, dogsStore, dogStore}
 
 ReactDOM.render(<Provider {...stores}><App /></Provider>, document.getElementById('root'));
 

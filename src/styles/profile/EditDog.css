@@ -1,0 +1,175 @@
+
+.profileContent {
+    position: relative;
+}
+
+.detaildiv{
+    display: flex;
+    position: relative;
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    align-items: center;
+    height: 3rem;
+}
+
+/**  Dog Name Line  **/
+
+#nameText{
+    position: relative;
+    /* width: 12rem; */
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    margin-right: 18px;
+    text-justify: center;    
+  }
+
+#inputDogName {
+    position: relative;
+    width: 10rem;
+    top: 0;
+    height: 3rem;
+    font-size: 27px;
+    color: rgb(44, 43, 43);
+    border: none;
+}
+
+#btnDogName{
+    position: absolute;
+    width: 40px;
+    right: 1rem;
+    padding: 0;
+}
+
+
+/**  Dog Age Line  **/
+
+#ageText{
+    position: relative;
+    /* width: 12rem; */
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    margin-right: 37px;
+    text-justify: center;    
+  }
+
+#inputDogAge {
+    position: relative;
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+}
+
+#btnDogAge{
+    position: absolute;
+    width: 40px;
+    right: 1rem;
+    padding: 0;
+}
+
+
+/**  Dog Weight Line  **/
+
+#weightText{
+    position: relative;
+    /* width: 12rem; */
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    margin-right: 10px;
+    text-justify: center;    
+  }
+
+#inputDogWeight {
+    position: relative;
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+}
+
+
+#btnDogWeight{
+    position: absolute;
+    width: 40px;
+    right: 1rem;
+    padding: 0;
+}
+
+
+
+/**  Dog Gender Line  **/
+
+#genderText{
+    position: relative;
+    width: 12rem;
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    text-justify: center;        
+}
+
+#gender_switch{
+    position: absolute;
+    right: 1rem;
+}
+
+
+/**  Dog Vaccinated Line  **/
+
+#vaccinated{
+    position: absolute;
+    right: 1rem;
+}
+
+#vaccinatedText{
+    position: relative;
+    width: 12rem;
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    text-justify: center;    
+}
+
+/**  Dog Neutered Line  **/
+
+#neuteredText{
+    position: relative;
+    width: 12rem;
+    font-size: 20px;
+    color: rgb(44, 43, 43);
+    border: none;
+    padding-left: 10px;
+    text-justify: center;    
+}
+
+#neutered{
+    position: absolute;
+    right: 1rem;
+}
+
+/**  EXTRAS  **/
+
+#back-button{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    top: -7.5rem;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .fa-arrow-right{
+      position: absolute;
+      font-size: 20px;
+      right: 27px;
+      color: rgb(77, 77, 77);
+  }

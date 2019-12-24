@@ -27,8 +27,8 @@ class MapContainer extends Component {
     onMarkerClick = async (props, marker, e) => {
         await this.getDistance(marker.id)
         await this.props.parksStore.insertId(marker.id)
-        await this.props.parksStore.getPark(marker.id)
         await this.props.MapStore.getDirections(marker.id)
+        await this.props.parksStore.getPark(marker.id)
 
         this.setState({
             selectedPlace: props,
@@ -44,7 +44,7 @@ class MapContainer extends Component {
         let origin = `${this.props.MapStore.location.latitude},${this.props.MapStore.location.longitude}`
         let destination = `${marker.position.lat},${marker.position.lng}`
         console.log(origin + " " + destination)
-        axios.post('http://localhost:4000/distance', { origin, destination })
+        axios.post('/distance', { origin, destination })
             .then(res => {
 
                 // console.log(res.data.rows[0].elements[0])

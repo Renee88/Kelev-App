@@ -3,8 +3,11 @@ const router = express.Router()
 const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
+
+
 const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
+
 const requestPromise = require('request-promise')
 
 

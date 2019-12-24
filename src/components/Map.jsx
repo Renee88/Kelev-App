@@ -1,4 +1,4 @@
-import { Map, Marker, InfoWindow, GoogleApiWrapper,Polyline } from 'google-maps-react';
+import { Map, Marker, InfoWindow, GoogleApiWrapper, Polyline } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import Park from './Park';
@@ -16,7 +16,7 @@ class MapContainer extends Component {
         super()
         this.state = {
             showingInfoWindow: false,
-            activeMarker: {},
+            activeMarker: null,
             selectedPlace: {},
             mins: '0 mins',
             distance: 0,
@@ -29,6 +29,7 @@ class MapContainer extends Component {
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
         await this.props.MapStore.getDirections(marker.id)
+        
 
         this.setState({
             selectedPlace: props,
@@ -36,6 +37,7 @@ class MapContainer extends Component {
             showingInfoWindow: true,
             polyline: this.props.MapStore.getDirections(marker.id)
         }, function () {
+            this.props.ownerStore.activeMarker =  true
         });
     }
 
@@ -59,29 +61,39 @@ class MapContainer extends Component {
 
     onClose = props => {
         if (this.state.showingInfoWindow) {
+            
             this.setState({
                 showingInfoWindow: false,
                 activeMarker: null
-            })
+            }, function () {
+                this.props.ownerStore.activeMarker =  false
+                this.props.MapStore.polyline = []
+            });
         }
     }
 
     beAtThePark = async () => {
-        if (this.state.meters < 100) {
-            if (this.props.ownerStore.status === 2) {
-                console.log(this.props.ownerStore.status)
-                await this.props.ownerStore.changeUserStatus()
+        
+            if (this.state.meters < 100 && this.props.ownerStore.status === 2) {
+                // console.log(this.props.ownerStore.status)
+                await this.props.ownerStore.changeUserStatus(2)
+
             }
-        }
+       
+
     }
-    
+
     componentDidMount = async () => {
+
          navigator.geolocation.watchPosition((position)=> {
+
             this.props.MapStore.location.latitude = position.coords.latitude
             this.props.MapStore.location.longitude = position.coords.longitude
-            console.log(this.props.MapStore.location)
-        } , null, {enableHighAccuracy:true})
-
+            if(this.props.ownerStore.activeMarker && (this.props.ownerStore.status === 3 ||this.props.ownerStore.status === 2 )) {
+                this.getDistance(this.state.activeMarker.id)
+            }
+        }, null, { enableHighAccuracy: true })
+        
     }
 
     render() {
@@ -139,7 +151,7 @@ class MapContainer extends Component {
 
                                     <i className="far fa-clock"></i>
                                     {this.state.mins} away
-        
+
                                 </div>
 
                                 <hr style={{ textDecoration: "none" }}></hr>

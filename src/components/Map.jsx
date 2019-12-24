@@ -27,6 +27,7 @@ class MapContainer extends Component {
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
         await this.props.MapStore.getDirections(marker.id)
+        
 
         this.setState({
             selectedPlace: props,
@@ -35,7 +36,6 @@ class MapContainer extends Component {
             polyline: this.props.MapStore.polyline
         }, function () {
             this.props.ownerStore.activeMarker = true
-
         });
     }
 
@@ -56,19 +56,21 @@ class MapContainer extends Component {
 
     onClose = props => {
         if (this.state.showingInfoWindow) {
+            
             this.setState({
                 showingInfoWindow: false,
                 activeMarker: null
-            })
+            }, function () {
+                this.props.ownerStore.activeMarker =  false
+                this.props.MapStore.polyline = []
+            });
         }
     }
 
     beAtThePark = async () => {
-        if (this.state.meters < 100) {
-            if (this.props.ownerStore.status === 2) {
-                await this.props.ownerStore.changeUserStatus()
+            if (this.state.meters < 100 && this.props.ownerStore.status === 2) {
+                await this.props.ownerStore.changeUserStatus(2)
             }
-        }
     }
 
     componentDidMount = async () => {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from 'antd';
 
 const mapStyles = {
     map: {
@@ -22,7 +23,7 @@ class CurrentLocation extends Component {
         };
     }
 
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate = (prevProps, prevState) => {
         if (prevProps.google !== this.props.google) {
             this.loadMap();
         }
@@ -31,7 +32,20 @@ class CurrentLocation extends Component {
         }
     }
 
-    componentDidMount() {
+    recenterMap = () => {
+        const map = this.map;
+        const current = this.state.currentLocation;
+
+        const google = this.props.google;
+        const maps = google.maps;
+
+        if (map) {
+            let center = new maps.LatLng(current.lat, current.lng);
+            map.panTo(center);
+        }
+    }
+
+    componentDidMount = () => {
         if (this.props.centerAroundCurrentLocation) {
             if (navigator && navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(pos => {
@@ -48,15 +62,13 @@ class CurrentLocation extends Component {
         this.loadMap();
     }
 
-    loadMap() {
+    loadMap = () => {
         if (this.props && this.props.google) {
-            // checks if google is available
             const { google } = this.props;
             const maps = google.maps;
 
             const mapRef = this.refs.map;
 
-            // reference to the actual DOM element
             const node = ReactDOM.findDOMNode(mapRef);
 
             let { zoom } = this.props;
@@ -70,12 +82,11 @@ class CurrentLocation extends Component {
                 }
             );
 
-            // maps.Map() is constructor that instantiates the map
             this.map = new maps.Map(node, mapConfig);
         }
     }
 
-    renderChildren() {
+    renderChildren = () => {
         const { children } = this.props;
 
         if (!children) return;
@@ -96,8 +107,9 @@ class CurrentLocation extends Component {
             <div>
                 <div style={style} ref="map">
                     Loading map...
-           </div>
+                </div>
                 {this.renderChildren()}
+                <Button id="reCenterButton"shape="circle" icon="drag" onClick={this.recenterMap}></Button>
             </div>
         );
     }
@@ -108,8 +120,8 @@ export default CurrentLocation;
 CurrentLocation.defaultProps = {
     zoom: 14,
     initialCenter: {
-        lat: -1.2884,
-        lng: 36.8233
+        lat: 32.0610048,
+        lng: 34.7737923
     },
     centerAroundCurrentLocation: false,
     visible: true

@@ -20,9 +20,7 @@ export class MapStore {
             .then((res) => {
                 let polyline = res.data.routes[0].overview_polyline.points
                 this.polyline = decodePolyline(polyline)
-
             })
-
     }
 
     @action getLocation = () => {
@@ -38,7 +36,6 @@ export class MapStore {
     @action getCoordinates = (position) => {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
-
     }
 
     @action watchPosition = () => {
@@ -46,8 +43,5 @@ export class MapStore {
             this.watchPos.latitude = position.coords.latitude
             this.watchPos.longitude = position.coords.longitude
         }, null, { distanceFilter: 10 })
-
-
-
     }
 }

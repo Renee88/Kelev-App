@@ -85,8 +85,8 @@ class MapContainer extends Component {
 
     componentDidMount = async () => {
 
-       
-        navigator.geolocation.watchPosition((position) => {
+         navigator.geolocation.watchPosition((position)=> {
+
             this.props.MapStore.location.latitude = position.coords.latitude
             this.props.MapStore.location.longitude = position.coords.longitude
             if(this.props.ownerStore.activeMarker && (this.props.ownerStore.status === 3 ||this.props.ownerStore.status === 2 )) {

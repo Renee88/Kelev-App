@@ -1,6 +1,8 @@
+require('dotenv').config()
 const express = require('express')
 const router = express.Router()
 const apiKey = process.env.REACT_APP_API_KEY
+
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 
@@ -14,6 +16,7 @@ const requestPromise = require('request-promise')
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
+    console.log(apiKey)
     requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
         .then(response => { res.send(response) })
 })
@@ -42,7 +45,7 @@ router.get('/map', function (req, res) {
                         lat: p.lat
                     },
                     address: p.address,
-                    park_picture: p.park_picture,
+                    park_pictures: p.park_picture,
                     rating: p.rating
 
                 }
@@ -133,14 +136,6 @@ router.delete('/dog-profile', function (req, res) {
         })
 })
 
-router.get(`/park-photo/:photoReference`, async function (req, res) {
-    const photoReference = req.params.photoReference
-    const promise = await requestPromise(`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${apiKey}`)
-        .then(response => {
-            console.log(response)
-            res.send(response)
-        })
-})
 
 
 // `https://maps.googleapis.com/maps/api/place/photo?photoreference=${photoReference}key=${apiKey}`

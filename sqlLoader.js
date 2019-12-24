@@ -49,9 +49,18 @@ const loadOwnersAndDogs = async function (owners) {
 const loadParks = async function(parks){
     parks = parks.results
     for(let park of parks){
-        let parkPicture = park.photos ? park.photos[0].photo_reference : null
+        let parkPictures 
+        if(park.photos){
+            let photos = park.photos
+            for(let photo of photos){
+                !parkPictures ? parkPictures = photo.photo_reference : parkPictures += `,${photo.photo_reference}`
+            }
+        } else {
+            parkPictures = "null"
+        }
         await sequelize.query(`INSERT INTO parks 
-        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPicture}","${park.rating}")`)
+        VALUES(null,"${park.name}","${park.geometry.location.lng}","${park.geometry.location.lat}","${park.formatted_address}","${parkPictures}","${park.rating}")`)
+
     }
 }
 
@@ -59,5 +68,3 @@ const loadParks = async function(parks){
 // loadOwners(owners)
 // loadParks(parks)
 // loadOwnersAndDogs(owners)
-
-module.exports = {loadParks, loadOwners,loadDogs , loadOwnersAndDogs}

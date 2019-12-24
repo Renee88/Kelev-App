@@ -7,13 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDog, faBell, faDirections } from '@fortawesome/free-solid-svg-icons'
 // import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 
-
-// import { observer, inject } from 'mobx-react';
-
-
-// @inject("ownerStore")
-// @observer
-
 class DirectionButton extends Component {
 
 

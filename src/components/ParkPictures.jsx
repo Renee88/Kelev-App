@@ -7,6 +7,7 @@ import { Carousel } from 'antd';
 import { Layout } from 'antd';
 import { observer, inject } from 'mobx-react';
 import requestPromise from 'request-promise';
+import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
 const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 
 

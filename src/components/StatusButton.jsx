@@ -23,22 +23,18 @@ class StatusButton extends Component {
                     
                 <div className="statusOne">
 
-                    <Popover position="top" className="awesome" trigger={
+                    <Popover position="top" className="awesome" trigger={  
                         <Button style={{ display: (ownerStore.status === 1) ? true : "none" }} onClick={ownerStore.changeUserStatus} id="statusOne" type="primary" shape="circle"  >
                             <FontAwesomeIcon id="paw1" icon={faPaw} />
                             <span>Lets GO</span>
                         </Button>
+                        
                         }
                     >
                         Please choose a park :)
                 </Popover>
 
-
-
                 </div>
-
-
-
 
 
                 <div className="statusTwo">

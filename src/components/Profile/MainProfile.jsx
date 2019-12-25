@@ -15,7 +15,6 @@ import kelevicon from '../../pictures/profileicon.png'
 import dogwalker from '../../pictures/dogwalkericon.png'
 // import lycheeCover from '../../pictures/lycheecover.png'
 
-
 import Profile from './Profile';
 const { Header, Footer, Sider, Content } = Layout;
 
@@ -42,11 +41,11 @@ class MainProfile extends Component {
                 <Layout id="mainProfileLayout" style={{ height: "100vh" }}>
                     <Header id="header" >
                         <div id="mainProfileImgDiv">
-                        {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
-                        <Link to="/">
-                            <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
-                            <Button id="userSettingBtn" type="primary"><i class="fas fa-user-cog" id="userSettingButon"></i></Button>
-                            
+                            {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
+                            <Link to="/">
+                                <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
+                                <Button id="userSettingBtn" type="primary"><i class="fas fa-user-cog" id="userSettingButon"></i></Button>
+
                             </Link>
                         </div>
                     </Header>
@@ -54,11 +53,11 @@ class MainProfile extends Component {
                     <Content className="profileContent">
 
                         <hr></hr>
-                        <Link to="/dog-profiles" > 
-                        <div className="divLook" style={{cursor: "pointer"}}>
-                            <Avatar className="profileIcons" size={35} src={kelevicon} />
-                            <span className="rowText">Profile</span>
-                        </div>
+                        <Link to="/dog-profiles" >
+                            <div className="divLook" style={{ cursor: "pointer" }}>
+                                <Avatar className="profileIcons" size={35} src={kelevicon} />
+                                <span className="rowText">Profile</span>
+                            </div>
                         </Link>
                         <hr></hr>
 
@@ -77,7 +76,6 @@ class MainProfile extends Component {
                         </div>
 
                         <hr></hr>
-
 
                         <Route exact path="/profile">
                             <Redirect to="/main-profile" />

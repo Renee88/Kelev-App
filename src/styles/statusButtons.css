@@ -91,4 +91,12 @@
     top: -2px;
     
   }
+
+
+  .popover .popover__content{
+    background-color: rgba(90, 55, 90, 0.733) !important;
+    min-width: 160px !important;
+
+    text-align: center;
+  }
   

@@ -13,6 +13,7 @@ import Profile from './components/Profile/Profile';
 import ProfileList from './components/Profile/ProfileList';
 import MainProfile from './components/Profile/MainProfile';
 import SplashScreen from './components/Splash';
+import { PopoverWrapper } from '@terebentina/react-popover';
 
 
 @inject("parksStore", "MapStore", "dogsStore")
@@ -36,7 +37,7 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <div className="App">
+        <PopoverWrapper  className="App">
           <Route exact path="/"  >
             <Map />
             <StatusButton />
@@ -50,7 +51,7 @@ class App extends Component {
           <Route path="/dog-profiles"  render={() => <Profile />} />
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
           <Route path="/main-profile"  render={() => <MainProfile />} />
-        </div>
+        </PopoverWrapper>
       </Router>
     );
   }

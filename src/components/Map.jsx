@@ -27,7 +27,7 @@ class MapContainer extends Component {
         await this.props.parksStore.insertId(marker.id)
         await this.props.parksStore.getPark(marker.id)
         await this.props.MapStore.getDirections(marker.id)
-        
+
 
         this.setState({
             selectedPlace: props,
@@ -57,21 +57,21 @@ class MapContainer extends Component {
 
     onClose = props => {
         if (this.state.showingInfoWindow) {
-            
+
             this.setState({
                 showingInfoWindow: false,
                 activeMarker: null
             }, function () {
-                this.props.ownerStore.activeMarker =  false
+                this.props.ownerStore.activeMarker = false
                 this.props.MapStore.polyline = []
             });
         }
     }
 
     beAtThePark = async () => {
-            if (this.state.meters < 50 && this.props.ownerStore.status === 2) {
-                await this.props.ownerStore.changeUserStatus(2)
-            }
+        if (this.state.meters < 50 && this.props.ownerStore.status === 2) {
+            await this.props.ownerStore.changeUserStatus(2)
+        }
     }
 
     componentDidMount = async () => {
@@ -83,70 +83,74 @@ class MapContainer extends Component {
                 this.getDistance(this.state.activeMarker.id)
             }
         }, null, { enableHighAccuracy: true })
+
+        const parks = this.props.parksStore.parks
+        this.props.MapStore.getParks(parks)
     }
 
     render() {
         return (
-            <CurrentLocation
-                centerAroundCurrentLocation
-                google={this.props.google}
-            >
-                <Marker
-                    position={{lat: this.props.MapStore.location.latitude,lng: this.props.MapStore.location.longitude}}
-                    name={'current location'}
-                    icon={{
-                        url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
-                        scaledSize: new window.google.maps.Size(60, 60)
-                    }} />
-
-                {this.props.MapStore.markers.map((m, i) =>
-                    <Marker
-                        key={i}
-                        onClick={this.onMarkerClick}
-                        id={m.id}
-                        position={m.position}
-                    />)}
-
-                <Polyline
-                    path={this.props.MapStore.polyline}
-                    strokeColor="#3471eb"
-                    strokeOpacity={0.7}
-                    strokeWeight={6} />
-
-                {this.props.MapStore.markers.map((m, i) =>
-                    <Marker
-                        key={i}
-                        onClick={this.onMarkerClick}
-                        id={m.id}
-                        position={m.position}
-                    />)}
-                <InfoWindow
-                    marker={this.state.activeMarker}
-                    visible={this.state.showingInfoWindow}
-                    onClose={this.onClose}
+            <div onClick={this.onClose}>
+                <CurrentLocation
+                    centerAroundCurrentLocation
+                    google={this.props.google}
                 >
-                    <Router>
-                        {this.state.activeMarker != null ?
-                            <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
-                                <div className="popupText" id="eta" >
-                                    <i className="far fa-clock"></i>
-                                    {this.state.mins} away
+                    <Marker
+                        position={{ lat: this.props.MapStore.location.latitude, lng: this.props.MapStore.location.longitude }}
+                        name={'current location'}
+                        icon={{
+                            url: "https://cdn4.iconfinder.com/data/icons/flat-colored-animal-faces/32/dog_front-512.png",
+                            scaledSize: new window.google.maps.Size(60, 60)
+                        }} />
+
+                    {this.props.MapStore.markers.map((m, i) =>
+                        <Marker
+                            key={i}
+                            onClick={this.onMarkerClick}
+                            id={m.id}
+                            position={m.position}
+                        />)}
+
+                    <Polyline
+                        path={this.props.MapStore.polyline}
+                        strokeColor="#3471eb"
+                        strokeOpacity={0.7}
+                        strokeWeight={6} />
+
+                    {this.props.MapStore.markers.map((m, i) =>
+                        <Marker
+                            key={i}
+                            onClick={this.onMarkerClick}
+                            id={m.id}
+                            position={m.position}
+                        />)}
+                    <InfoWindow
+                        marker={this.state.activeMarker}
+                        visible={this.state.showingInfoWindow}
+                        onClose={this.onClose}
+                    >
+                        <Router>
+                            {this.state.activeMarker != null ?
+                                <Link to={`/park/${this.state.activeMarker.id}`} style={{ textDecoration: "none" }} >
+                                    <div className="popupText" id="eta" >
+                                        <i className="far fa-clock"></i>
+                                        {this.state.mins} away
                                 </div>
 
-                                <hr style={{ textDecoration: "none" }}></hr>
+                                    <hr style={{ textDecoration: "none" }}></hr>
 
-                                <div className="popupText" id="numDogs" >
-                                    <i className="far fa-map"></i>
-                                    4 dogs at the park</div>
-                            </Link>
-                            : null}
-                    </Router>
-                </InfoWindow>
-            </CurrentLocation>
-        );
+                                    <div className="popupText" id="numDogs" >
+                                        <i className="far fa-map"></i>
+                                        4 dogs at the park</div>
+                                </Link>
+                                : null}
+                        </Router>
+                    </InfoWindow>
+                </CurrentLocation>
+            </div>);
     }
 }
 
 export default GoogleApiWrapper({
-        apiKey: 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
+    apiKey: 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
 })(MapContainer)

@@ -10,7 +10,6 @@ import requestPromise from 'request-promise';
 import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
 
 
-
 @inject("parksStore")
 @observer
 class ParkPictures extends Component {

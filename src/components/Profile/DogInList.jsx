@@ -26,7 +26,7 @@ class DogInList extends Component {
                 <Checkbox checked="checked" ></Checkbox>
                 <Avatar className="avatar" size={50} src={dogImg} />
                 <span id="dogName">Louie</span>
-                <Link to="/dog-profiles/edit-dog">
+                <Link to="/dog-profiles/edit-dog/42">
                     <i className="far fa-edit" style={{ color: "black" }}></i>
                 </Link>
             </div>

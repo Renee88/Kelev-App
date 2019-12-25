@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Checkbox } from 'antd';
 import ProfileList from './ProfileList';
 import AddDog from './AddDog';
-import EditDogTest from './EditDogTest';
+import EditDog from './EditDog';
 // import { Avatar, Icon, Button } from 'antd';
 // import OnBoard from './components/OnBoard';
 import OnBoard from '../../components/OnBoard'
@@ -65,7 +65,7 @@ class Profile extends Component {
                         
                         <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
                         <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
-                        <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDogTest match = {match}/>} />
+                        <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDog match = {match}/>} />
 
                     </Content>
                 </Layout>

@@ -8,7 +8,6 @@ import { Layout } from 'antd';
 import { observer, inject } from 'mobx-react';
 import requestPromise from 'request-promise';
 import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
-const apiKey = "AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk"
 
 
 @inject("parksStore")
@@ -28,17 +27,9 @@ class ParkPictures extends Component {
             <div className="parkPictures">
                 <Carousel autoplay>
                     <div>
-                        {this.props.parksStore.parkPhotos.map(p=><img id="imgheader" src={p} />)}
+                        {this.props.parksStore.parkPhotos != cover ? this.props.parksStore.parkPhotos.map(p=><img id="imgheader" src={p} />) : this.props.parksStore.parkPhotos.map(p=><img id="no-imgheader" src={p} />)}
                     </div>
-                    {/* <div>
-                        <img id="imgheader" src={require('../pictures/2.jpg')} />
-                    </div>
-                    <div>
-                        <img id="imgheader" src={require('../pictures/3.jpg')} />
-                    </div>
-                    <div>
-                        <img id="imgheader" src={require('../pictures/4.jpg')} />
-                    </div> */}
+                    
                 </Carousel>
 
             </div>

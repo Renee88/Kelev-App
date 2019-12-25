@@ -130,7 +130,9 @@ class AddDog extends Component {
 
                 <Divider id="divider" />
                 <div className="addDogButtons">
+                <Link to="/dog-profiles/dog-list">
                     <Button id="btnAddDog" onClick={this.props.dogStore.saveNewDog} type="primary">Add</Button>
+                    </Link>
                     <Link to="/dog-profiles/dog-list">
                         <Button id="btnCancelDog" type="primary">Cancel</Button>
                     </Link>

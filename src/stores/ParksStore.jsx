@@ -23,7 +23,7 @@ class ParksStore {
         this.parkId = id
     }
 
-    async getPhoto() {
+    @action getPhoto = () => {
             const photoReferences = this.chosenPark.park_pictures.split(",")
             console.log(photoReferences)
             if(photoReferences != "null"){

@@ -49,8 +49,6 @@ USE kelev_app;
 -- );
 
 
-
-
 -- CREATE TABLE dog_owner_status_park(
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 --     dog_owner_id INT,

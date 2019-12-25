@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styles/profileButton.css'
 import { Icon } from 'antd';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+
 import { Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDog } from '@fortawesome/free-solid-svg-icons'
@@ -22,10 +24,13 @@ class ProfileButton extends Component {
         return (
 
             <div className="profileButton">
-                <Button id="profileBtn" type="primary" shape="circle"  >
-                <FontAwesomeIcon icon={faDog} />
-                     </Button>
-            </div>
+                <Link to="/main-profile">
+                    <Button id="profileBtn" type="primary" shape="circle"  >
+                        <FontAwesomeIcon icon={faDog} />
+                    </Button>
+                </Link>
+
+            </div >
         );
     }
 }

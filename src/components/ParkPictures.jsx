@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
 import ChatButton from './ChatButton';
-import ProfileButton from './profileButton';
+import ProfileButton from './ProfileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
 import { observer, inject } from 'mobx-react';

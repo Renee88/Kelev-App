@@ -19,7 +19,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 @inject("dogStore", "dogsStore")
 @observer
-class EditDog1 extends Component {
+class EditDogTest extends Component {
     constructor() {
         super()
         this.state = {
@@ -305,6 +305,6 @@ class EditDog1 extends Component {
 
 }
 
-export default EditDog1;
+export default EditDogTest;
 
 

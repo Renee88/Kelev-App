@@ -34,7 +34,7 @@ class ProfileList extends Component {
                     <Button id="addDog" type="primary" shape="circle" onClick={this.props.onToggle}>
                         <Link to="/dog-profiles/add-dog">
                         {/* <i class="fas fa-dog" style={{ color: "black" }}></i> */}
-                        <i class="fas fa-plus" ></i>
+                        <i className="fas fa-plus" ></i>
                             {/* <i class="fas fa-user-plus" style={{ color: "black" }}></i> */}
                         </Link>
                     </Button>

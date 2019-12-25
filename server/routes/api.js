@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const router = express.Router()
-const apiKey = process.env.REACT_APP_API_KEY_2
+const apiKey = process.env.REACT_APP_API_KEY
 
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')

@@ -7,7 +7,7 @@ const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 
 
-const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
+const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 const requestPromise = require('request-promise')
@@ -25,9 +25,9 @@ router.get('/directions', (req, res) => {
     const directions = req.query
     const originCo = directions.origin
     const destinationCo = directions.destination
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY&mode=walking`)
+    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=${apiKey}&mode=walking`)
         .then(response => {
-            response = JSON.parse(response)
+            console.log(response)
             res.send(response)
         })
 })

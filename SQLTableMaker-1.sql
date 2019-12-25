@@ -1,4 +1,4 @@
-USE kelev_app;
+USE sql_intro;
 
 -- CREATE TABLE dogs (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

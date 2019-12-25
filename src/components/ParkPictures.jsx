@@ -17,6 +17,7 @@ class ParkPictures extends Component {
     async componentDidMount() {
         const parkId = parseInt(this.props.match.params.id)
         await this.props.parksStore.getPark(parkId)
+        console.log(this.props.parksStore.chosenPark)
         this.props.parksStore.getPhoto()
     }
 

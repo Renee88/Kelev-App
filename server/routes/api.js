@@ -7,8 +7,8 @@ const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 
 
-// const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
-const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
+const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
+// const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 const requestPromise = require('request-promise')
 
@@ -45,7 +45,7 @@ router.get('/map', function (req, res) {
                         lat: p.lat
                     },
                     address: p.address,
-                    park_pictures: p.park_picture,
+                    park_pictures: p.park_pictures,
                     rating: p.rating
 
                 }

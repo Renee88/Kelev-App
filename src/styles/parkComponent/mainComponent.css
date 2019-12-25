@@ -111,6 +111,13 @@ body {
     object-fit: cover;
     }
 
+    #no-imgheader{
+      position: relative;
+      top: -150px;
+      width: 100vw;
+      object-fit: cover;
+    }
+    
     .ant-carousel{
       position: relative;
     }

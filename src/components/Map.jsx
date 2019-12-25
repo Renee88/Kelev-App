@@ -1,11 +1,10 @@
-require('dotenv').config()
 import { Map, Marker, InfoWindow, GoogleApiWrapper, Polyline } from 'google-maps-react';
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import '../styles/popup.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaw, faTimes, faTimesCircle, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -167,5 +166,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: process.env.REACT_APP_API_KEY_2
+    apiKey: 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
 })(MapContainer)

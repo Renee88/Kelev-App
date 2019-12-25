@@ -68,7 +68,7 @@ class MapContainer extends Component {
     }
 
     beAtThePark = async () => {
-            if (this.state.meters < 100 && this.props.ownerStore.status === 2) {
+            if (this.state.meters < 50 && this.props.ownerStore.status === 2) {
                 await this.props.ownerStore.changeUserStatus(2)
             }
     }

@@ -84,7 +84,7 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="nameText">Edit Profile Picture</span>
-                    <i class="fas fa-arrow-right"></i>
+                    <i className="fas fa-arrow-right"></i>
                 </div>
 
                 <Divider id="divider" />

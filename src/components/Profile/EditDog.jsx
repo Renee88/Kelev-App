@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
-// import '../App.css';
-// import '../styles/parkComponent/mainComponent.css';
-
-import { Layout, Divider, Input, Avatar, Icon, InputNumber , Button, Switch } from 'antd';
-
+import { Layout, Divider, Input, Avatar, Icon, InputNumber, Button, Switch } from 'antd';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import { observer, inject } from 'mobx-react';
 import '../../styles/profile/EditDog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { Avatar, Icon, Button } from 'antd';
-import '../../styles/profile/Profile.css'
 import { faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -69,9 +64,9 @@ class EditDog extends Component {
 
     }
 
-    onChange =(value) => {
+    onChange = (value) => {
         console.log('changed', value)
-      }
+    }
 
 
     render() {
@@ -83,7 +78,6 @@ class EditDog extends Component {
 
             <div className="dogInputs">
                 <Link to="/dog-profiles/dog-list"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
-
                 <span id="dogListHeader"> Edit Dog</span>
 
                 <Divider id="divider" />
@@ -96,8 +90,8 @@ class EditDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="nameText">Name</span>
-                    <Input id="inputDogName" size="large" placeholder="Lychee" disabled={this.state.nameDisabled} />
+                    <span id="nameText1">Name</span>
+                    <Input id="inputDogName" size="large" placeholder="louie" disabled={this.state.nameDisabled} />
                     <Button id="btnDogName" onClick={this.toggle} type="primary">
                         Edit
                     </Button>
@@ -107,7 +101,7 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="ageText">Age</span>
-                    <InputNumber id="inputDogAge" disabled={this.state.weightDisabled} onClick={this.toggle}  min={0} max={20} placeholder="3" onChange={this.onChange} disabled={this.state.ageDisabled} />
+                    <InputNumber id="inputDogAge" style={{ width: '70px' }} disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={25} placeholder="7" onChange={this.onChange} disabled={this.state.ageDisabled} />
 
                     {/* <Input id="inputDogAge" size="large" placeholder="6 years" disabled={this.state.ageDisabled} /> */}
                     <Button id="btnDogAge" onClick={this.toggle} type="primary">
@@ -119,7 +113,7 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="weightText">Weight</span>
-                    <InputNumber id="inputDogWeight" disabled={this.state.weightDisabled} onClick={this.toggle}  min={0} max={20} placeholder="3" onChange={this.onChange} />
+                    <InputNumber id="inputDogWeight" style={{ width: '70px' }} disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={80} placeholder="9 KG" onChange={this.onChange} />
                     {/* <Input id="inputDogWeight" size="large" placeholder="10 kg" disabled={this.state.weightDisabled} /> */}
                     <Button id="btnDogWeight" onClick={this.toggle} type="primary">
                         Edit
@@ -129,7 +123,7 @@ class EditDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="genderText">Gender</span>
+                    <span id="genderText">Sex</span>
                     <Switch
                         onChange={this.colorChanger}
                         style={{ backgroundColor: state.genderDisabled }}
@@ -153,7 +147,7 @@ class EditDog extends Component {
                 <Divider id="divider" />
 
                 <div className="detaildiv">
-                    <span id="neuteredText">Neutered</span>
+                    <span id="neuteredText">{state.genderDisabled == "hotpink" ? `Spayed` : "Fixed"}</span>
                     <Switch onChange={this.changeVaccinated}
                         id="neutered"
                         checkedChildren={<Icon type="check" />}
@@ -161,6 +155,12 @@ class EditDog extends Component {
                         defaultChecked
                     />
                 </div>
+
+                <Divider id="divider" />
+
+
+                <Button id="btnDeleteDog" type="primary">Delete Dog</Button>
+
 
 
 

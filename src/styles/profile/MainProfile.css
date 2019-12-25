@@ -1,0 +1,118 @@
+
+.divLook {
+    display: flex;
+    position: relative;
+    height: 4rem;
+    padding-left: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+        
+}
+
+
+#mainProfileImgDiv{
+    position: relative;;
+    height: 100%;
+    background-image: url('../../../src/pictures/lycheecover.jpg');
+    background-size: cover;
+    background-size: 380px;
+    background-position-x: -10px;
+    background-position-y: -30px;
+
+ }
+
+
+ .ant-avatar > img {
+     height: 100%;
+     /* top: 5px.; */
+ }
+
+ .rowText{
+     position: absolute;
+     font-size: 25px;
+     margin-left: 25px;
+     left: 15%;
+     top: 25%;
+     color: black;     
+ }
+
+ .fa-heart{
+     position: relative;
+     font-size: 30px;
+     left: 2px;
+ }
+
+ #comingSoon{
+     position: absolute;
+     right: 0;
+     top:0;
+     background-color: rgb(187, 64, 64);
+     color: white;
+     font-size: 10px;
+     padding: 5px;
+     padding-top: 6px;
+     padding-bottom: 6px;
+     letter-spacing: 2px;
+    font-family: Helvetica ;
+     box-shadow: 1px 1px 1px  rgba(138, 138, 138, 0.356);
+ }
+
+ hr{
+     background-color: rgb(4, 175, 255);
+     height: 1px;
+     margin: 0;
+     border: none;
+ }
+
+ #back-buttonMain{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    color: white;
+    font-size: 40px;
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  #backBtnReturn{
+      position: absolute;
+      background-color: rgb(172, 52, 172);
+      border: none;
+      border-radius:  25px;
+      height: 4.2rem;
+      left: -15%;
+      top: 5%;
+  }
+
+  #returnBtn{
+      position: relative;
+        float: right;
+        bottom: 5px;
+        right: 5px;
+  }
+
+
+
+  #userSettingBtn{
+    position: absolute;
+    background-color: rgb(172, 52, 172);
+    border: none;
+    border-radius:  25px;
+    height: 4.2rem;
+    right: -15%;
+    top: 5%
+  }
+
+
+#userSettingButon{
+    position: relative;
+      float: left;
+      bottom: 5px;
+      right: 8px;
+      color: white;
+      font-size: 25px;
+      text-shadow: 3px 3px 3px #000000;
+      margin-left: 10px;
+      margin-top: 10px;
+}

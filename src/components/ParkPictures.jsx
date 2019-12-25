@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import '../styles/parkComponent/mainComponent.css';
 import ChatButton from './ChatButton';
-import ProfileButton from './profileButton';
+import ProfileButton from './ProfileButton';
 import { Carousel } from 'antd';
 import { Layout } from 'antd';
 import { observer, inject } from 'mobx-react';
@@ -17,6 +17,7 @@ class ParkPictures extends Component {
     async componentDidMount() {
         const parkId = parseInt(this.props.match.params.id)
         await this.props.parksStore.getPark(parkId)
+        console.log(this.props.parksStore.chosenPark)
         this.props.parksStore.getPhoto()
     }
 

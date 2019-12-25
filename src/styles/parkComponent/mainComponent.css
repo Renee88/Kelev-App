@@ -11,10 +11,6 @@ body {
     height: 100vh;
   }
 
-/* #parkLayout{
-    background-color: black
-} */
-
 .ant-layout-content {
     display: block;
     color: #fff;

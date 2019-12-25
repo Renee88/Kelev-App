@@ -34,7 +34,7 @@ body {
       top: 0;
       color: black;
       height: 100%;
-      padding-top: 30px;
+      padding-top: 12px;
     background-image: linear-gradient(to bottom, #aeceea, #bfd8ee, #cfe2f2, #e0ecf6, #f1f6fa);
 
   }
@@ -65,13 +65,13 @@ body {
 
 #addDog{
     position: absolute;
-    right: 1rem;
+    right: 2.5rem;
     width: 60px;
     float: right;
     height: 60px;
     background-color: rgb(252, 67, 67);
     border: none;
-    bottom: 4rem;
+    bottom: 4.5rem;
     box-shadow: 1px 1px 4px gray;
     cursor: pointer;
     }

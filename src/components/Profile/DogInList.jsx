@@ -23,7 +23,7 @@ class DogInList extends Component {
                 <div>
 
             <div className="dogLine">
-                <Checkbox checked="checked" ></Checkbox>
+                <Checkbox checked= {true} ></Checkbox>
                 <Avatar className="avatar" size={50} src={dogImg} />
                 <span id="dogName">Louie</span>
                 <Link to="/dog-profiles/edit-dog/42">

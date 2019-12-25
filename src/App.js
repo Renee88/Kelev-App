@@ -8,7 +8,6 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
 import { inject, observer } from 'mobx-react';
 import OnBoard from './components/OnBoard';
-import EditDog from './components/EditDogTest'
 import Profile from './components/Profile/Profile';
 import ProfileList from './components/Profile/ProfileList';
 

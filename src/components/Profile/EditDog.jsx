@@ -11,6 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { Avatar, Icon, Button } from 'antd';
 import '../../styles/profile/Profile.css'
 import { faSmileBeam } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
 
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
@@ -19,7 +20,7 @@ const { Header, Footer, Sider, Content } = Layout;
 @inject("dogStore", "dogsStore")
 @observer
 class EditDog extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
             imgDisabled: true,
@@ -29,87 +30,143 @@ class EditDog extends Component {
             genderDisabled: "hotpink",
             vaccinatedDisabled: "close",
             neaturedDisabled: false,
+            isNameActive: false,
+            isAgeActive: false,
+            isWeightActive: false,
+            dog_name: null,
+            age: null,
+            weight: null,
             gender: null,
             vaccinated: null,
             neutered: null,
+            owner_id: 5,
             dog: {}
         };
 
     }
 
-     /* editDogField = (fieldName, dogId) => {
+    editDogField = (dogId, fieldName, fieldValue) => {
         axios.put('http://localhost:4000/dog-profile', {
             fieldName,
-            fieldValue: this[fieldName],
+            fieldValue,
             dogId
         })
-    } */
+    }
 
-    handleInput = (event) => {
+    handleInput = async (event) => {
         let inputName = event.target.name
         let value = event.target.value
-        this.props.dogStore.getDogInput(inputName, value)
-        console.log(this.props.dogStore);
+        await this.setState({ [inputName]: value })
     }
 
     toggle = (e) => {
         if (e.target.id === "btnDogName") {
             this.setState({
-                nameDisabled: !this.state.nameDisabled
+                nameDisabled: !this.state.nameDisabled,
+                isNameActive: !this.state.isNameActive
             })
         }
         if (e.target.id === "btnDogAge") {
             this.setState({
-                ageDisabled: !this.state.ageDisabled
+                ageDisabled: !this.state.ageDisabled,
+                isAgeActive: !this.state.isAgeActive
             })
         }
         if (e.target.id === "btnDogWeight") {
             this.setState({
-                weightDisabled: !this.state.weightDisabled
+                weightDisabled: !this.state.weightDisabled,
+                isWeightActive: !this.state.isWeightActive
             })
         }
-        if (e.target.id === "btnDogName") {
+        if (e.target.id === "btnDogNameV" || e.target.id === "btnDogNameX") {
             this.setState({
-                nameDisabled: !this.state.nameDisabled
+                nameDisabled: !this.state.nameDisabled,
+                isNameActive: !this.state.isNameActive
             })
+            if (e.target.id === "btnDogNameV") {
+                this.editDogField(this.state.dog.id, "dog_name", this.state.dog_name)
+            }
+            if (e.target.id === "btnDogNameX") {
+                this.setState({
+                    dog_name: ""
+                })
+            }
         }
-
+        if (e.target.id === "btnDogAgeV" || e.target.id === "btnDogAgeX") {
+            this.setState({
+                ageDisabled: !this.state.ageDisabled,
+                isAgeActive: !this.state.isAgeActive
+            })
+            if (e.target.id === "btnDogAgeV") {
+                this.editDogField(this.state.dog.id, "age", this.state.age)
+            }
+            if (e.target.id === "btnDogAgeX") {
+                this.setState({
+                    age: ""
+                })
+            }
+        }
+        if (e.target.id === "btnDogWeightV" || e.target.id === "btnDogWeightX") {
+            this.setState({
+                weightDisabled: !this.state.weightDisabled,
+                isWeightActive: !this.state.isWeightActive
+            })
+            if (e.target.id === "btnDogWeightV") {
+                this.editDogField(this.state.dog.id, "weight", this.state.weight)
+            }
+            if (e.target.id === "btnDogWeightX") {
+                this.setState({
+                    weight: ""
+                })
+            }
+        }
     };
 
-    checkGender = (e) => {
+    checkGender = async (e) => {
         let gender = !this.state.gender
         let dogs = this.props.dogsStore.dogs
         let dogId = this.props.match.params.id
         let dog = dogs.find(i => i.id == dogId)
-        
+
         let dogGender
         let genderDisabled
 
-        if(gender){
+        if (gender) {
             dogGender = "male"
             genderDisabled = "mediumblue"
-        } else{
+        } else {
             dogGender = "female"
             genderDisabled = "hotpink"
-        } 
+        }
 
         dog.gender = dogGender
 
-        this.setState({ gender , dog, genderDisabled})
+        await this.setState({ gender, dog, genderDisabled })
+        let value = this.state.gender ? "male" : "female"
+        console.log(this.state.dog.id, "gender", value);
+
+        this.editDogField(this.state.dog.id, "gender", value)
     }
 
-    checkVaccinated = (e) => {
+    checkVaccinated = async (e) => {
         let vaccinated = !this.state.vaccinated
-        this.setState({
+        await this.setState({
             vaccinated
         })
+
+        let value = this.state.vaccinated ? 1 : 0
+        this.editDogField(this.state.dog.id, "vaccinated", value)
     }
 
-    checkNeutered = (e) => {
+    checkNeutered = async (e) => {
         let neutered = !this.state.neutered
-        this.setState({
+        await this.setState({
             neutered
         })
+        let value = this.state.neutered ? 1 : 0
+        console.log(this.state.dog.id, "neutered", value);
+
+        this.editDogField(this.state.dog.id, "neutered", value)
     }
 
     async componentDidMount() {
@@ -121,19 +178,29 @@ class EditDog extends Component {
         let gender
 
         if (dog) {
-            if(dog.gender === "male"){
+            if (dog.gender === "male") {
                 genderDisabled = "mediumblue"
                 gender = true
-            } else{
+            } else {
                 genderDisabled = "hotpink"
                 gender = false
-            } 
+            }
         }
 
-        this.setState({ dog, gender , genderDisabled, vaccinated: dog.vaccinated, neutered: dog.neutered})
+        this.setState({ dog, gender, genderDisabled, vaccinated: dog.vaccinated, neutered: dog.neutered })
     }
 
- 
+    deleteDog = () => {
+        axios.delete('http://localhost:4000/dog-profile', {
+            data:
+            {
+                id: this.state.dog.id,
+                owner_id: this.state.owner_id
+            }
+        }
+        )
+    }
+
 
     render() {
 
@@ -158,30 +225,35 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="nameText">Name</span>
-                    <Input id="inputDogName" name="dog_name" size="large" placeholder={dog.dog_name} onChange={this.handleInput} disabled={this.state.nameDisabled} />
-                    <Button id="btnDogName" onClick={this.toggle} type="primary">
-                        Edit
-                    </Button>
+                    <Input id="inputDogName" name="dog_name" size="large" placeholder={dog.dog_name} onChange={this.handleInput} disabled={this.state.nameDisabled} value={this.state.dog_name} />
+                    {this.state.isNameActive ?
+                        <div><Button id="btnDogNameV" onClick={this.toggle} type="primary">V</Button>
+                            <Button id="btnDogNameX" onClick={this.toggle} type="primary">X</Button></div>
+                        : <Button id="btnDogName" onClick={this.toggle} type="primary">Edit</Button>}
                 </div>
 
                 <Divider id="divider" />
 
                 <div className="detaildiv">
                     <span id="ageText">Age</span>
-                    <InputNumber id="inputDogAge" name="age" disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={20} placeholder={dog.age} onChange={this.handleInput} disabled={this.state.ageDisabled} />
-                    <Button id="btnDogAge" onClick={this.toggle} type="primary">
-                        Edit
-                    </Button>
+                    <Input id="inputDogAge" name="age" disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={20} placeholder={dog.age} onChange={this.handleInput} disabled={this.state.ageDisabled} value={this.state.age} />
+                    {this.state.isAgeActive ?
+                        <div><Button id="btnDogAgeV" onClick={this.toggle} type="primary">V</Button>
+                            <Button id="btnDogAgeX" onClick={this.toggle} type="primary">X</Button></div>
+                        : <Button id="btnDogAge" onClick={this.toggle} type="primary">Edit</Button>}
+
                 </div>
 
                 <Divider id="divider" />
 
                 <div className="detaildiv">
                     <span id="weightText">Weight</span>
-                    <InputNumber id="inputDogWeight" name="weight" disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={20} placeholder={dog.weight} onChange={this.handleInput} />
-                    <Button id="btnDogWeight" onClick={this.toggle} type="primary">
-                        Edit
-                    </Button>
+                    <Input id="inputDogWeight" name="weight" disabled={this.state.weightDisabled} onClick={this.toggle} min={0} max={20} placeholder={dog.weight} onChange={this.handleInput} value={this.state.weight} />
+                    {this.state.isWeightActive ?
+                        <div><Button id="btnDogWeightV" onClick={this.toggle} type="primary">V</Button>
+                            <Button id="btnDogWeightX" onClick={this.toggle} type="primary">X</Button></div>
+                        : <Button id="btnDogWeight" onClick={this.toggle} type="primary">Edit</Button>}
+
                 </div>
 
                 <Divider id="divider" />
@@ -214,7 +286,7 @@ class EditDog extends Component {
 
                 <div className="detaildiv">
                     <span id="neuteredText">Neutered</span>
-                    <Switch onChange={e => {this.checkNeutered(); this.props.dogStore.editDogField()}}
+                    <Switch onChange={this.checkNeutered}
                         id="neutered"
                         checked={this.state.neutered}
                         checkedChildren={<Icon type="check" />}
@@ -222,6 +294,9 @@ class EditDog extends Component {
                         defaultChecked
                     />
                 </div>
+                <Link to = '/dog-profiles/dog-list'>
+                <button onClick={this.deleteDog}>Delete</button>
+                </Link>
             </div>
             : null
 
@@ -233,21 +308,3 @@ class EditDog extends Component {
 export default EditDog;
 
 
-
-
-
-//     <Divider id="divider" />
-
-//     <div className="dogNameDiv">
-
-//     </div>
-
-//     <Divider id="divider" />
-
-//     <div className="dogNameDiv">
-//         Neutered: <Switch onChange={this.changeNeutered}
-//             checkedChildren={<Icon type="check" />}
-//             unCheckedChildren={<Icon type="close" />}
-//             defaultChecked
-//         />
-//     </div>

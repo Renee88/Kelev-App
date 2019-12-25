@@ -7,7 +7,7 @@ const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
 
 
-const sequelize = new Sequelize('mysql://root:@localhost/kelev_app')
+const sequelize = new Sequelize('mysql://root:@localhost/sql_intro')
 // const sequelize = new Sequelize('mysql://root:Gilisinai1@localhost/sql_intro')
 
 const requestPromise = require('request-promise')
@@ -90,8 +90,8 @@ router.put('/owner', function (req, res) {
 router.put('/dog-profile', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName
-    const fieldValue = detailsForEdit[fieldName]
-    const dogId = detailsForEdit.id
+    const fieldValue = detailsForEdit.fieldValue
+    const dogId = detailsForEdit.dogId
   
     sequelize.query(`UPDATE dogs 
     SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)

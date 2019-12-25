@@ -30,13 +30,13 @@ class ProfileList extends Component {
 
                     <DogInList />
 
-                <Link to="/dog-profiles/add-dog">
+                <Route to="/dog-profiles/add-dog">
                     <Button id="addDog" type="primary" shape="circle" onClick={this.props.onToggle}>
                         <Link to="/dog-profiles/add-dog">
                         <i className="fas fa-plus" ></i>
                         </Link>
                     </Button>
-                </Link>
+                </Route>
 
             </div>
         );

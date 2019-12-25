@@ -7,7 +7,7 @@ class DogsStore {
     @action loadDogs = async () => {
         let dogs = await axios.get('http://localhost:4000/dogs')
         dogs = dogs.data
-        this.dogs = [...dogs]
+        this.dogs = dogs
     }
    
 }

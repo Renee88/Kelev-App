@@ -15,7 +15,7 @@ import EditDog from './EditDog';
 // import { Avatar, Icon, Button } from 'antd';
 // import OnBoard from './components/OnBoard';
 import OnBoard from '../../components/OnBoard'
-import EditDog_test from '../EditDog_test';
+
 
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
@@ -65,8 +65,7 @@ class Profile extends Component {
                         
                         <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
                         <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
-                        <Route path="/dog-profiles/edit-dog" exact render={() => <EditDog />} />
-                        <Route path="/dog-profiles/editdog" exact render={() => <EditDog_test />} />
+                        <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDog match = {match}/>} />
 
                     </Content>
                 </Layout>

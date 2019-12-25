@@ -15,7 +15,7 @@ const { Header, Footer, Sider, Content } = Layout;
 
 @inject("dogStore")
 @observer
-class AddDog extends Component {
+class AddDog1 extends Component {
 
     handleInput = (event) => {
         let inputName = event.target.name
@@ -113,7 +113,7 @@ class AddDog extends Component {
 
 }
 
-export default AddDog;
+export default AddDog1;
 
 
 

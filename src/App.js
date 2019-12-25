@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <PopoverWrapper  className="App">
+        <div  className="App">
           <Route exact path="/"  >
             <Map />
             <StatusButton />
@@ -49,7 +49,7 @@ class App extends Component {
           <Route path="/dog-profiles"  render={() => <Profile />} />
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
           <Route path="/main-profile"  render={() => <MainProfile />} />
-        </PopoverWrapper>
+        </div>
       </Router>
     );
   }

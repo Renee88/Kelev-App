@@ -1,7 +1,7 @@
 import { observable, action } from "mobx";
 import axios from 'axios'
 import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
-
+const apiKey = "AIzaSyADCCx3k634dLQ4-Il3PJKs52pYjhcpMUA"
 
 class ParksStore {
     @observable parks = []
@@ -28,7 +28,7 @@ class ParksStore {
             console.log(photoReferences)
             if(photoReferences != "null"){
                 for(let photoReference of photoReferences){
-                    const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${photoReference}&key=${process.env.REACT_APP_API_KEY}`
+                    const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${photoReference}&key=${apiKey}`
                     this.parkPhotos.push(photoUrl)  
                 }
             } else {

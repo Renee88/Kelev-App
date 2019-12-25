@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const router = express.Router()
-const apiKey = process.env.REACT_APP_API_KEY
+const apiKey = process.env.REACT_APP_API_KEY_2
 
 const chosenCity = "telaviv"
 const Sequelize = require('sequelize')
@@ -25,9 +25,9 @@ router.get('/directions', (req, res) => {
     const directions = req.query
     const originCo = directions.origin
     const destinationCo = directions.destination
-    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY&mode=walking`)
+    requestPromise(`https://maps.googleapis.com/maps/api/directions/json?origin=${originCo}&destination=${destinationCo}&key=${apiKey}&mode=walking`)
         .then(response => {
-            response = JSON.parse(response)
+            console.log(response)
             res.send(response)
         })
 })

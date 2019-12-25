@@ -46,6 +46,7 @@ class MapContainer extends Component {
 
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
+                console.log(res)
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value
@@ -147,5 +148,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY"
+    apiKey: "AIzaSyADCCx3k634dLQ4-Il3PJKs52pYjhcpMUA"
 })(MapContainer)

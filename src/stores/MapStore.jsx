@@ -26,7 +26,6 @@ export class MapStore {
     @action getLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.getCoordinates);
-            console.log('1')
         } else {
             this.location.latitude = 32.0723416
             this.location.longitude = 34.7737931

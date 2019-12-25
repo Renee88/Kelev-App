@@ -23,15 +23,6 @@ class CurrentLocation extends Component {
         };
     }
 
-    componentDidUpdate = (prevProps, prevState) => {
-        if (prevProps.google !== this.props.google) {
-            this.loadMap();
-        }
-        if (prevState.currentLocation !== this.state.currentLocation) {
-            this.recenterMap();
-        }
-    }
-
     recenterMap = () => {
         const map = this.map;
         const current = this.state.currentLocation;
@@ -57,6 +48,15 @@ class CurrentLocation extends Component {
                         }
                     });
                 });
+                navigator.geolocation.watchPosition(pos => {
+                    const coords = pos.coords;
+                    this.setState({
+                        currentLocation: {
+                            lat: coords.latitude,
+                            lng: coords.longitude
+                        }
+                    });
+                })
             }
         }
         this.loadMap();

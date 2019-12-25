@@ -69,7 +69,7 @@ class MapContainer extends Component {
     }
 
     beAtThePark = async () => {
-            if (this.state.meters < 100 && this.props.ownerStore.status === 2) {
+            if (this.state.meters < 50 && this.props.ownerStore.status === 2) {
                 await this.props.ownerStore.changeUserStatus(2)
             }
     }
@@ -148,5 +148,5 @@ class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: "AIzaSyADCCx3k634dLQ4-Il3PJKs52pYjhcpMUA"
+        apiKey: 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
 })(MapContainer)

@@ -1,7 +1,7 @@
 import { observable, action } from "mobx";
 import axios from 'axios'
 import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
-const apiKey = "AIzaSyADCCx3k634dLQ4-Il3PJKs52pYjhcpMUA"
+const apiKey = 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
 
 class ParksStore {
     @observable parks = []
@@ -23,7 +23,7 @@ class ParksStore {
         this.parkId = id
     }
 
-    async getPhoto() {
+    @action getPhoto = () => {
             const photoReferences = this.chosenPark.park_pictures.split(",")
             console.log(photoReferences)
             if(photoReferences != "null"){

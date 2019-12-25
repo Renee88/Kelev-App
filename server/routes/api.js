@@ -45,7 +45,7 @@ router.get('/map', function (req, res) {
                         lat: p.lat
                     },
                     address: p.address,
-                    park_pictures: p.park_picture,
+                    park_pictures: p.park_pictures,
                     rating: p.rating
 
                 }

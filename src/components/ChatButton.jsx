@@ -5,10 +5,6 @@ import '../styles/chatButton.css'
 import { Button } from 'antd'
 // import { observer, inject } from 'mobx-react';
 
-
-// @inject("ownerStore")
-// @observer
-
 class ChatButton extends Component {
 
 

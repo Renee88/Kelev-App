@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Map from './components/Map'
 import StatusButton from './components/StatusButton';
-import ReCenterButton from './components/reCenterButton';
 import HeaderButtons from './components/headerButtons';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
@@ -11,6 +10,9 @@ import OnBoard from './components/OnBoard';
 import EditDog from './components/EditDog_test'
 import Profile from './components/Profile/Profile';
 import ProfileList from './components/Profile/ProfileList';
+import MainProfile from './components/Profile/MainProfile';
+import SplashScreen from './components/Splash';
+import { PopoverWrapper } from '@terebentina/react-popover';
 
 
 @inject("parksStore", "MapStore", "dogsStore")
@@ -34,18 +36,20 @@ class App extends Component {
   render() {
     return (
       <Router >
-        <div className="App">
+        <PopoverWrapper  className="App">
           <Route exact path="/"  >
             <Map />
             <StatusButton />
             <HeaderButtons />
-            <ReCenterButton />
           </Route>
+
+          <Route path="/splash" exact render={() => <SplashScreen />} />
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
           <Route path="/dog-profiles"  render={() => <Profile />} />
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
-        </div>
+          <Route path="/main-profile"  render={() => <MainProfile />} />
+        </PopoverWrapper>
       </Router>
     );
   }

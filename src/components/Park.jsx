@@ -15,7 +15,6 @@ const { Header, Footer, Sider, Content } = Layout;
 @observer
 class Park extends Component {
 
-
     render() {
         return (
             <div className="parkComponent">

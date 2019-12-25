@@ -17,35 +17,31 @@ export class MapStore {
         let destination = `${marker.position.lat},${marker.position.lng}`
         let currLoc = `${this.location.latitude},${this.location.longitude}`
         axios.get(`http://localhost:4000/directions/?origin=${currLoc}&destination=${destination}`)
-            .then((res)=> {
+            .then((res) => {
                 let polyline = res.data.routes[0].overview_polyline.points
                 this.polyline = decodePolyline(polyline)
-            
-            } )
-            
+            })
     }
 
     @action getLocation = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.getCoordinates);
+            console.log('1')
         } else {
-            alert("Geolocation is not supported by this browser.")
+            this.location.latitude = 32.0723416
+            this.location.longitude = 34.7737931
         }
     }
 
     @action getCoordinates = (position) => {
         this.location.latitude = position.coords.latitude
         this.location.longitude = position.coords.longitude
-    
     }
 
     @action watchPosition = () => {
         let id = navigator.geolocation.watchPosition((position) => {
             this.watchPos.latitude = position.coords.latitude
             this.watchPos.longitude = position.coords.longitude
-        }, null , {distanceFilter : 10}) 
-            
-
-        
+        }, null, { distanceFilter: 10 })
     }
 }

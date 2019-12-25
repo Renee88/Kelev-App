@@ -7,13 +7,20 @@
   }
   
   #profileBtn{
-    width: 4rem;
-    height: 4rem;
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
     font-size: 30px;
     text-align: center;
-    line-height: 10px; 
+    /* line-height: 25px;  */
     border: white solid 1.5px;
     box-shadow:  0px 3px 2px 1px rgba(0, 0, 0, 0.253);
 
  }
   
+ .fa-dog{
+font-size: 30px !important;
+left: 0 !important;
+position: relative;
+
+ }

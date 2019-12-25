@@ -5,9 +5,6 @@ import { Icon } from 'antd';
 import { Button } from 'antd'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDog, faBell } from '@fortawesome/free-solid-svg-icons'
-// import '../node_modules/font-awesome/css/font-awesome.min.css'; 
-
-
 // import { observer, inject } from 'mobx-react';
 
 

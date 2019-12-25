@@ -61,7 +61,7 @@ class MainProfile extends Component {
                         <hr></hr>
 
                         <div className="divLook">
-                            <i class="far fa-heart"></i>
+                            <i className="far fa-heart"></i>
                             <span className="rowText" >Favorite Dogs</span>
                             <span id="comingSoon">COMIMG SOON</span>
                         </div>

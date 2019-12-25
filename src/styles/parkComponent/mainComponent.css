@@ -106,11 +106,22 @@ body {
     overflow: hidden;
   }
 
-  #imgheader{
+    #imgheader{ 
     width: 100vw;
     object-fit: cover;
     }
 
+    #no-imgheader{
+      position: relative;
+      top: -150px;
+      width: 100vw;
+      object-fit: cover;
+    }
+<<<<<<< HEAD
+
+=======
+    
+>>>>>>> a139db46525fd5ec5ae4ff0cadd37a0c88641675
     .ant-carousel{
       position: relative;
     }

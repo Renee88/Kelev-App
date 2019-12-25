@@ -27,14 +27,14 @@ class App extends Component {
 
    componentDidMount = async () => {
     await this.props.parksStore.loadParks()
-    const parks = this.props.parksStore.parks
-    this.props.MapStore.getParks(parks)
+    await this.props.dogsStore.loadDogs()
+    
   }
 
   render() {
     return (
       <Router >
-        <PopoverWrapper  className="App">
+        <div  className="App">
           <Route exact path="/"  >
             <Map />
             <StatusButton />
@@ -47,7 +47,7 @@ class App extends Component {
           <Route path="/dog-profiles"  render={() => <Profile />} />
           <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
           <Route path="/main-profile"  render={() => <MainProfile />} />
-        </PopoverWrapper>
+        </div>
       </Router>
     );
   }

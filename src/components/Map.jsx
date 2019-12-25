@@ -46,7 +46,6 @@ class MapContainer extends Component {
 
         axios.post('http://localhost:4000/distance', { origin, destination })
             .then(res => {
-                console.log(res)
                 this.setState({
                     mins: res.data.rows[0].elements[0].duration.text,
                     meters: res.data.rows[0].elements[0].distance.value

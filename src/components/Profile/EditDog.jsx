@@ -172,18 +172,25 @@ class EditDog extends Component {
         let dog = dogs.find(i => i.id == dogId)
         let genderDisabled
         let gender
+        let neutered
+        let vaccinated
 
         if (dog) {
+                vaccinated = dog.vaccinated
+                neutered = dog.neutered
+
             if (dog.gender === "male") {
                 genderDisabled = "mediumblue"
                 gender = true
+                
             } else {
                 genderDisabled = "hotpink"
                 gender = false
+
             }
         }
 
-        this.setState({ dog, gender, genderDisabled, vaccinated: dog.vaccinated, neutered: dog.neutered })
+        this.setState({ dog, gender, genderDisabled, vaccinated, neutered })
     }
 
     deleteDog = () => {

@@ -11,15 +11,15 @@ class DogStore  {
     @observable weight
     @observable vaccinated = false
     @observable neutered = false
-    @observable owner_id = 5
+    @observable owner_id = 22
     @observable dog_status = 1
     
     @action getDogInput(inputName, value){
         this[inputName] = value
     }
     
-    @action saveNewDog =  () => {
-        axios.post('http://localhost:4000/dog-profile', {
+    @action saveNewDog = async  () => {
+        const newDog = await axios.post('http://localhost:4000/dog-profile', {
             dog_name: this.dog_name,
             dog_picture: this.dog_picture,
             gender: this.gender,
@@ -30,6 +30,7 @@ class DogStore  {
             dog_status: this.dog_status,
             owner_id: this.owner_id
         })
+
     }
 
     @action editDogField = (fieldName, dogId) => {

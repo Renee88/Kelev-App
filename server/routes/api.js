@@ -72,11 +72,12 @@ router.get('/dogs', function (req, res) {
         })
 })
 
-router.get('/owner', function (req, res) {
-    sequelize.query(`SELECT * FROM owners WHERE owners.id = 1`)
+router.get('/owner/dogs/:id', function (req, res) {
+    const id = req.params.id
+    sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id `)
     .then(function (results) {
-        const owner = results[0]
-        res.send(owner)
+        const dogs = results[0]
+        res.send(dogs)
     })
 })
 
@@ -114,14 +115,16 @@ router.post('/dog-profile', async function (req, res) {
 
     await sequelize.query(`INSERT INTO dogs VALUES(null,"${newDog.dog_name}","${newDog.dog_picture}","${newDog.gender}",${newDog.age},${newDog.weight},${newDog.vaccinated},${newDog.neutered},${newDog.dog_status})`)
 
-    const results = await sequelize.query(`SELECT * FROM dogs`)
     const dogs = results[0]
     const lastIndex = dogs.length - 1
     const newDogId = dogs[lastIndex].id
-
+    
     sequelize.query(`INSERT INTO dog_owner VALUES (null,${newDog.owner_id},${newDogId})`)
-    .then(function(results){
-        res.send(dogs[lastIndex])
+    .then(async function(results){
+        const results = await sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id`)
+        const dogsOfOwner = results[0]
+        console.log(dogsOfOwner)
+        res.send(dogsOfOwner)
     })
 })
 

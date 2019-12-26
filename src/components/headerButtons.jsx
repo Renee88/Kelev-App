@@ -14,9 +14,11 @@ class HeaderButtons extends Component {
 
     render() {
 
+        const id = this.props.match ? this.props.match.params.id : 22
+
         return (
             <div className="headerButtons">
-                <ProfileButton />
+                <ProfileButton id = {id}/>
                 <ChatButton />
             </div>
         );

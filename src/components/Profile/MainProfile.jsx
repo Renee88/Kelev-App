@@ -33,7 +33,7 @@ class MainProfile extends Component {
 
     render() {
         const state = this.state;
-
+        const id = this.props.match.params.id || 22
 
         return (
             <div className="MainPageComponent">
@@ -52,7 +52,7 @@ class MainProfile extends Component {
                     <Content className="profileContent">
 
                         <hr></hr>
-                        <Link to="/dog-profiles" >
+                        <Link to={`/dog-profiles/dog-list/${id}`} >
                             <div className="divLook" style={{ cursor: "pointer" }}>
                                 <Avatar className="profileIcons" size={35} src={kelevicon} />
                                 <span className="rowText">Profile</span>

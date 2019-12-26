@@ -34,6 +34,11 @@ class OwnerStore {
     @action addDogToOwner(dog) {
         this.dogs.push(dog)
     }
+
+    @action async getOwnerDogs(id){
+        let dogs = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
+        this.dogs = dogs.data
+    }
 }
 
 export default OwnerStore;

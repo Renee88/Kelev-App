@@ -1,4 +1,4 @@
-USE sql_intro;
+USE kelev_app;
 
 -- CREATE TABLE dogs (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -64,3 +64,6 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"inThePark");
 
 
+-- INSERT INTO owners VALUES (null,"Gili Sinai","./src/pictures/Screenshot_20191226-093707_Gallery","gilisinai@gmail.com",1);
+ UPDATE dogs SET dog_picture = 'https://photos.google.com/photo/AF1QipMDsJR-Lg6CzR8X3tcpEG3IOqbUqgq1_4K2GyS4' WHERE dogs.id = 22;
+ UPDATE dogs SET dog_picture = 'https://photos.google.com/photo/AF1QipMe9Q8BXdbsjiDHPCFGQXSJ8dTEBMosyx2FrG_2' WHERE dogs.id = 23;

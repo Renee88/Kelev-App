@@ -52,11 +52,11 @@ class AddDog extends Component {
     render() {
 
         let state = this.state
-
+        // const id = this.props.match.params.id
         return (
 
             <div className="dogInputs">
-                <Link to="/dog-profiles"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to="/dog-profiles/dog-list/22"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
                 <span id="dogListHeader"> Add New Dog</span>
                 <Divider id="divider" />
 

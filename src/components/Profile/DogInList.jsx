@@ -6,7 +6,7 @@ import '../../styles/profile/Profile.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Checkbox } from 'antd';
 // import { Avatar, Icon, Button } from 'antd';
-import dogImg from '../../pictures/loyee.jpg'
+// import dogImg from '../../pictures/loyee.jpg'
 import soyaImg from '../../pictures/soya.jpg'
 import lycheeImg from '../../pictures/lycheecover.jpg'
 
@@ -15,24 +15,38 @@ const { Header, Footer, Sider, Content } = Layout;
 
 
 class DogInList extends Component {
+    constructor(){
+        super()
+        this.state = {
+            checked: true
+        }
+    }
 
+    handleChange = (e) =>{
+        let checked = e.target.checked
+        this.setState({checked})
+    }
  
     render() {
+        const dog = this.props.dog
+        const id =dog.id
+        const dogImg = dog.dog_picture
+        const dogName = dog.dog_name
 
         return (
                 <div>
 
             <div className="dogLine">
-                <Checkbox checked= {true} ></Checkbox>
-                <Avatar className="avatar" size={50} src={dogImg} />
-                <span id="dogName">Louie</span>
-                <Link to="/dog-profiles/edit-dog/42">
+                <Checkbox checked= {this.state.checked} onChange = {this.handleChange} ></Checkbox>
+                <Avatar className="avatar" size={50} src= {dogImg} />
+                <span id="dogName">{dogName}</span>
+                <Link to={`/dog-profiles/edit-dog/${id}`}>
                     <i className="far fa-edit" style={{ color: "black" }}></i>
                 </Link>
             </div>
 
 
-             <div className="dogLine">
+             {/* <div className="dogLine">
                 <Checkbox></Checkbox>
                 <Avatar className="avatar" size={50} src={lycheeImg} />
                 <span id="dogName">Lychee</span>
@@ -49,7 +63,7 @@ class DogInList extends Component {
                 <Link to="/dog-profiles/edit-dog">
                     <i className="far fa-edit" style={{ color: "black" }}></i>
                 </Link>
-            </div>
+            </div> */}
 
 
             </div> 

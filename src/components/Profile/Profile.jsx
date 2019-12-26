@@ -60,11 +60,11 @@ class Profile extends Component {
                     <Content className="profileContent">
 
                         <Route exact path="/dog-profiles">
-                            <Redirect to="/dog-profiles/dog-list" />
+                            <Redirect to="/dog-profiles/dog-list/:id" />
                         </Route>
                         
-                        <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
-                        <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
+                        <Route path="/dog-profiles/dog-list/:id" exact render={({match}) => <ProfileList match = {match} />} />
+                        <Route path="/dog-profiles/add-dog/:id" exact render={({match}) => <AddDog match = {match}/>} />
                         <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDog match = {match}/>} />
 
                     </Content>

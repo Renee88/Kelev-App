@@ -65,7 +65,7 @@ export default class SimpleSlider extends Component {
                 </div>
 
                
-                <Link to="/">
+                <Link to="/home">
                     <Button id="startBtn" type="primary" size="large">
                         Start
                      </Button>

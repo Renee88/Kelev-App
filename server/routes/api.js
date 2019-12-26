@@ -90,8 +90,8 @@ router.put('/owner', function (req, res) {
 router.put('/dog-profile', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName
-    const fieldValue = detailsForEdit[fieldName]
-    const dogId = detailsForEdit.id
+    const fieldValue = detailsForEdit.fieldValue
+    const dogId = detailsForEdit.dogId
   
     sequelize.query(`UPDATE dogs 
     SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)

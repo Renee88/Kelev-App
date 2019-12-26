@@ -32,7 +32,7 @@ class DogStore  {
         })
     }
 
-    @action editDogField = (fieldName, fieldValue, dogId) => {
+    @action editDogField = (fieldName, dogId) => {
         axios.put('http://localhost:4000/dog-profile', {
             fieldName,
             fieldValue: this[fieldName],

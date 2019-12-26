@@ -10,7 +10,6 @@ import AddDog from './AddDog';
 import EditDog from './EditDog';
 // import { Avatar, Icon, Button } from 'antd';
 // import OnBoard from './components/OnBoard';
-import EditDog_test from '../EditDog_test';
 import kelevicon from '../../pictures/profileicon.png'
 import dogwalker from '../../pictures/dogwalkericon.png'
 // import lycheeCover from '../../pictures/lycheecover.png'

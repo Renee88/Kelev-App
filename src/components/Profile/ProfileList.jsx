@@ -22,6 +22,7 @@ class ProfileList extends Component {
     async componentDidMount(){
         const id = this.props.match.params.id
         await this.props.ownerStore.getOwnerDogs(id)
+        console.log(this.props.ownerStore.dogs)
     }
 
     render() {

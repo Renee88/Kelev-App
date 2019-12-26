@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom
 import { observer, inject } from 'mobx-react';
 import '../../styles/profile/MainProfile.css'
 import ProfileList from './ProfileList';
-import AddDog from './AddDog';
 import EditDog from './EditDog';
 // import { Avatar, Icon, Button } from 'antd';
 // import OnBoard from './components/OnBoard';
@@ -41,11 +40,10 @@ class MainProfile extends Component {
                     <Header id="header" >
                         <div id="mainProfileImgDiv">
                             {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
-                            <Link to="/">
+                            <Link to="/home">
                                 <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
-                                <Button id="userSettingBtn" type="primary"><i class="fas fa-user-cog" id="userSettingButon"></i></Button>
-
                             </Link>
+                                <Button id="userSettingBtn" type="primary"><i class="fas fa-user-cog" id="userSettingButon"></i></Button>
                         </div>
                     </Header>
 

@@ -52,7 +52,7 @@ class AddDog extends Component {
     render() {
 
         let state = this.state
-        // const id = this.props.match.params.id
+        const id = this.props.match.params.id
         return (
 
             <div className="dogInputs">
@@ -130,10 +130,10 @@ class AddDog extends Component {
 
                 <Divider id="divider" />
                 <div className="addDogButtons">
-                <Link to="/dog-profiles/dog-list">
+                <Link to={`/dog-profiles/dog-list/${id}`}>
                     <Button id="btnAddDog" onClick={this.props.dogStore.saveNewDog} type="primary">Add</Button>
                     </Link>
-                    <Link to="/dog-profiles/dog-list">
+                    <Link to={`/dog-profiles/dog-list/${id}`}>
                         <Button id="btnCancelDog" type="primary">Cancel</Button>
                     </Link>
                 </div>

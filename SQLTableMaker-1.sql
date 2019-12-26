@@ -40,7 +40,7 @@ USE kelev_app;
 --     rating VARCHAR(4)
 -- );
 
--- DROP TABLE parks;
+
 
 
 -- CREATE TABLE status(
@@ -65,5 +65,5 @@ USE kelev_app;
 
 
 -- INSERT INTO owners VALUES (null,"Gili Sinai","./src/pictures/Screenshot_20191226-093707_Gallery","gilisinai@gmail.com",1);
- UPDATE dogs SET dog_picture = 'https://photos.google.com/photo/AF1QipMDsJR-Lg6CzR8X3tcpEG3IOqbUqgq1_4K2GyS4' WHERE dogs.id = 22;
- UPDATE dogs SET dog_picture = 'https://photos.google.com/photo/AF1QipMe9Q8BXdbsjiDHPCFGQXSJ8dTEBMosyx2FrG_2' WHERE dogs.id = 23;
+--  UPDATE dogs SET dog_picture = '../../pictures/loyee.jpg' WHERE dogs.id = 22;
+--  UPDATE dogs SET dog_picture = '../../pictures/soya.jpg' WHERE dogs.id = 23;

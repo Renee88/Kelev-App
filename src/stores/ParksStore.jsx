@@ -1,7 +1,7 @@
 import { observable, action } from "mobx";
 import axios from 'axios'
 import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
-const apiKey = 'AIzaSyCGMsr5VxvZjUuEatLh04zZqxR9dM4EpCY'
+const apiKey = 'AIzaSyBJIbKNrO_UfxyAeFsFsJwSqYYKg7_MHRk'
 
 class ParksStore {
     @observable parks = []

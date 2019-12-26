@@ -27,8 +27,7 @@ class OwnerStore {
     @action changeUserStatus = async () => {
         const id = 22
         let owner = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
-        let newStatus = this.changeStatus(owner.data.owner_status)
-        console.log(newStatus)
+        let newStatus = this.changeStatus(owner.data[0].owner_status)
         await axios.put('http://localhost:4000/owner', { userStatus: newStatus })
     }
 
@@ -36,9 +35,15 @@ class OwnerStore {
         this.dogs.push(dog)
     }
 
-    @action async getOwnerDogs(id){
+    @action async getOwnerDogs(id) {
         let dogs = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
-        this.dogs = dogs.data
+        dogs = dogs.data
+        if (dogs.length) {
+            this.dogs = dogs
+        } else {
+            this.dogs = [dogs]
+        }
+
     }
 }
 

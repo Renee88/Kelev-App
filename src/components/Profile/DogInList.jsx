@@ -30,7 +30,7 @@ class DogInList extends Component {
     render() {
         const dog = this.props.dog
         const id =dog.id
-        const dogImg = dog.dog_picture
+        const dogImg = require('../../pictures/soya.jpg') || dog.dog_picture 
         const dogName = dog.dog_name
 
         return (

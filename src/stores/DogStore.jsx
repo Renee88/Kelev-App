@@ -30,6 +30,7 @@ class DogStore  {
             dog_status: this.dog_status,
             owner_id: this.owner_id
         })
+        
 
     }
 

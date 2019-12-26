@@ -25,9 +25,10 @@ class OwnerStore {
     }
 
     @action changeUserStatus = async () => {
-        let owner = await axios.get('http://localhost:4000/owner')
-        console.log(owner.data[0].owner_status)
-        let newStatus = this.changeStatus(owner.data[0].owner_status)
+        const id = 22
+        let owner = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
+        let newStatus = this.changeStatus(owner.data.owner_status)
+        console.log(newStatus)
         await axios.put('http://localhost:4000/owner', { userStatus: newStatus })
     }
 

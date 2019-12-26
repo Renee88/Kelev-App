@@ -74,17 +74,19 @@ router.get('/dogs', function (req, res) {
 
 router.get('/owner/dogs/:id', function (req, res) {
     const id = req.params.id
-    sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id `)
+    sequelize.query(`SELECT dogs.*, owners.* FROM dogs,owners,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id AND owners.id = owner_id `)
     .then(function (results) {
-        const dogs = results[0]
+        const dogs = results[0][0]
+        console.log(dogs)
         res.send(dogs)
     })
 })
 
 router.put('/owner', function (req, res) {
     let userStatus = req.body.userStatus
+    const id = 22
     sequelize.query(`UPDATE owners 
-    SET owner_status = '${userStatus}' WHERE owners.id = 1`)
+    SET owner_status = '${userStatus}' WHERE owners.id = ${id}`)
         res.send("done")  
 })
 

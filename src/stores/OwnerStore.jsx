@@ -6,9 +6,17 @@ class OwnerStore {
     @observable name
     @observable picture
     @observable email
-    @observable dogs = []
+    @observable dogs 
     @observable status = 1
     @observable activeMarker = false
+    @observable currUser
+
+    @action async getOwnerDetails(email){
+        let ownerDetails = await axios.get(`http://localhost:4000/owner/${email}`)
+        ownerDetails = ownerDetails.data
+        this.currUser = ownerDetails
+    }
+
 
     @action changeStatus = (userStatus = 1) => {
 
@@ -25,14 +33,25 @@ class OwnerStore {
     }
 
     @action changeUserStatus = async () => {
-        let owner = await axios.get('http://localhost:4000/owner')
-        console.log(owner.data[0].owner_status)
+        const id = 22
+        let owner = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
         let newStatus = this.changeStatus(owner.data[0].owner_status)
         await axios.put('http://localhost:4000/owner', { userStatus: newStatus })
     }
 
     @action addDogToOwner(dog) {
         this.dogs.push(dog)
+    }
+
+    @action async getOwnerDogs(id) {
+        if(id){
+            let dogs = await axios.get(`http://localhost:4000/owner/dogs/${id}`)
+            dogs = dogs.data
+            if (dogs.length) {
+                this.dogs = dogs
+            } 
+        }
+
     }
 }
 

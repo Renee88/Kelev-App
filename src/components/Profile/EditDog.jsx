@@ -172,18 +172,25 @@ class EditDog extends Component {
         let dog = dogs.find(i => i.id == dogId)
         let genderDisabled
         let gender
+        let neutered
+        let vaccinated
 
         if (dog) {
+                vaccinated = dog.vaccinated
+                neutered = dog.neutered
+
             if (dog.gender === "male") {
                 genderDisabled = "mediumblue"
                 gender = true
+                
             } else {
                 genderDisabled = "hotpink"
                 gender = false
+
             }
         }
 
-        this.setState({ dog, gender, genderDisabled, vaccinated: dog.vaccinated, neutered: dog.neutered })
+        this.setState({ dog, gender, genderDisabled, vaccinated, neutered })
     }
 
     deleteDog = () => {
@@ -203,10 +210,11 @@ class EditDog extends Component {
         let dogId = this.props.match.params.id
         let dogs = this.props.dogsStore.dogs
         let dog = dogs.find(i => i.id == dogId)
+        let ownerId = 22
 
         return dog ?
             <div className="dogInputs">
-                <Link to="/dog-profiles/dog-list"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to={`/dog-profiles/dog-list/${ownerId}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
 
                 <span id="dogListHeader"> Edit Dog</span>
 

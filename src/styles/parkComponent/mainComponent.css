@@ -108,6 +108,7 @@ body {
 
     #imgheader{ 
     width: 100vw;
+    height: 25vh;
     object-fit: cover;
     }
 
@@ -117,11 +118,7 @@ body {
       width: 100vw;
       object-fit: cover;
     }
-<<<<<<< HEAD
-
-=======
     
->>>>>>> a139db46525fd5ec5ae4ff0cadd37a0c88641675
     .ant-carousel{
       position: relative;
     }

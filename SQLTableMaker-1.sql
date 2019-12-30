@@ -1,4 +1,4 @@
-USE sql_intro;
+USE kelev_app;
 
 -- CREATE TABLE dogs (
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -12,6 +12,7 @@ USE sql_intro;
 --     dog_status TINYINT DEFAULT 1
 -- );
 
+    -- DELETE FROM owners WHERE owners.id = 23;
 
 -- CREATE TABLE owners(
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -40,7 +41,7 @@ USE sql_intro;
 --     rating VARCHAR(4)
 -- );
 
--- DROP TABLE parks;
+
 
 
 -- CREATE TABLE status(
@@ -64,3 +65,6 @@ USE sql_intro;
 -- INSERT INTO status VALUES (null,"inThePark");
 
 
+-- INSERT INTO owners VALUES (null,"Gili Sinai","./src/pictures/Screenshot_20191226-093707_Gallery","gilisinai@gmail.com",1);
+--  UPDATE dogs SET dog_picture = '../../pictures/loyee.jpg' WHERE dogs.id = 22;
+--  UPDATE dogs SET dog_picture = '../../pictures/soya.jpg' WHERE dogs.id = 23;

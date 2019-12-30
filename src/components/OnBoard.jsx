@@ -14,8 +14,18 @@ import { BrowserRouter as Router ,Link } from 'react-router-dom';
 
 import '../styles/flickity.css'
 import { Button, Icon } from 'antd';
+import { inject, observer } from "mobx-react";
+import { observable } from "mobx";
 
-export default class SimpleSlider extends Component {
+@inject("ownerStore")
+@observer
+class SimpleSlider extends Component {
+    
+    async componentDidMount(){
+        const email = 'gilisinai@gmail.com'
+    await this.props.ownerStore.getOwnerDetails(email)
+    }
+
     render() {
         const settings = {
             arrows: true,
@@ -27,7 +37,7 @@ export default class SimpleSlider extends Component {
 
 
         };
-        return (
+        return this.props.ownerStore.currUser ?
             <div className="caroo">
 
                 <Slider {...settings}>
@@ -65,7 +75,7 @@ export default class SimpleSlider extends Component {
                 </div>
 
                
-                <Link to="/">
+                <Link to={`/home/${this.props.ownerStore.currUser.id}`}>
                     <Button id="startBtn" type="primary" size="large">
                         Start
                      </Button>
@@ -74,7 +84,8 @@ export default class SimpleSlider extends Component {
 
                 <p>Already a member? Login</p>
             </div>
-
-        );
+            : null
     }
 }
+
+export default SimpleSlider;

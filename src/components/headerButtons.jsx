@@ -14,9 +14,10 @@ class HeaderButtons extends Component {
 
     render() {
 
+        const id = this.props.id
         return (
             <div className="headerButtons">
-                <ProfileButton />
+                <ProfileButton id = {id}/>
                 <ChatButton />
             </div>
         );

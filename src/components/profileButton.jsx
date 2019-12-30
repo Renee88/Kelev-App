@@ -20,11 +20,13 @@ class ProfileButton extends Component {
 
 
     render() {
-
+        // const id = 22
+        const id = this.props.id 
+        console.log(id)
         return (
 
             <div className="profileButton">
-                <Link to="/main-profile">
+                <Link to={`/main-profile/${id}`}>
                     <Button id="profileBtn" type="primary" shape="circle"  >
                         <FontAwesomeIcon icon={faDog} />
                     </Button>

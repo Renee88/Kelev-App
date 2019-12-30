@@ -20,15 +20,15 @@ import OnBoard from '../../components/OnBoard'
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
 
-
+@inject("ownerStore")
 class Profile extends Component {
 
 
     constructor() {
         super();
         this.state = {
-
-            dogList: true
+            dogList: true,
+            dogs: []
 
         }
     }
@@ -42,6 +42,12 @@ class Profile extends Component {
 
     onChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
+    }
+
+    componentDidMount = async () =>{
+        const currUserId = this.props.ownerStore.currUser.id
+        debugger
+        await this.props.ownerStore.getOwnerDogs(currUserId)
     }
 
     render() {
@@ -60,11 +66,11 @@ class Profile extends Component {
                     <Content className="profileContent">
 
                         <Route exact path="/dog-profiles">
-                            <Redirect to="/dog-profiles/dog-list" />
+                            <Redirect to="/dog-profiles/dog-list/:id" />
                         </Route>
                         
-                        <Route path="/dog-profiles/dog-list" exact render={() => <ProfileList />} />
-                        <Route path="/dog-profiles/add-dog" exact render={() => <AddDog />} />
+                        <Route path="/dog-profiles/dog-list/:id" exact render={({match}) => <ProfileList match = {match} />} />
+                        <Route path="/dog-profiles/add-dog/:id" exact render={({match}) => <AddDog match = {match}/>} />
                         <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDog match = {match}/>} />
 
                     </Content>

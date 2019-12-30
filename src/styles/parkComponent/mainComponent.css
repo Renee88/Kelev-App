@@ -108,6 +108,7 @@ body {
 
     #imgheader{ 
     width: 100vw;
+    height: 25vh;
     object-fit: cover;
     }
 

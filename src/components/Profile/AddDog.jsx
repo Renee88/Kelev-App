@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Upload, message, Layout, Divider, Input, Avatar, Icon, Button, InputNumber, Switch, Form } from 'antd';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import '../../styles/profile/AddDog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
 
-@inject("dogStore")
+@inject("dogStore", "ownerStore")
 @observer
 class AddDog extends Component {
 
-    state = {
-        genderDisabled: "hotpink"
+    constructor() {
+        super()
+        this.state = {
+            genderDisabled: "hotpink"
 
+        }
     }
 
     handleInput = (event) => {
@@ -52,11 +55,11 @@ class AddDog extends Component {
     render() {
 
         let state = this.state
-
+        const id = this.props.match.params.id
         return (
 
             <div className="dogInputs">
-                <Link to="/dog-profiles"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to="/dog-profiles/dog-list/22"><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
                 <span id="dogListHeader"> Add New Dog</span>
                 <Divider id="divider" />
 
@@ -130,11 +133,13 @@ class AddDog extends Component {
 
                 <Divider id="divider" />
                 <div className="addDogButtons">
-                <Link to="/dog-profiles/dog-list">
-                    <Button id="btnAddDog" onClick={this.props.dogStore.saveNewDog} type="primary">Add</Button>
-                    </Link>
-                    <Link to="/dog-profiles/dog-list">
-                        <Button id="btnCancelDog" type="primary">Cancel</Button>
+                    <Button id="btnAddDog" onClick={async () => {
+                        await this.props.dogStore.saveNewDog()
+                        window.location.replace(`/dog-profiles/dog-list/${id}`)
+                    }} type="primary">Add</Button>
+                    
+                    <Link to={`/dog-profiles/dog-list/${id}`}>
+                        <Button id="btnCancelDog" type="primary" >Cancel</Button>
                     </Link>
                 </div>
             </div>

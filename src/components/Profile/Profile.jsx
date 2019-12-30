@@ -20,15 +20,15 @@ import OnBoard from '../../components/OnBoard'
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
 
-
+@inject("ownerStore")
 class Profile extends Component {
 
 
     constructor() {
         super();
         this.state = {
-
-            dogList: true
+            dogList: true,
+            dogs: []
 
         }
     }
@@ -42,6 +42,12 @@ class Profile extends Component {
 
     onChange = (e) => {
         console.log(`checked = ${e.target.checked}`);
+    }
+
+    componentDidMount = async () =>{
+        const currUserId = this.props.ownerStore.currUser.id
+        debugger
+        await this.props.ownerStore.getOwnerDogs(currUserId)
     }
 
     render() {

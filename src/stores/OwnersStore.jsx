@@ -3,9 +3,6 @@ import Axios from "axios";
 
 class OwnersStore {
     @observable owners = []
-    @observable currUser
-
-    
     
 }
 

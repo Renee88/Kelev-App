@@ -35,7 +35,6 @@ class DogInList extends Component {
 
         return (
                 <div>
-
             <div className="dogLine">
                 <Checkbox checked= {this.state.checked} onChange = {this.handleChange} ></Checkbox>
                 <Avatar className="avatar" size={50} src= {dogImg} />

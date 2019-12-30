@@ -14,42 +14,45 @@ const { Header, Footer, Sider, Content } = Layout;
 @inject("ownerStore")
 @observer
 class ProfileList extends Component {
-
+    constructor(){
+        super()
+            this.state = {
+                dogsOfOwner: []
+            }
+        
+    }
     // onChange = (e) => {
     //     console.log(`checked = ${e.target.checked}`);
     // }
 
-    async componentDidMount(){
-        const id = this.props.match.params.id
-        await this.props.ownerStore.getOwnerDogs(id)
-        console.log(this.props.ownerStore.dogs)
+    componentDidMount = async () => {
+        const ownerId = this.props.match.params.id
+        await this.props.ownerStore.getOwnerDogs(ownerId)
+        const dogsOfOwner = this.props.ownerStore.dogs
+        this.setState({dogsOfOwner})
     }
 
     render() {
-        const dogsOfOwner = this.props.ownerStore.dogs
-        console.log(this.props.match)
-        const id = this.props.match.params.id
+        const dogsOfOwner = this.state.dogsOfOwner
+        const ownerId = this.props.match.params.id
         return (
-            
             <div>
-                <Link to={`/main-profile/${id}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to={`/main-profile/${ownerId}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
 
                 <span id="dogListHeader"> My Dogs</span>
 
+                {dogsOfOwner ? dogsOfOwner.map(d => <DogInList dog={d} />) : null}
 
-                {dogsOfOwner.length ? dogsOfOwner.map(d => <DogInList dog = {d} />) :null}
-
-                <Route to="/dog-profiles/add-dog">
+                <Route exact to="/dog-profiles/add-dog/:id">
                     <Button id="addDog" type="primary" shape="circle" onClick={this.props.onToggle}>
-                        <Link to={`/dog-profiles/add-dog/${id}`}>
-                        <i className="fas fa-plus" ></i>
+                        <Link to={`/dog-profiles/add-dog/${ownerId}`}>
+                            <i className="fas fa-plus" ></i>
                         </Link>
                     </Button>
                 </Route>
 
             </div>
-            
-        );
+            );
     }
 }
 

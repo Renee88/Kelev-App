@@ -9,6 +9,7 @@ class DogsStore {
         dogs = dogs.data
         this.dogs = dogs
     }
+
    
 }
 

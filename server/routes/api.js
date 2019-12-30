@@ -88,6 +88,15 @@ router.put('/owner', function (req, res) {
         res.send("done")  
 })
 
+router.get('/owner/:email', function(req,res){
+    const email = req.params.email
+    sequelize.query(`SELECT * FROM owners WHERE email = '${email}'`)
+    .then(function(results){
+        currUser = results[0][0]
+        res.send(currUser)
+    }) 
+})
+
 router.put('/dog-profile', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName
@@ -110,19 +119,16 @@ router.post('/dog-profile', async function (req, res) {
     const newDog = req.body
     newDog.vaccinated ? newDog.vaccinated = 1 : newDog.vaccinated = 0
     newDog.neutered ? newDog.neutered = 1 : newDog.neutered = 0
-    
+    const ownerId = newDog.owner_id
     
     await sequelize.query(`INSERT INTO dogs VALUES(null,"${newDog.dog_name}","${newDog.dog_picture}","${newDog.gender}",${newDog.age},${newDog.weight},${newDog.vaccinated},${newDog.neutered},${newDog.dog_status})`)
     
-    let dogs = await sequelize.query(`SELECT * FROM dogs`)
-    dogs = dogs[0]
-    const lastIndex = dogs.length - 1
-    const newDogId = dogs[lastIndex].id
+    let lastDog = await sequelize.query(`SELECT MAX(dogs.id) AS lastDogId FROM dogs`) 
+    const newDogId = lastDog[0][0].lastDogId
     sequelize.query(`INSERT INTO dog_owner VALUES (null,${newDog.owner_id},${newDogId})`)
     .then(async function(results){
-        const dogsOfOwner = await sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id`)
+        let dogsOfOwner = await sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${ownerId} AND dogs.id = dog_id`)
         dogsOfOwner = dogsOfOwner[0]
-        console.log(dogsOfOwner)
         res.send(dogsOfOwner)
     })
 })

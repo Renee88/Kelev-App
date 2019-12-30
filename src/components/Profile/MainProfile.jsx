@@ -31,16 +31,15 @@ class MainProfile extends Component {
     // }
 
     render() {
-        const state = this.state;
-        const id = this.props.match.params.id || 22
-
+        // const state = this.state;
+        const ownerId = this.props.match.params.id 
         return (
             <div className="MainPageComponent">
                 <Layout id="mainProfileLayout" style={{ height: "100vh" }}>
                     <Header id="header" >
                         <div id="mainProfileImgDiv">
                             {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
-                            <Link to="/home">
+                            <Link to={`/home/${ownerId}`}>
                                 <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
                             </Link>
                                 <Button id="userSettingBtn" type="primary"><i class="fas fa-user-cog" id="userSettingButon"></i></Button>
@@ -50,7 +49,7 @@ class MainProfile extends Component {
                     <Content className="profileContent">
 
                         <hr></hr>
-                        <Link to={`/dog-profiles/dog-list/${id}`} >
+                        <Link to={`/dog-profiles/dog-list/${ownerId}`} >
                             <div className="divLook" style={{ cursor: "pointer" }}>
                                 <Avatar className="profileIcons" size={35} src={kelevicon} />
                                 <span className="rowText">Profile</span>
@@ -77,7 +76,7 @@ class MainProfile extends Component {
                         <Route exact path="/profile">
                             <Redirect to="/main-profile" />
                         </Route>
-                        <Route path="/dog-profiles/dog-list" exact render={() => <Profile />} />
+                        <Route path={`/dog-profiles/dog-list`} exact render={() => <Profile />} />
 
                     </Content>
                 </Layout>

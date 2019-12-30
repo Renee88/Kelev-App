@@ -12,9 +12,10 @@ import ProfileList from './components/Profile/ProfileList';
 import MainProfile from './components/Profile/MainProfile';
 import SplashScreen from './components/Splash';
 import { PopoverWrapper } from '@terebentina/react-popover';
+import Home from './components/Home';
 
 
-@inject("parksStore", "MapStore", "dogsStore")
+@inject("parksStore", "MapStore", "dogsStore", "ownerStore")
 @observer
 class App extends Component {
 
@@ -28,19 +29,16 @@ class App extends Component {
    componentDidMount = async () => {
     await this.props.parksStore.loadParks()
     await this.props.dogsStore.loadDogs()
-    
+    const email = 'gilisinai@gmail.com'
+    await this.props.ownerStore.getOwnerDetails(email)
   }
 
   render() {
-    return (
+    return this.props.ownerStore.currUser ?
       <Router >
         <div  className="App">
-          <Route exact path="/home"  >
-            <Map />
-            <StatusButton />
-            <HeaderButtons />
-          </Route> 
-
+          <Route exact path={`/home/:id`} render = {({match}) => <Home match = {match}/>}  />
+            
           <Route path="/" exact render={() => <SplashScreen />} />
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
@@ -49,7 +47,8 @@ class App extends Component {
           <Route path="/main-profile/:id"  render={({match}) => <MainProfile match ={match} />} />
         </div>
       </Router>
-    );
+      :null
+    
   }
 }
 export default App;

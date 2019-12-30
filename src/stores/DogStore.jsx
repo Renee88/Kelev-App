@@ -1,5 +1,6 @@
 import { observable, action } from "mobx";
 import axios from 'axios';
+import OwnerStore from "./OwnerStore";
 
 
 class DogStore  {
@@ -19,7 +20,7 @@ class DogStore  {
     }
     
     @action saveNewDog = async  () => {
-        const newDog = await axios.post('http://localhost:4000/dog-profile', {
+        let dogsOfOwner = await axios.post('http://localhost:4000/dog-profile', {
             dog_name: this.dog_name,
             dog_picture: this.dog_picture,
             gender: this.gender,
@@ -30,8 +31,7 @@ class DogStore  {
             dog_status: this.dog_status,
             owner_id: this.owner_id
         })
-        
-
+        return dogsOfOwner.data
     }
 
     @action editDogField = (fieldName, dogId) => {

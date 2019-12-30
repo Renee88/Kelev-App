@@ -22,6 +22,7 @@ class ProfileButton extends Component {
     render() {
         // const id = 22
         const id = this.props.id 
+        console.log(id)
         return (
 
             <div className="profileButton">

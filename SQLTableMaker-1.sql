@@ -12,6 +12,7 @@ USE kelev_app;
 --     dog_status TINYINT DEFAULT 1
 -- );
 
+    -- DELETE FROM owners WHERE owners.id = 23;
 
 -- CREATE TABLE owners(
 --     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,

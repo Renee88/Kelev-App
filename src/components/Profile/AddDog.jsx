@@ -1,20 +1,23 @@
 import React, { Component } from 'react';
 import { observer, inject } from 'mobx-react';
 import { Upload, message, Layout, Divider, Input, Avatar, Icon, Button, InputNumber, Switch, Form } from 'antd';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import '../../styles/profile/AddDog.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
 
-@inject("dogStore")
+@inject("dogStore", "ownerStore")
 @observer
 class AddDog extends Component {
 
-    state = {
-        genderDisabled: "hotpink"
+    constructor() {
+        super()
+        this.state = {
+            genderDisabled: "hotpink"
 
+        }
     }
 
     handleInput = (event) => {
@@ -130,11 +133,13 @@ class AddDog extends Component {
 
                 <Divider id="divider" />
                 <div className="addDogButtons">
-                <Link to={`/dog-profiles/dog-list/${id}`}>
-                    <Button id="btnAddDog" onClick={this.props.dogStore.saveNewDog} type="primary">Add</Button>
-                    </Link>
+                    <Button id="btnAddDog" onClick={async () => {
+                        await this.props.dogStore.saveNewDog()
+                        window.location.replace(`/dog-profiles/dog-list/${id}`)
+                    }} type="primary">Add</Button>
+                    
                     <Link to={`/dog-profiles/dog-list/${id}`}>
-                        <Button id="btnCancelDog" type="primary">Cancel</Button>
+                        <Button id="btnCancelDog" type="primary" >Cancel</Button>
                     </Link>
                 </div>
             </div>

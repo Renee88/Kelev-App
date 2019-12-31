@@ -200,7 +200,7 @@
     },
     {
         "dog_name": "Louie",
-        "picture": "../../pictures/loyee.jpg",
+        "picture": "/images/loyee.jpg",
         "gender": "male",
         "age": "7",
         "weight": "9",
@@ -209,7 +209,7 @@
     },
     {
         "dog_name": "Lychee",
-        "picture": "../../pictures/lycheecover.jpg",
+        "picture": "/images/lycheecover.jpg",
         "gender": "female",
         "age": "2",
         "weight": "22",
@@ -218,7 +218,7 @@
     },
     {
         "dog_name": "Soya",
-        "picture":  "../../pictures/soya.jpg",
+        "picture":  "/images/soya.jpg",
         "gender": "female",
         "age": "1",
         "weight": "15",

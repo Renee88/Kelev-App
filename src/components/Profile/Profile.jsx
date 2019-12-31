@@ -46,7 +46,6 @@ class Profile extends Component {
 
     componentDidMount = async () =>{
         const currUserId = this.props.ownerStore.currUser.id
-        debugger
         await this.props.ownerStore.getOwnerDogs(currUserId)
     }
 
@@ -69,9 +68,9 @@ class Profile extends Component {
                             <Redirect to="/dog-profiles/dog-list/:id" />
                         </Route>
                         
-                        <Route path="/dog-profiles/dog-list/:id" exact render={({match}) => <ProfileList match = {match} />} />
-                        <Route path="/dog-profiles/add-dog/:id" exact render={({match}) => <AddDog match = {match}/>} />
-                        <Route path="/dog-profiles/edit-dog/:id" exact render={({match}) => <EditDog match = {match}/>} />
+                        <Route path="/dog-profiles/dog-list/:ownerId" exact render={({match}) => <ProfileList match = {match} />} />
+                        <Route path="/dog-profiles/add-dog/:ownerId" exact render={({match}) => <AddDog match = {match}/>} />
+                        <Route path="/dog-profiles/edit-dog/:dogId" exact render={({match}) => <EditDog match = {match}/>} />
 
                     </Content>
                 </Layout>

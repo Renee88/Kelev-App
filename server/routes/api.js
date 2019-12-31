@@ -15,7 +15,6 @@ const requestPromise = require('request-promise')
 router.post('/distance', (req, res) => {
     const origin = req.body.origin
     const destination = req.body.destination
-    console.log(apiKey)
     requestPromise(`https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=${origin}&destinations=${destination}&units=metric&mode=walking&key=${apiKey}`)
         .then(response => { res.send(response) })
 })
@@ -73,18 +72,18 @@ router.get('/dogs', function (req, res) {
 
 router.get('/owner/dogs/:id', function (req, res) {
     const id = req.params.id
-    sequelize.query(`SELECT dogs.*, owners.* FROM dogs,owners,dog_owner WHERE owner_id = ${id} AND dogs.id = dog_id AND owners.id = owner_id `)
+    sequelize.query(`SELECT dogs.*, owners.* FROM dogs,owners,dog_owner WHERE dog_owner.owner_id = ${id} AND dog_owner.dog_id =dogs.dog_id AND owners.owner_id = dog_owner.owner_id `)
     .then(function (results) {
         const dogs = results[0]
         res.send(dogs)
     })
 })
 
-router.put('/owner', function (req, res) {
+router.put('/owner/:id', function (req, res) {
     let userStatus = req.body.userStatus
-    const id = 22
+    const ownerId = req.params.ownerId
     sequelize.query(`UPDATE owners 
-    SET owner_status = '${userStatus}' WHERE owners.id = ${id}`)
+    SET owner_status = '${userStatus}' WHERE owners.owner_id = ${ownerId}`)
         res.send("done")  
 })
 
@@ -97,16 +96,27 @@ router.get('/owner/:email', function(req,res){
     }) 
 })
 
-router.put('/dog-profile', function (req, res) {
+router.get('/dog/:dogId',function(req,res){
+    const dogId = req.params.dogId
+    sequelize.query(`SELECT dogs.*, owners.* FROM dogs,owners,dog_owner WHERE dogs.dog_id = ${dogId} 
+    AND dog_owner.dog_id = ${dogId} 
+    AND dog_owner.owner_id = owners.owner_id`)
+    .then(function(results){
+        let dog = results[0][0]
+        res.send(dog)
+    })
+})
+
+router.put('/dog-profile/:dogId', function (req, res) {
     const detailsForEdit = req.body
     const fieldName = detailsForEdit.fieldName
     const fieldValue = detailsForEdit.fieldValue
-    const dogId = detailsForEdit.dogId
+    const dogId = req.params.dogId
   
     sequelize.query(`UPDATE dogs 
-    SET ${fieldName} = '${fieldValue}' WHERE dogs.id = ${dogId}`)
+    SET ${fieldName} = '${fieldValue}' WHERE dogs.dog_id = ${dogId}`)
         .then(function (results) {
-            sequelize.query(`SELECT dogs.* FROM dogs WHERE dogs.id = ${dogId}`)
+            sequelize.query(`SELECT dogs.* FROM dogs WHERE dogs.dog_id = ${dogId}`)
                 .then(function (results) {
                     const updatedDog = results[0][0]
                     res.send(updatedDog)
@@ -127,7 +137,7 @@ router.post('/dog-profile', async function (req, res) {
     const newDogId = lastDog[0][0].lastDogId
     sequelize.query(`INSERT INTO dog_owner VALUES (null,${newDog.owner_id},${newDogId})`)
     .then(async function(results){
-        let dogsOfOwner = await sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${ownerId} AND dogs.id = dog_id`)
+        let dogsOfOwner = await sequelize.query(`SELECT dogs.* FROM dogs,dog_owner WHERE owner_id = ${ownerId} AND dogs.dog_id = dog_owner.dog_id`)
         dogsOfOwner = dogsOfOwner[0]
         res.send(dogsOfOwner)
     })
@@ -137,7 +147,7 @@ router.delete('/dog-profile', function (req, res) {
     const dogToRemove = req.body
     sequelize.query(`DELETE FROM dog_owner WHERE dog_id = ${dogToRemove.id} AND owner_id = ${dogToRemove.owner_id}`)
         .then(function () {
-            sequelize.query(`DELETE FROM dogs WHERE dogs.id = ${dogToRemove.id}`)
+            sequelize.query(`DELETE FROM dogs WHERE dogs.dog_id = ${dogToRemove.id}`)
                 .then(function () {
                     res.send(`Dog with the id of ${dogToRemove.id} was deleted from user ${dogToRemove.owner_id}`)
                 })

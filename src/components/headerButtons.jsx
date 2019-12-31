@@ -14,10 +14,10 @@ class HeaderButtons extends Component {
 
     render() {
 
-        const id = this.props.id
+        const ownerId = this.props.ownerId
         return (
             <div className="headerButtons">
-                <ProfileButton id = {id}/>
+                <ProfileButton ownerId = {ownerId}/>
                 <ChatButton />
             </div>
         );

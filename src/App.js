@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from './components/Map'
-import StatusButton from './components/StatusButton';
-import HeaderButtons from './components/headerButtons';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
 import { inject, observer } from 'mobx-react';
@@ -37,7 +34,7 @@ class App extends Component {
     return this.props.ownerStore.currUser ?
       <Router >
         <div  className="App">
-          <Route exact path={`/home/:id`} render = {({match}) => <Home match = {match}/>}  />
+          <Route exact path={`/home/:ownerId`} render = {({match}) => <Home match = {match}/>}  />
             
           <Route path="/" exact render={() => <SplashScreen />} />
 

@@ -26,7 +26,7 @@ class ProfileList extends Component {
     // }
 
     componentDidMount = async () => {
-        const ownerId = this.props.match.params.id
+        const ownerId = this.props.match.params.ownerId
         await this.props.ownerStore.getOwnerDogs(ownerId)
         const dogsOfOwner = this.props.ownerStore.dogs
         this.setState({dogsOfOwner})

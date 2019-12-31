@@ -31,14 +31,14 @@ const loadOwners = async function (owners) {
 
 const loadOwnersAndDogs = async function (owners) {
     for (let owner of owners) {
-        let ownerID = await sequelize.query(`SELECT owners.id FROM owners WHERE owners.email = '${owner.email}' `)
-        ownerID = ownerID[0][0].id
+        let ownerId = await sequelize.query(`SELECT owners.owner_id FROM owners WHERE owners.email = '${owner.email}' `)
+        ownerId = ownerId[0][0].owner_id
         let dogs = owner.dogs
         for (let dog of dogs) {
-            let dogID = await sequelize.query(`SELECT dogs.id FROM dogs WHERE dogs.dog_picture = '${dog.picture}'`)
-            dogID = dogID[0][0].id
+            let dogId = await sequelize.query(`SELECT dogs.dog_id FROM dogs WHERE dogs.dog_picture = '${dog.picture}'`)
+            dogId = dogId[0][0].dog_id
             await sequelize.query(`INSERT INTO dog_owner 
-            VALUES (null,${ownerID},${dogID})`)
+            VALUES (null,${ownerId},${dogId})`)
         }
 
     }

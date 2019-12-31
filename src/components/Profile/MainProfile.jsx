@@ -38,7 +38,6 @@ class MainProfile extends Component {
                 <Layout id="mainProfileLayout" style={{ height: "100vh" }}>
                     <Header id="header" >
                         <div id="mainProfileImgDiv">
-                            {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
                             <Link to={`/home/${ownerId}`}>
                                 <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
                             </Link>

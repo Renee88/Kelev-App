@@ -45,7 +45,7 @@ class Profile extends Component {
     }
 
     componentDidMount = async () =>{
-        const currUserId = this.props.ownerStore.currUser.id
+        const currUserId = this.props.ownerStore.currUser.owner_id
         await this.props.ownerStore.getOwnerDogs(currUserId)
     }
 

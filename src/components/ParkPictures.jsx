@@ -14,9 +14,8 @@ import cover from '../pictures/cute-dogs-park-scene_24877-51220.jpg'
 class ParkPictures extends Component {
 
     async componentDidMount() {
-        const parkId = parseInt(this.props.match.params.id)
+        const parkId = parseInt(this.props.match.params.parkId)
         await this.props.parksStore.getPark(parkId)
-        console.log(this.props.parksStore.chosenPark)
         this.props.parksStore.getPhoto()
     }
 

@@ -10,7 +10,7 @@ class ParkGeneralInfo extends Component {
 
 
     async componentDidMount (){
-        const parkId = parseInt(this.props.match.params.id)
+        const parkId = parseInt(this.props.match.params.parkId)
         await this.props.parksStore.getPark(parkId)
     }
     

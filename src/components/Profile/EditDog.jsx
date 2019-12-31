@@ -35,7 +35,6 @@ class EditDog extends Component {
             gender: null,
             vaccinated: null,
             neutered: null,
-            // owner_id: 0,
             dog: {}
         };
 
@@ -242,7 +241,7 @@ class EditDog extends Component {
                         onChange={this.checkGender}
                         style={{ backgroundColor: this.state.genderDisabled }}
                         id="gender_switch"
-                        checked={this.state.genderChecked}
+                        checked={this.state.gender}
                         checkedChildren="M"
                         unCheckedChildren="F" />
                 </div>

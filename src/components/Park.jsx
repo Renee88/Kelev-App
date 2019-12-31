@@ -21,7 +21,7 @@ class Park extends Component {
             <Layout id="parkLayout"  style={{height:"100vh"}}>
                 <Content id="info">
                 <Content id="inside">
-                    <Link to = {`/home/${this.props.ownerStore.currUser.id}`}><div id = "back-button1"><i className="fas fa-chevron-left"></i></div></Link>
+                    <Link to = {`/home/${this.props.ownerStore.currUser.owner_id}`}><div id = "back-button1"><i className="fas fa-chevron-left"></i></div></Link>
                     <ParkPictures match = {this.props.match} />
                 </Content>
                 <Content>

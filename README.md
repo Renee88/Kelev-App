@@ -33,7 +33,7 @@ The app watches the users position and detects when he arrived to the park in or
 
 ### Dog-Park
 
-As a user clicks on a pop-up of a certain dog-park , the app provides him with the inforamtion of who is currently at the park, who's on its way, park ameneties as well as park pics 7 rating. 
+As a user clicks on a pop-up of a certain dog-park , the app provides him with the inforamtion of who is currently at the park, who's on its way, park ameneties as well as park pics & rating. 
 
 <p align="center"><img src="assets/kelev-dogpark.PNG" width="250" /></p>
 
@@ -41,7 +41,7 @@ As a user clicks on a pop-up of a certain dog-park , the app provides him with t
 
 The user page contains menu where he can access his dogs page , and see the upcomig features. When he clicks on a profile he can see a list of his dogs and have the ability to choose with which of the dogs he is going to the park.
 
-<p align="center"><img src="assets/menu-features.PNG" width="600" /></p>
+<p align="center"><img src="assets/menu-profile.PNG" width="600" /></p>
 
 
 A user can add new dog to his list or edit the dog's details if needed.

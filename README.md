@@ -35,7 +35,7 @@ The app watches the users position and detects when he arrived to the park in or
 
 As a user clicks on a pop-up of a certain dog-park , the app provides him with the inforamtion of who is currently at the park, who's on its way, park ameneties as well as park pics 7 rating. 
 
-<p align="center"><img src="assets/kelev-dogpark.PNG" width="400" /></p>
+<p align="center"><img src="assets/kelev-dogpark.PNG" width="250" /></p>
 
 ### Profile 
 

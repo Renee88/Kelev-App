@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kelev-App
 
-## Available Scripts
+Kelev-App is a social network app that connects dog owners , dogs and dog-parks. 
 
-In the project directory, you can run:
 
-### `npm start`
+# Table Of Contents
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Kelev-App](#kelev-app)
+  - [Screenshots](#screenshots)
+    - [First Screen](#first-screen)
+    - [Main Map](#main-map)
+    - [Dog-Park](#dog-park)
+    - [Profile](#profile)
+  - [Techstack](#tech-stack)
+  - [TODO](#todo)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+### First Screen
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When the user opens the app for the fist time, he gets information regarding the app and its features.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<p align="center"><img src="assets/onboard.PNG" width="600" /></p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Main Map
 
-### `npm run eject`
+The main maps displays the closest dog-parks based on the users location. After a user selects a park the app offers a navigation path and displays estimated arrival time by walking.
+The app watches the users position and detects when he arrived to the park in order to inform others.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<p align="center"><img src="assets/kelev-map.PNG" width="600" /></p>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Dog-Park
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+As a user clicks on a pop-up of a certain dog-park , the app provides him with the inforamtion of who is currently at the park, who's on its way, park ameneties as well as park pics 7 rating. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="center"><img src="assets/kelev-dogpark.PNG" width="600" /></p>
 
-## Learn More
+### Profile 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The user page contains menu where he can access his dogs page , and see the upcomig features. When he clicks on a profile he can see a list of his dogs and have the ability to choose with which of the dogs he is going to the park.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="center"><img src="assets/menu-features.PNG" width="600" /></p>
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+A user can add new dog to his list or edit the dog's details if needed.
 
-### Analyzing the Bundle Size
+<p align="center"><img src="assets/profile-features.PNG" width="600" /></p>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Techstack
 
-### Advanced Configuration
+- React with MobX
+- MySQL
+- Google API's (maps, places, directions, matrix)
+- NodeJS, Express
+- Ant design
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## TODO
 
-### Deployment
+1. make the app user authenticated.
+2. Add favorite dogs featue.
+3. Add a Dog Walker feature. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

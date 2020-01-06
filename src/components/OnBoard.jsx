@@ -75,7 +75,7 @@ class SimpleSlider extends Component {
                 </div>
 
                
-                <Link to={`/home/${this.props.ownerStore.currUser.id}`}>
+                <Link to={`/home/${this.props.ownerStore.currUser.owner_id}`}>
                     <Button id="startBtn" type="primary" size="large">
                         Start
                      </Button>

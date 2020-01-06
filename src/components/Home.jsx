@@ -8,12 +8,12 @@ class Home extends Component {
 
 
     render() {
-        console.log(this.props.match.params.id)
+        console.log(this.props.match.params.ownerId)
         return (
             <div>
             <Map />
-            <StatusButton />
-            <HeaderButtons id = {this.props.match.params.id} />
+            <StatusButton ownerId = {this.props.match.params.ownerId}/>
+            <HeaderButtons ownerId = {this.props.match.params.ownerId} />
             </div>
 
         )

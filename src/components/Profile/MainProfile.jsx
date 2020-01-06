@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import { Layout, Divider, Avatar, Icon, Button } from 'antd';
-
 import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom'
 import { observer, inject } from 'mobx-react';
 import '../../styles/profile/MainProfile.css'
@@ -19,26 +17,15 @@ const { Header, Footer, Sider, Content } = Layout;
 
 class MainProfile extends Component {
 
-    // onToggle = () => {
-    //     let opposite = !this.state.dogList
-    //     this.setState({
-    //         dogList: opposite
-    //     })
-    // }
-
-    // onChange = (e) => {
-    //     console.log(`checked = ${e.target.checked}`);
-    // }
 
     render() {
-        // const state = this.state;
-        const ownerId = this.props.match.params.id 
+        
+        const ownerId = this.props.match.params.ownerId 
         return (
             <div className="MainPageComponent">
                 <Layout id="mainProfileLayout" style={{ height: "100vh" }}>
                     <Header id="header" >
                         <div id="mainProfileImgDiv">
-                            {/* <Link to="/"><div id="back-buttonMain"><i className="fas fa-chevron-left"></i></div></Link> */}
                             <Link to={`/home/${ownerId}`}>
                                 <Button id="backBtnReturn" type="primary"><i className="fas fa-chevron-left" id="returnBtn"></i></Button>
                             </Link>

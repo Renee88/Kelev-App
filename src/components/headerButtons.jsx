@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import { Button } from 'antd'
 import ChatButton from './ChatButton';
-import ProfileButton from './ProfileButton';
+import ProfileButton from './profileButton';
 // import { observer, inject } from 'mobx-react';
 
 
@@ -14,10 +14,10 @@ class HeaderButtons extends Component {
 
     render() {
 
-        const id = this.props.id
+        const ownerId = this.props.ownerId
         return (
             <div className="headerButtons">
-                <ProfileButton id = {id}/>
+                <ProfileButton ownerId = {ownerId}/>
                 <ChatButton />
             </div>
         );

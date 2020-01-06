@@ -14,6 +14,7 @@ class DogStore  {
     @observable neutered = false
     @observable owner_id = 22
     @observable dog_status = 1
+    @observable dogForEdit
     
     @action getDogInput(inputName, value){
         this[inputName] = value
@@ -34,13 +35,20 @@ class DogStore  {
         return dogsOfOwner.data
     }
 
-    @action editDogField = (fieldName, dogId) => {
-        axios.put('http://localhost:4000/dog-profile', {
+    @action async getDog(dogId){
+        let dog = await axios.get(`http://localhost:4000/dog/${dogId}`)
+        dog = dog.data
+        this.dogForEdit = dog
+    }
+
+    @action editDogField = async (fieldName, dog) => {
+        const dogId = dog.dog_id
+        await axios.put(`http://localhost:4000/dog-profile/${dogId}`, {
             fieldName,
-            fieldValue: this[fieldName],
-            dogId
+            fieldValue: dog[fieldName]
         })
     }
+
 }
 
 export default DogStore;

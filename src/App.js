@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Map from './components/Map'
-import StatusButton from './components/StatusButton';
-import HeaderButtons from './components/headerButtons';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Park from './components/Park';
 import { inject, observer } from 'mobx-react';
@@ -37,14 +34,14 @@ class App extends Component {
     return this.props.ownerStore.currUser ?
       <Router >
         <div  className="App">
-          <Route exact path={`/home/:id`} render = {({match}) => <Home match = {match}/>}  />
+          <Route exact path={`/home/:ownerId`} render = {({match}) => <Home match = {match}/>}  />
             
           <Route path="/" exact render={() => <SplashScreen />} />
 
           <Route path="/onboard" exact render={() => <OnBoard />} />
-          <Route path="/dog-profiles/:id"  render={({match}) => <Profile match = {match} />} />
-          <Route path="/park/:id" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
-          <Route path="/main-profile/:id"  render={({match}) => <MainProfile match ={match} />} />
+          <Route path="/dog-profiles/:ownerId"  render={({match}) => <Profile match = {match} />} />
+          <Route path="/park/:parkId" exact render={({match}) => <Park chosenPark = {this.state.chosenPark} match = {match}/>} />
+          <Route path="/main-profile/:ownerId"  render={({match}) => <MainProfile match ={match} />} />
         </div>
       </Router>
       :null

@@ -26,7 +26,7 @@ class ProfileList extends Component {
     // }
 
     componentDidMount = async () => {
-        const ownerId = this.props.match.params.id
+        const ownerId = this.props.match.params.ownerId
         await this.props.ownerStore.getOwnerDogs(ownerId)
         const dogsOfOwner = this.props.ownerStore.dogs
         this.setState({dogsOfOwner})
@@ -34,7 +34,7 @@ class ProfileList extends Component {
 
     render() {
         const dogsOfOwner = this.state.dogsOfOwner
-        const ownerId = this.props.match.params.id
+        const ownerId = this.props.match.params.ownerId
         return (
             <div>
                 <Link to={`/main-profile/${ownerId}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>

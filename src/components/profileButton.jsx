@@ -21,12 +21,11 @@ class ProfileButton extends Component {
 
     render() {
         // const id = 22
-        const id = this.props.id 
-        console.log(id)
+        const ownerId = this.props.ownerId 
         return (
 
             <div className="profileButton">
-                <Link to={`/main-profile/${id}`}>
+                <Link to={`/main-profile/${ownerId}`}>
                     <Button id="profileBtn" type="primary" shape="circle"  >
                         <FontAwesomeIcon icon={faDog} />
                     </Button>

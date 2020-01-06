@@ -15,6 +15,11 @@ import '@terebentina/react-popover/lib/styles.css'
 
 class StatusButton extends Component {
 
+    changeUserStatus = () =>{
+        const ownerId = this.props.ownerId
+        this.props.ownerStore.changeUserStatus(ownerId)
+    }
+
     render() {
 
         let ownerStore = this.props.ownerStore

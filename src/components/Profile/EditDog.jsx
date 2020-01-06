@@ -13,7 +13,7 @@ const { Header, Footer, Sider, Content } = Layout;
 // const { Checkbox } = antd;
 
 
-@inject("dogStore", "dogsStore")
+@inject("dogStore", "dogsStore","ownerStore")
 @observer
 class EditDog extends Component {
     constructor() {
@@ -35,27 +35,20 @@ class EditDog extends Component {
             gender: null,
             vaccinated: null,
             neutered: null,
-            owner_id: 5,
             dog: {}
         };
 
     }
 
-    editDogField = (dogId, fieldName, fieldValue) => {
-        axios.put('http://localhost:4000/dog-profile', {
-            fieldName,
-            fieldValue,
-            dogId
-        })
-    }
 
-    handleInput = async (event) => {
+    handleInput = (event) => {
         let inputName = event.target.name
         let value = event.target.value
-        await this.setState({ [inputName]: value })
+        this.setState({ [inputName]: value })
     }
-
-    toggle = (e) => {
+    
+    toggle = async (e) => {
+        let dog = this.props.dogStore.dogForEdit
         if (e.target.id === "btnDogName") {
             this.setState({
                 nameDisabled: !this.state.nameDisabled,
@@ -74,19 +67,18 @@ class EditDog extends Component {
                 isWeightActive: !this.state.isWeightActive
             })
         }
+
         if (e.target.id === "btnDogNameV" || e.target.id === "btnDogNameX") {
             this.setState({
                 nameDisabled: !this.state.nameDisabled,
                 isNameActive: !this.state.isNameActive
             })
             if (e.target.id === "btnDogNameV") {
-                this.editDogField(this.state.dog.id, "dog_name", this.state.dog_name)
+                dog.dog_name = this.state.dog_name
+                await this.props.dogStore.editDogField("dog_name", dog)
+                return
             }
-            if (e.target.id === "btnDogNameX") {
-                this.setState({
-                    dog_name: ""
-                })
-            }
+            
         }
         if (e.target.id === "btnDogAgeV" || e.target.id === "btnDogAgeX") {
             this.setState({
@@ -94,13 +86,11 @@ class EditDog extends Component {
                 isAgeActive: !this.state.isAgeActive
             })
             if (e.target.id === "btnDogAgeV") {
-                this.editDogField(this.state.dog.id, "age", this.state.age)
+                dog.age = this.state.age
+                await this.props.dogStore.editDogField("age", dog)
+                return
             }
-            if (e.target.id === "btnDogAgeX") {
-                this.setState({
-                    age: ""
-                })
-            }
+            
         }
         if (e.target.id === "btnDogWeightV" || e.target.id === "btnDogWeightX") {
             this.setState({
@@ -108,22 +98,18 @@ class EditDog extends Component {
                 isWeightActive: !this.state.isWeightActive
             })
             if (e.target.id === "btnDogWeightV") {
-                this.editDogField(this.state.dog.id, "weight", this.state.weight)
+                dog.weight = this.state.weight
+                await this.props.dogStore.editDogField("weight", dog)
+                return
             }
-            if (e.target.id === "btnDogWeightX") {
-                this.setState({
-                    weight: ""
-                })
-            }
+           
         }
     };
 
+
     checkGender = async (e) => {
         let gender = !this.state.gender
-        let dogs = this.props.dogsStore.dogs
-        let dogId = this.props.match.params.id
-        let dog = dogs.find(i => i.id == dogId)
-
+        let dog = this.props.dogStore.dogForEdit
         let dogGender
         let genderDisabled
 
@@ -136,12 +122,8 @@ class EditDog extends Component {
         }
 
         dog.gender = dogGender
-
-        await this.setState({ gender, dog, genderDisabled })
-        let value = this.state.gender ? "male" : "female"
-        console.log(this.state.dog.id, "gender", value);
-
-        this.editDogField(this.state.dog.id, "gender", value)
+        await this.props.dogStore.editDogField("gender", dog)
+        this.setState({ gender, dog, genderDisabled })
     }
 
     checkVaccinated = async (e) => {
@@ -151,7 +133,7 @@ class EditDog extends Component {
         })
 
         let value = this.state.vaccinated ? 1 : 0
-        this.editDogField(this.state.dog.id, "vaccinated", value)
+        this.props.dogStore.editDogField("vaccinated", this.state.dog)
     }
 
     checkNeutered = async (e) => {
@@ -160,16 +142,13 @@ class EditDog extends Component {
             neutered
         })
         let value = this.state.neutered ? 1 : 0
-        console.log(this.state.dog.id, "neutered", value);
-
-        this.editDogField(this.state.dog.id, "neutered", value)
+        this.props.dogStore.editDogField("neutered", this.state.dog)
     }
 
     async componentDidMount() {
-        await this.props.dogsStore.loadDogs()
-        let dogs = this.props.dogsStore.dogs
-        let dogId = this.props.match.params.id
-        let dog = dogs.find(i => i.id == dogId)
+        let dogId = this.props.match.params.dogId
+        await this.props.dogStore.getDog(dogId)
+        let dog = this.props.dogStore.dogForEdit
         let genderDisabled
         let gender
         let neutered
@@ -189,8 +168,7 @@ class EditDog extends Component {
 
             }
         }
-
-        this.setState({ dog, gender, genderDisabled, vaccinated, neutered })
+        this.setState({ dog, genderDisabled, gender, vaccinated, neutered })
     }
 
     deleteDog = () => {
@@ -206,15 +184,10 @@ class EditDog extends Component {
 
 
     render() {
-
-        let dogId = this.props.match.params.id
-        let dogs = this.props.dogsStore.dogs
-        let dog = dogs.find(i => i.id == dogId)
-        let ownerId = 22
-
+        let dog = this.props.dogStore.dogForEdit
         return dog ?
             <div className="dogInputs">
-                <Link to={`/dog-profiles/dog-list/${ownerId}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
+                <Link to={`/dog-profiles/dog-list/${dog.owner_id}`}><div id="back-button"><i className="fas fa-chevron-left"></i></div></Link>
 
                 <span id="dogListHeader"> Edit Dog</span>
 
@@ -279,7 +252,7 @@ class EditDog extends Component {
                     <span id="vaccinatedText">Vaccinated</span>
                     <Switch onChange={this.checkVaccinated}
                         id="vaccinated"
-                        checked={this.state.vaccinated}
+                        checked={this.state.vaccinatedChecked}
                         checkedChildren={<Icon type="check" />}
                         unCheckedChildren={<Icon type="close" />}
                         defaultChecked
